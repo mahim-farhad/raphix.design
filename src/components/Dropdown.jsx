@@ -1,7 +1,10 @@
 import {
+  useState,
   useRef,
   useEffect
 } from 'react'
+
+import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
@@ -10,15 +13,7 @@ import {
 } from 'framer-motion'
 
 import Icon from './Icon'
-
-const itemVariants = {
-  open: {
-    opacity: 1,
-    x: 0,
-    transition: { type: 'spring', stiffness: 300, damping: 24 }
-  },
-  closed: { opacity: 0, x: 10, transition: { duration: 0.2 } }
-}
+import Button from './Button'
 
 const useOutsideClick = (ref, modal, setModal) => {
   useEffect(() => {
@@ -38,11 +33,11 @@ const useOutsideClick = (ref, modal, setModal) => {
 
 function Dropdown({
   dropdownItem,
-  dropdown,
-  setDropdown,
   text,
   right
 }) {
+  const [dropdown, setDropdown] = useState(false)
+
   const wrapperRef = useRef(null)
 
   useOutsideClick(wrapperRef, dropdown, setDropdown);
@@ -51,17 +46,27 @@ function Dropdown({
     <motion.nav
       ref={wrapperRef}
       initial={false}
-      animate={dropdown ? 'open' : 'closed'}
+      animate={
+        dropdown ? 'open' : 'closed'
+      }
       className='dropdown'
     >
-      <motion.button
-        whileTap={{ scale: 0.97 }}
+      <Button
         onClick={() => setDropdown(!dropdown)}
-        className='btn btn--extended btn--tonal-dark dropdown__toggle w-100 w-md-auto'
+        size='sm'
+        variant='tonal'
+        color='dark'
+        extended
+        classes={[
+          'dropdown__toggle'
+        ]}
+        utilities={{
+          w: { _: 100, md: 'auto' }
+        }}
       >
         {text}
 
-        <motion.div
+        <motion.span
           variants={{
             open: { rotate: -180 },
             closed: { rotate: 0 }
@@ -70,12 +75,12 @@ function Dropdown({
           className='dropdown__toggle-icon'
         >
           <Icon
-            name='arrow-long-right'
+            name='chevron-down'
           />
-        </motion.div>
-      </motion.button>
+        </motion.span>
+      </Button>
 
-      <motion.ul
+      <ul
         className={classNames(
           'dropdown__menu',
           'top-100',
@@ -86,20 +91,16 @@ function Dropdown({
           pointerEvents: dropdown ? 'auto' : 'none'
         }}
       >
-        {
-          dropdownItem && dropdownItem.map(item => {
-            return (
-              <li
-                key={item}
-              >
-                {item}
-              </li>
-            )
-          })
-        }
-      </motion.ul>
-    </motion.nav>
+        {dropdownItem}
+      </ul>
+    </motion.nav >
   )
+}
+
+Dropdown.propTypes = {
+  dropdownItem: PropTypes.node,
+  text: PropTypes.string,
+  right: PropTypes.bool
 }
 
 export default Dropdown

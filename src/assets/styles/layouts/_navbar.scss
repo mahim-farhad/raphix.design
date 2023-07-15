@@ -1,7 +1,7 @@
 .navbar {
   // z-index: $z-index-navbar;
   position: relative;
-  padding: $spacer-6 $spacer-0;
+  padding: $spacer-3 $spacer-0;
   margin-bottom: $spacer-0;
   background-color: $surface;
 
@@ -107,6 +107,8 @@
         }
 
         @include media-breakpoint-up($next) {
+          padding: $spacer-6 $spacer-0;
+
           .navbar {
             &__brand {
               margin-right: $spacer-6;

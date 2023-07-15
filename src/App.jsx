@@ -18,8 +18,7 @@ import Sidebar from './layouts/sidebar/Sidebar'
 import Footer from './layouts/footer/Footer'
 
 import Home from './pages/Home'
-import Collections from './pages/Collections'
-import Collection from './pages/Collection'
+import Designs from './pages/Designs'
 import Error404 from './pages/Error'
 
 function App() {
@@ -62,17 +61,17 @@ function App() {
           path='/collections'
           exact
           element={
-            <Collections />
+            <Designs />
           }
         />
 
-        <Route
+        {/* <Route
           path='/collection/:slug'
           exact
           element={
             <Collection />
           }
-        />
+        /> */}
 
         <Route
           path='*'

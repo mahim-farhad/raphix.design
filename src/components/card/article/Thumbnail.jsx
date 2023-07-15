@@ -28,7 +28,7 @@ function Thumbnail({
       />
 
       <DynamicLink
-        path={`/blogs/`}
+        path={`/collections/${slug}`}
         classes={[
           'card__thumbnail-link'
         ]}

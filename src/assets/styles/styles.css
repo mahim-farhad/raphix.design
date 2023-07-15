@@ -7907,7 +7907,7 @@ mark {
   margin-bottom: 0rem;
   font-family: "Nunito Sans", serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
@@ -9969,7 +9969,7 @@ mark {
   opacity: 0;
   visibility: hidden;
   overflow-y: overlay;
-  background-color: rgba(0, 0, 0, 0.0509803922);
+  background-color: #ffffff;
   transition: all 0.5s ease;
 }
 .sidebar .navbar__brand-svg {
@@ -9994,10 +9994,6 @@ mark {
 .sidebar__footer {
   margin-top: auto;
 }
-.sidebar--dark {
-  color: #343a40;
-  background-color: #343a40;
-}
 
 .aside {
   position: sticky;
@@ -10008,7 +10004,7 @@ mark {
 
 .navbar {
   position: relative;
-  padding: 1.5rem 0rem;
+  padding: 0.75rem 0rem;
   margin-bottom: 0rem;
   background-color: rgba(0, 0, 0, 0.0509803922);
 }
@@ -10085,6 +10081,9 @@ mark {
   }
 }
 @media (min-width: 36rem) {
+  .navbar--expand-sm {
+    padding: 1.5rem 0rem;
+  }
   .navbar--expand-sm .navbar__brand {
     margin-right: 1.5rem;
   }
@@ -10101,6 +10100,9 @@ mark {
   }
 }
 @media (min-width: 48rem) {
+  .navbar--expand-md {
+    padding: 1.5rem 0rem;
+  }
   .navbar--expand-md .navbar__brand {
     margin-right: 1.5rem;
   }
@@ -10117,6 +10119,9 @@ mark {
   }
 }
 @media (min-width: 62rem) {
+  .navbar--expand-lg {
+    padding: 1.5rem 0rem;
+  }
   .navbar--expand-lg .navbar__brand {
     margin-right: 1.5rem;
   }
@@ -10133,12 +10138,18 @@ mark {
   }
 }
 @media (min-width: 74rem) {
+  .navbar--expand-xl {
+    padding: 1.5rem 0rem;
+  }
   .navbar--expand-xl .navbar__brand {
     margin-right: 1.5rem;
   }
   .navbar--expand-xl .navbar__toggler {
     display: none;
   }
+}
+.navbar--expand {
+  padding: 1.5rem 0rem;
 }
 .navbar--expand .navbar__menu:not(.navbar__menu--right) {
   display: none;

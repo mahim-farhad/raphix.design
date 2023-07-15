@@ -10,8 +10,8 @@ import NavLink from '../../components/nav/NavLink'
 const links = [
   {
     id: 1,
-    name: 'About',
-    path: '/about'
+    name: 'Designs',
+    path: '/designs'
   },
   {
     id: 2,
@@ -20,13 +20,8 @@ const links = [
   },
   {
     id: 3,
-    name: 'Designs',
-    path: '/designs'
-  },
-  {
-    id: 4,
-    name: 'Contact',
-    path: '/contact'
+    name: 'Esports',
+    path: '/esports'
   }
 ]
 
@@ -42,19 +37,9 @@ const socialLinks = [
     path: 'https://www.linkedin.com/mohammadistiaquddin'
   },
   {
-    name: 'orcid',
-    icon: 'orcid',
+    name: 'twitter',
+    icon: 'twitter',
     path: 'https://orcid.org/mohammadistiaquddin'
-  },
-  {
-    name: 'research gate',
-    icon: 'research-gate',
-    path: 'https://www.researchgate.net/mohammadistiaquddin'
-  },
-  {
-    name: 'github',
-    icon: 'github',
-    path: 'https://www.github.com/mohammadistiaquddin'
   }
 ]
 

@@ -8,11 +8,10 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import Divider from '../../components/Divider'
-import Button from '../../components/Button'
 
 import Box from '../Box'
 import Backdrop from '../Backdrop'
-import NavbarBrand from '../navbar/NavbarBrand'
+// import NavbarBrand from '../navbar/NavbarBrand'
 
 import SidebarMenu from './SidebarMenu'
 
@@ -63,13 +62,13 @@ function Sidebar({
           'sidebar'
         )}
       >
-        <Box
+        {/* <Box
           classes={[
             'sidebar__header'
           ]}
         >
           <NavbarBrand />
-        </Box>
+        </Box> */}
 
         <Divider
           utilities={{
@@ -79,25 +78,18 @@ function Sidebar({
 
         <SidebarMenu />
 
-        <Divider
+        {/* <Divider
           utilities={{
             my: { _: 6 }
           }}
-        />
+        /> */}
 
-        <Box
+        {/* <Box
           classes={[
             'sidebar__footer'
           ]}
         >
-          <Button
-            utilities={{
-              w: { _: 100 }
-            }}
-          >
-            Subscribe
-          </Button>
-        </Box>
+        </Box> */}
       </aside>
     </Box>
   )

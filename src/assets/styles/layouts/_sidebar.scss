@@ -47,7 +47,7 @@
   opacity: 0;
   visibility: hidden;
   overflow-y: overlay;
-  background-color: $surface;
+  background-color: $background;
   transition: all 0.5s ease;
 
   .navbar__brand-svg {
@@ -77,10 +77,5 @@
 
   &__footer {
     margin-top: auto;
-  }
-
-  &--dark {
-    color: $dark;
-    background-color: $dark;
   }
 }

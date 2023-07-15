@@ -63,7 +63,7 @@ function Error404() {
                   <DynamicLink
                     path='/home'
                     classes={[
-                      'btn btn--lg btn--fill-primary btn--link'
+                      'btn btn--fill-primary btn--link'
                     ]}
                   >
                     Go to home page

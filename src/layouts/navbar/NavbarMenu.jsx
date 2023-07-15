@@ -3,10 +3,6 @@ import NavLink from '../../components/nav/NavLink'
 
 const links = [
   {
-    name: 'About',
-    path: '/'
-  },
-  {
     name: 'Designs',
     path: '/designs'
   },
@@ -17,10 +13,6 @@ const links = [
   {
     name: 'eSports',
     path: '/esports'
-  },
-  {
-    name: 'Contact',
-    path: '/contact'
   }
 ]
 
