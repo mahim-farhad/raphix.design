@@ -321,6 +321,111 @@ function Icon({
             </svg>
           )
         ) || (
+          name === 'grid' && (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 512 512'
+              fill='currentColor'
+              className={classNames(
+                'icon',
+                classes,
+                utilities &&
+                Object.entries(utilities).map(
+                  ([utility, value]) =>
+                    value &&
+                    Object.entries(value).map(([breakpoint, values]) =>
+                      breakpoint === '_'
+                        ? `${utility}-${values}`
+                        : `${utility}-${breakpoint}-${values}`
+                    )
+                )
+              )}
+              style={style}
+            >
+              <g>
+                <path d="M85.333,0h64c47.128,0,85.333,38.205,85.333,85.333v64c0,47.128-38.205,85.333-85.333,85.333h-64   C38.205,234.667,0,196.462,0,149.333v-64C0,38.205,38.205,0,85.333,0z" />
+                <path d="M362.667,0h64C473.795,0,512,38.205,512,85.333v64c0,47.128-38.205,85.333-85.333,85.333h-64   c-47.128,0-85.333-38.205-85.333-85.333v-64C277.333,38.205,315.538,0,362.667,0z" />
+                <path d="M85.333,277.333h64c47.128,0,85.333,38.205,85.333,85.333v64c0,47.128-38.205,85.333-85.333,85.333h-64   C38.205,512,0,473.795,0,426.667v-64C0,315.538,38.205,277.333,85.333,277.333z" />
+                <path d="M362.667,277.333h64c47.128,0,85.333,38.205,85.333,85.333v64C512,473.795,473.795,512,426.667,512h-64   c-47.128,0-85.333-38.205-85.333-85.333v-64C277.333,315.538,315.538,277.333,362.667,277.333z" />
+              </g>
+            </svg>
+          )
+        ) || (
+          name === 'list' && (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              className={classNames(
+                'icon',
+                classes,
+                utilities &&
+                Object.entries(utilities).map(
+                  ([utility, value]) =>
+                    value &&
+                    Object.entries(value).map(([breakpoint, values]) =>
+                      breakpoint === '_'
+                        ? `${utility}-${values}`
+                        : `${utility}-${breakpoint}-${values}`
+                    )
+                )
+              )}
+              style={style}
+            >
+              <path d="m19,1H5C2.243,1,0,3.243,0,6v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V6c0-2.757-2.243-5-5-5ZM6.5,18.5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm0-5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm0-5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm11.5,9.5h-7c-.552,0-1-.448-1-1s.448-1,1-1h7c.552,0,1,.448,1,1s-.448,1-1,1Zm0-5h-7c-.552,0-1-.448-1-1s.448-1,1-1h7c.552,0,1,.448,1,1s-.448,1-1,1Zm0-5h-7c-.552,0-1-.448-1-1s.448-1,1-1h7c.552,0,1,.448,1,1s-.448,1-1,1Z" />
+            </svg>
+          )
+        ) || (
+          name === 'filters' && (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              className={classNames(
+                'icon',
+                classes,
+                utilities &&
+                Object.entries(utilities).map(
+                  ([utility, value]) =>
+                    value &&
+                    Object.entries(value).map(([breakpoint, values]) =>
+                      breakpoint === '_'
+                        ? `${utility}-${values}`
+                        : `${utility}-${breakpoint}-${values}`
+                    )
+                )
+              )}
+              style={style}
+            >
+              <path d="M16,20c-.212,0-.424-.068-.6-.2l-4-3c-.252-.188-.4-.485-.4-.8v-3.586L5.121,6.536c-.723-.724-1.121-1.685-1.121-2.707,0-2.111,1.718-3.829,3.828-3.829h12.344c2.11,0,3.828,1.717,3.828,3.829,0,1.022-.398,1.983-1.121,2.707l-5.879,5.879v6.586c0,.379-.214,.725-.553,.895-.142,.071-.295,.105-.447,.105Zm-5.8-1.6c-.751-.562-1.2-1.459-1.2-2.4v-2.757L3.707,7.95c-.951-.952-1.505-2.179-1.646-3.497-1.219,.641-2.061,1.905-2.061,3.376,0,1.022,.398,1.983,1.121,2.707l5.879,5.878v3.586c0,.315,.148,.611,.4,.8l4,3c.176,.132,.388,.2,.6,.2,.152,0,.306-.035,.447-.105,.339-.169,.553-.516,.553-.895v-2.5l-2.8-2.1Z" />
+            </svg>
+          )
+        ) || (
+          name === 'chevron-down' && (
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 24 24'
+              fill='currentColor'
+              className={classNames(
+                'icon',
+                classes,
+                utilities &&
+                Object.entries(utilities).map(
+                  ([utility, value]) =>
+                    value &&
+                    Object.entries(value).map(([breakpoint, values]) =>
+                      breakpoint === '_'
+                        ? `${utility}-${values}`
+                        : `${utility}-${breakpoint}-${values}`
+                    )
+                )
+              )}
+              style={style}
+            >
+              <path d="M18.71,8.21a1,1,0,0,0-1.42,0l-4.58,4.58a1,1,0,0,1-1.42,0L6.71,8.21a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l4.59,4.59a3,3,0,0,0,4.24,0l4.59-4.59A1,1,0,0,0,18.71,8.21Z" />
+            </svg>
+          )
+        ) || (
           name === 'arrow-long-right' && (
             <svg
               xmlns='http://www.w3.org/2000/svg'

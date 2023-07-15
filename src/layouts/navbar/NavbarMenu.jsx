@@ -12,7 +12,7 @@ const links = [
   },
   {
     name: 'Collections',
-    path: '/collection'
+    path: '/collections'
   },
   {
     name: 'eSports',

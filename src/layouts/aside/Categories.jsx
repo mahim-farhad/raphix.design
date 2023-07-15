@@ -1,25 +1,32 @@
-import useFetch from '../../hooks/useFetch'
-
 import {
   Heading
 } from '../../components/Typography'
-import Badge from '../../components/Badge'
 import Nav from '../../components/nav/Nav'
-import NavLink from '../../components/nav/NavLink'
-import SkeletonLoading from '../../components/card/SkeletonLoading'
 
 import Section from '../Section'
+import Box from '../Box'
+import { NavLink } from 'react-router-dom'
+
+const categories = [
+  {
+    type: 'Jersey',
+  },
+  {
+    type: 'Banner',
+  },
+  {
+    type: 'Hoodies',
+  },
+  {
+    type: 'Sleeves',
+  }
+]
 
 function Categories() {
-  const {
-    data,
-    loading
-  } = useFetch('categories')
-
   return (
     <Section
       utilities={{
-        pt: { _: 6 }
+        pt: { _: 2 }
       }}
     >
       <Heading
@@ -28,10 +35,10 @@ function Categories() {
           'section__title'
         ]}
         utilities={{
-          mb: { _: 8 }
+          mb: { _: 6 }
         }}
       >
-        Populer Tags
+        Apparel Type
       </Heading>
 
       <Nav
@@ -41,27 +48,23 @@ function Categories() {
         }}
       >
         {
-          loading
-            ? <SkeletonLoading />
-            : (data && data.map((category) => {
-              return (
+          categories && categories.map((category) => {
+            return (
+              <li
+                key={category.id}
+                className='w-100'
+              >
                 <NavLink
-                  key={category.id}
-                  path={`/categories/${category.attributes.categoryName}`}
-                  extended
-                  utilities={{
-                    p: { _: 0 }
-                  }}
+                  to={`/categories/${category.type}`}
+                  className={[
+                    'd-block'
+                  ]}
                 >
-                  <Badge
-                    variant='outline'
-                    color='dark'
-                  >
-                    {category.attributes.categoryName}
-                  </Badge>
+                  {category.type}
                 </NavLink>
-              )
-            }))
+              </li>
+            )
+          })
         }
       </Nav>
     </Section>

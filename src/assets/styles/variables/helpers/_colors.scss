@@ -50,7 +50,7 @@ $colors: (
   black: $black,
   ) !default;
 
-$primary: #002bff !default;
+$primary: #53ec98 !default;
 $secondary: #070928 !default;
 $light: $gray-200 !default;
 $dark: $gray-800 !default;
@@ -62,9 +62,9 @@ $theme-colors: (
   dark: $dark,
   ) !default;
 
-$background: #0f0f0f;
-$surface: #0f0f0f;
-$surface-variant: #002733;
+$background: #ffffff;
+$surface: #0000000d;
+$surface-variant: #e9e9e9;
 
 $layout-colors: (
   background: $background,
@@ -74,7 +74,7 @@ $layout-colors: (
 
 $on-background: #1a1a1a;
 $on-surface: #161515;
-$font-color: #e3e5e6;
+$font-color: #212222;
 
 $text-colors: (
   on-background: $on-background,
@@ -192,7 +192,7 @@ $component-active-bg: $primary !default;
 $body-color: $font-color !default;
 $body-bg: $background !default;
 
-$hr-bg-color: $dark !default;
+$hr-bg-color: $gray-400 !default;
 
 $headings-color: $font-color !default;
 

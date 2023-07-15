@@ -86,8 +86,7 @@ const Brand = () => {
       <Heading
         as="h5"
         utilities={{
-          mb: { _: 0 },
-          tc: { _: 'light' }
+          mb: { _: 0 }
         }}
       >
         Raphix Design
@@ -103,8 +102,7 @@ const Navigations = () => {
         as="h6"
         utilities={{
           mt: { _: 0 },
-          mb: { _: 4 },
-          tc: { _: 'light' }
+          mb: { _: 4 }
         }}
       >
         Navigations
@@ -121,7 +119,7 @@ const Navigations = () => {
               utilities={{
                 py: { _: 2 },
                 px: { _: 0 },
-                tc: { _: 'light' }
+
               }}
             >
               {navigation.name}
@@ -140,8 +138,7 @@ const Services = () => {
         as="h6"
         utilities={{
           mt: { _: 0 },
-          mb: { _: 4 },
-          tc: { _: 'light' }
+          mb: { _: 4 }
         }}
       >
         Services
@@ -158,7 +155,7 @@ const Services = () => {
               utilities={{
                 py: { _: 2 },
                 px: { _: 0 },
-                tc: { _: 'light' }
+
               }}
             >
               {service}
@@ -177,8 +174,7 @@ const Payments = () => {
         as="h6"
         utilities={{
           mt: { _: 0 },
-          mb: { _: 4 },
-          tc: { _: 'light' }
+          mb: { _: 4 }
         }}
       >
         Payment Methods
@@ -215,8 +211,7 @@ const Newsletter = () => {
         as="h6"
         utilities={{
           mt: { _: 0 },
-          mb: { _: 6 },
-          tc: { _: 'light' }
+          mb: { _: 6 }
         }}
       >
         Newsletter
@@ -225,8 +220,7 @@ const Newsletter = () => {
       <Paragraph
         utilities={{
           mt: { _: 0 },
-          mb: { _: 6 },
-          tc: { _: 'light' }
+          mb: { _: 6 }
         }}
       >
         Subscribe to the weekly newsletter <br />
@@ -305,7 +299,7 @@ function Top() {
               utilities={{
                 w: { md: 75, lg: 100 },
                 fs: { _: 'lg', lg: 'xxl' },
-                tc: { _: 'light' }
+
               }}
             >
               ORDER YOUR TEAMS CUSTOM ESPORTS JERSEYS WITH

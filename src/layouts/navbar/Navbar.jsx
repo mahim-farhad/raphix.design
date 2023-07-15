@@ -2,8 +2,6 @@ import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import Divider from '../../components/Divider'
-
 import Container from '../Container'
 
 import NavbarBrand from './NavbarBrand'
@@ -25,13 +23,6 @@ function Navbar({
     >
       <Container fluid>
         <NavbarBrand />
-
-        <Divider
-          utilities={{
-            w: { _: '100px' },
-            bg: { _: 'light' }
-          }}
-        />
 
         <NavbarMenu />
 

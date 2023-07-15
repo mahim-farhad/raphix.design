@@ -1,7 +1,6 @@
 import Icon from '../../components/Icon'
 import Nav from '../../components/nav/Nav'
 import NavLink from '../../components/nav/NavLink'
-// import Button from '../../components/Button'
 
 const links = [
   {
@@ -10,13 +9,13 @@ const links = [
     iconName: 'search'
   },
   {
-    id: 1,
-    path: '/',
+    id: 2,
+    path: '/cart',
     iconName: 'cart'
   },
   {
-    id: 2,
-    path: '/',
+    id: 3,
+    path: '/user',
     iconName: 'user'
   }
 ]
@@ -48,22 +47,6 @@ function NavbarMenuRight() {
           </NavLink>
         ))
       }
-
-      {/* <Button
-        // onClick={() => {}}
-        size='sm'
-        variant='text'
-        color='light'
-        iconOnly
-        utilities={{
-          ml: { _: 3 },
-          text: { _: 'end' }
-        }}
-      >
-        <Icon
-          name='sun'
-        />
-      </Button> */}
     </Nav>
   )
 }

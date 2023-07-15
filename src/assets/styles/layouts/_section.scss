@@ -78,7 +78,7 @@
       left: 0;
       transform: skew(-4deg);
       display: block;
-      background-color: rgba(31, 29, 41, .9);
+      background-color: $background;
       border-radius: 5px;
       transition: background-color .2s ease-in-out;
     }
@@ -87,6 +87,7 @@
       position: absolute;
       width: 2.15rem;
       height: 2.15rem;
+      color: $dark;
     }
 
     &::after {
@@ -98,9 +99,8 @@
 
   &__name {
     display: block;
-    margin-top: 14px;
+    margin-top: $spacer-2;
     margin-bottom: 0;
-    line-height: 1.3333333333;
   }
 }
 
@@ -108,7 +108,7 @@
   .section {
     &__title {
       &-wrapper {
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: $surface;
       }
     }
   }

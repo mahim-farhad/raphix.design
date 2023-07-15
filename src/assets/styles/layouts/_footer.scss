@@ -3,13 +3,12 @@
 
   &__top {
     padding: $spacer-10 $spacer-0;
-    color: $light;
-    background-color: #0e0e0e;
+    background-color: $background;
   }
 
   &__bottom {
     padding: $spacer-9 $spacer-0;
-    background-color: #1a1a1a;
+    background-color: $surface;
   }
 
   &__payments {
@@ -25,14 +24,15 @@
       width: 50px;
       padding: $spacer-1;
       text-align: center;
-      background-color: $light;
+      background-color: $surface;
     }
   }
 
   &__copyright-text,
   &__developer-text {
     text-align: center;
-    color: $light;
+    font-weight: 600;
+    font-size: $font-size-lg;
   }
 }
 

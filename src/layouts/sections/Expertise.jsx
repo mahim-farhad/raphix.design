@@ -140,7 +140,7 @@ function Expertise() {
                     <text
                       fontSize='12'
                       fontWeight='bold'
-                      fill='#fff'
+                      fill='currentColor'
                     >
                       <textPath
                         className='circular-link__text'
@@ -189,7 +189,7 @@ function Expertise() {
                   slidesPerView: 3
                 }
               }}
-              speed={1500}
+              speed={1000}
               modules={[
                 Autoplay,
                 Navigation,

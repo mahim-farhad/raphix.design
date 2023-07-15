@@ -1,23 +1,21 @@
-import React, {
+import {
   useRef,
   useEffect
-} from "react"
+} from 'react'
 
-import classNames from "classnames"
+import classNames from 'classnames'
 
 import {
   motion
-} from "framer-motion"
+} from 'framer-motion'
 
-import {
-  ChevronDown
-} from "react-feather"
+import Icon from './Icon'
 
 const itemVariants = {
   open: {
     opacity: 1,
     x: 0,
-    transition: { type: "spring", stiffness: 300, damping: 24 }
+    transition: { type: 'spring', stiffness: 300, damping: 24 }
   },
   closed: { opacity: 0, x: 10, transition: { duration: 0.2 } }
 }
@@ -30,10 +28,10 @@ const useOutsideClick = (ref, modal, setModal) => {
       }
     }
 
-    document.addEventListener("mousedown", handleClickOutside)
+    document.addEventListener('mousedown', handleClickOutside)
 
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [ref, modal, setModal])
 }
@@ -53,17 +51,15 @@ function Dropdown({
     <motion.nav
       ref={wrapperRef}
       initial={false}
-      animate={dropdown ? "open" : "closed"}
-      className="dropdown"
+      animate={dropdown ? 'open' : 'closed'}
+      className='dropdown'
     >
       <motion.button
         whileTap={{ scale: 0.97 }}
         onClick={() => setDropdown(!dropdown)}
-        className="btn btn--extended btn--tonal-light dropdown__toggle w-100 w-md-auto"
+        className='btn btn--extended btn--tonal-dark dropdown__toggle w-100 w-md-auto'
       >
-        {
-          text
-        }
+        {text}
 
         <motion.div
           variants={{
@@ -71,26 +67,34 @@ function Dropdown({
             closed: { rotate: 0 }
           }}
           transition={{ duration: 0.2 }}
-          className="dropdown__toggle-icon"
+          className='dropdown__toggle-icon'
         >
-          <ChevronDown className="fe" />
+          <Icon
+            name='arrow-long-right'
+          />
         </motion.div>
       </motion.button>
 
       <motion.ul
         className={classNames(
-          "dropdown__menu",
-          "top-100",
+          'dropdown__menu',
+          'top-100',
           { [`dropdown__menu--show`]: dropdown },
           { [`dropdown__menu--right`]: right },
         )}
         style={{
-          pointerEvents: dropdown ? "auto" : "none"
+          pointerEvents: dropdown ? 'auto' : 'none'
         }}
       >
         {
           dropdownItem && dropdownItem.map(item => {
-            return <li key={item}>{item}</li>
+            return (
+              <li
+                key={item}
+              >
+                {item}
+              </li>
+            )
           })
         }
       </motion.ul>
