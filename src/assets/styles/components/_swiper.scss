@@ -1,0 +1,74 @@
+:root {
+  --swiper-navigation-color: $light !important;
+  --swiper-theme-color: $light !important;
+  --swiper-navigation-size: 20px !important;
+}
+
+.swiper {
+  &-wrapper {
+    transition-timing-function: linear !important;
+  }
+
+  &-button-prev,
+  &-button-next {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    padding: $spacer-6;
+    cursor: pointer;
+    background-color: rgba(202, 202, 202, 0.253);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: rotate(135deg);
+      display: block;
+      width: 0;
+      height: calc($spacer-1 * 2.5);
+      margin-top: -$spacer-2;
+      border-right: calc($spacer-1 * 0.5) solid;
+    }
+
+    &::after {
+      margin-top: calc($spacer-1 * -0.5);
+      transform: rotate(45deg);
+    }
+  }
+
+  &-button-prev {
+    right: auto;
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  &-button-next {
+    right: 0;
+    left: auto;
+  }
+
+  &-pagination {
+    z-index: 1;
+    position: absolute;
+    bottom: $spacer-0;
+    display: flex;
+    gap: $spacer-2;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: $spacer-4 $spacer-0;
+
+    &-bullet {
+      display: inline-block;
+      width: $spacer-6;
+      height: $spacer-1;
+      background-color: $white;
+
+      &-active {
+        background-color: $primary;
+      }
+    }
+  }
+}

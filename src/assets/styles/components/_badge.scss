@@ -1,0 +1,75 @@
+.badge {
+  display: inline-block;
+  height: 36px;
+  padding: $badge-padding-y $badge-padding-x;
+  @include font-size($badge-font-size);
+  font-weight: $badge-font-weight;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: $badge-color;
+  vertical-align: middle;
+  user-select: none;
+  overflow: hidden;
+  background-color: $primary;
+  border: $btn-border-width solid $btn-border-color;
+  @include border-radius($btn-border-radius-sm);
+  @include transition($btn-transition);
+
+  &:empty {
+    display: none;
+  }
+
+  @each $color,
+  $value in $theme-colors {
+    &--fill-#{$color} {
+      @include badge-fill-variant($value);
+    }
+
+    &--tonal-#{$color} {
+      @include badge-tonal-variant($value);
+    }
+
+    &--outline-#{$color} {
+      @include badge-outline-variant($value);
+    }
+
+    &--text-#{$color} {
+      @include badge-text-variant($value);
+    }
+  }
+}
+
+.badge--dot {
+  padding-left: 0;
+  padding-right: 0;
+  color: map-get($theme-colors, dark);
+  font-weight: map-get($font-weights, md);
+  font-size: map-get($font-sizes, sm);
+  text-transform: capitalize;
+  background: transparent;
+
+  .dot {
+    display: inline-block;
+    width: $badge-dot-icon-width;
+    height: $badge-dot-icon-height;
+    margin-right: $badge-dot-icon-margin-right;
+    border-radius: $badge-dot-icon-radius;
+    vertical-align: middle;
+
+    @each $color,
+    $value in $theme-colors {
+      &--#{$color} {
+        background-color: $value;
+      }
+    }
+
+    @each $color,
+    $value in $social-media-colors {
+      &--#{$color} {
+        background-color: $value;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: $spacer-6;
+  background-color: transparent;
+  border: $input-group-border-width solid $input-group-border-color;
+  @include border-radius(0);
+  @include box-shadow(0);
+  @include transition($input-group-transition);
+
+  &--sm {
+    .input-group__control {
+      height: $btn-height-sm;
+      padding: $btn-padding-y-sm $btn-padding-x-sm;
+    }
+  }
+
+  &--lg {
+    .input-group__control {
+      height: $btn-height-lg;
+      padding: $btn-padding-y-lg 1.5rem;
+    }
+  }
+
+  &--newsletter {
+    flex-wrap: nowrap;
+    padding: $spacer-3;
+
+    .input-group__control {
+      padding: $spacer-0 $spacer-3 $spacer-0 $spacer-0;
+    }
+
+    .btn {
+      box-shadow: none;
+    }
+  }
+}
