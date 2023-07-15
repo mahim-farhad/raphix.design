@@ -11,22 +11,22 @@ const links = [
   {
     id: 1,
     name: 'About',
-    path: '/'
+    path: '/about'
   },
   {
     id: 2,
-    name: 'CV',
-    path: '/cv'
+    name: 'Collections',
+    path: '/collections'
   },
   {
     id: 3,
-    name: 'Publications',
-    path: '/publications'
+    name: 'Designs',
+    path: '/designs'
   },
   {
     id: 4,
-    name: 'Repositories',
-    path: '/repositories'
+    name: 'Contact',
+    path: '/contact'
   }
 ]
 
