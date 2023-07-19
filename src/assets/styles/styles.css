@@ -7603,7 +7603,7 @@ mark {
   width: auto;
   height: 0.0635rem;
   margin: 0rem 0rem;
-  background-color: #ced4da;
+  background-color: #343a40;
   opacity: 0.125;
 }
 .divider--light {
@@ -7654,7 +7654,7 @@ mark {
   position: relative;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 0.0635rem solid rgba(206, 212, 218, 0.125);
+  border-bottom: 0.0635rem solid rgba(52, 58, 64, 0.125);
 }
 .list__item:first-child {
   padding-top: 0rem;
@@ -8899,7 +8899,7 @@ mark {
 }
 .card--article {
   padding-bottom: 4rem;
-  border-bottom: 0.0635rem solid rgba(206, 212, 218, 0.125);
+  border-bottom: 0.0635rem solid rgba(52, 58, 64, 0.125);
 }
 .card--article:last-child {
   padding-bottom: 0rem;
@@ -8981,7 +8981,7 @@ mark {
 .product__gallery-image {
   display: block;
   position: relative;
-  padding-top: 75%;
+  padding-top: 100%;
   overflow: hidden;
   border-radius: 5px;
 }

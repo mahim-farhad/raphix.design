@@ -10,7 +10,7 @@ const Image = ({
 }) => {
   return (
     <img
-      src={src}
+      src={`https://raphix-design-app.onrender.com${src}`}
       alt={alt}
       loading='lazy'
       className={classNames(

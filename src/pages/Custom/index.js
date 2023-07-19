@@ -37,7 +37,7 @@ import {
   Column
 } from '../../layouts/Grid'
 
-function Design() {
+function CustomDesign() {
   const {
     slug
   } = useParams()
@@ -219,4 +219,4 @@ function Design() {
   )
 }
 
-export default Design
+export default CustomDesign
