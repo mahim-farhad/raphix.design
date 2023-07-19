@@ -11,12 +11,15 @@ import {
 
 import 'swiper/css'
 
+import useFetch from '../../hooks/useFetch'
+
 import {
   Heading,
   Paragraph
 } from '../../components/Typography'
 import DynamicLink from '../../components/DynamicLink'
 import Icon from '../../components/Icon'
+import SkeletonLoading from '../../components/card/SkeletonLoading'
 import ArticleCard from '../../components/card/article/ArticleCard'
 
 import Section from '../../layouts/Section'
@@ -27,56 +30,16 @@ import {
 } from '../../layouts/Grid'
 import Box from '../../layouts/Box'
 
-const collectionsData = [
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/e4ca49173999109.649a2ee5e7859.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/343c56173999109.649a30d6f29f5.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/53e27a173999109.649a30d70054f.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/9d9c79174817139.64a8bc2107ff7.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/c1b718174141023.649c7fd0935b0.jpg',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/8921d4174499077.64a3c98379454.png',
-    uploadedAt: 5
-  }
-]
-
 function Expertise() {
+  const {
+    data,
+    loading
+  } = useFetch('designs?populate=*')
+
   return (
     <Section
       classes={[
-        'section--collections'
+        'section--designs'
       ]}
     >
       <Container
@@ -110,7 +73,7 @@ function Expertise() {
                     mb: { _: 7 }
                   }}
                 >
-                  2021-2023 Collection
+                  2021-2023 design
                 </Paragraph>
 
                 <DynamicLink
@@ -197,18 +160,23 @@ function Expertise() {
               ]}
             >
               {
-                collectionsData && collectionsData.map((collection, index) => {
+                data && data.map((design, index) => {
                   return (
                     <SwiperSlide
                       key={index}
                     >
-                      <ArticleCard
-                        title={'Esports Jersey Design'}
-                        slug={'article.attributes.slug'}
-                        excerpt={'USD 50.00 $'}
-                        thumbnail={collection.thumbnail}
-                        uploadedAt={'01/05/2022'}
-                      />
+                      {
+                        loading
+                          ? <SkeletonLoading />
+                          :
+                          <ArticleCard
+                            title={design.attributes.title}
+                            slug={design.attributes.slug}
+                            excerpt={'USD 50.00 $'}
+                            thumbnail={design.attributes.thumbnail.data.attributes.url}
+                            uploadedAt={design.attributes.uploadedAt}
+                          />
+                      }
                     </SwiperSlide>
                   )
                 })

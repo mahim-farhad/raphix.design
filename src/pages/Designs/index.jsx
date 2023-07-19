@@ -88,7 +88,7 @@ function Designs() {
               {
                 designsData.map((design, index) => (
                   <Column
-                    col={{ _: 12, md: 6, lg: 4, xl: 3 }}
+                    col={{ _: 6, md: 6, lg: 4, xl: 3 }}
                     key={index}
                   >
                     <ArticleCard

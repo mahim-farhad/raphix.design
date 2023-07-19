@@ -15,7 +15,11 @@ import {
 import Icon from './Icon'
 import Button from './Button'
 
-const useOutsideClick = (ref, modal, setModal) => {
+const useOutsideClick = (
+  ref,
+  modal,
+  setModal
+) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {

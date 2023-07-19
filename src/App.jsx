@@ -19,6 +19,7 @@ import Footer from './layouts/footer/Footer'
 
 import Home from './pages/Home'
 import Designs from './pages/Designs'
+import Design from './pages/Design'
 import Error404 from './pages/Error'
 
 function App() {
@@ -65,13 +66,13 @@ function App() {
           }
         />
 
-        {/* <Route
-          path='/collection/:slug'
+        <Route
+          path='/collections/:slug'
           exact
           element={
-            <Collection />
+            <Design />
           }
-        /> */}
+        />
 
         <Route
           path='*'

@@ -142,6 +142,9 @@ function Filters() {
         >
           <Icon
             name='list'
+            classes={[
+              'opacity-5'
+            ]}
           />
         </DynamicLink>
 
@@ -150,6 +153,9 @@ function Filters() {
         >
           <Icon
             name='grid'
+            classes={[
+              'opacity-5'
+            ]}
           />
         </DynamicLink>
       </Box>
