@@ -97,12 +97,10 @@ function Social() {
         </Row>
       </Container>
 
-      <Image
+      <img
         src={BG}
         alt='bg'
-        classes={[
-          'section__bg'
-        ]}
+        className='section__bg'
       />
     </Section >
   )
