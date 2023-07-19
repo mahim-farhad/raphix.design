@@ -82,7 +82,7 @@ function Design() {
                       >
                         <Span classes='product__gallery-image'>
                           <Image
-                            src={`http://localhost:1337${design.attributes.thumbnail.data.attributes.url}`}
+                            src={`${design.attributes.thumbnail.data.attributes.url}`}
                             alt=''
                           />
                         </Span>
@@ -127,7 +127,7 @@ function Design() {
                                     >
                                       <span className='product__gallery-image'>
                                         <Image
-                                          src={`http://localhost:1337${gallery.attributes.url}`}
+                                          src={`${gallery.attributes.url}`}
                                           alt=''
                                         />
                                       </span>
