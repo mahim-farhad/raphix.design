@@ -14,21 +14,28 @@ function NavbarBrand() {
         'navbar__brand'
       ]}
     >
-      <Box
+      <Icon
+        name='brand'
+        classes={[
+          'icon--3xl'
+        ]}
+      />
+
+      {/* <Box
         classes={[
           'navbar__brand-text'
         ]}
       >
         Raphix Design <br />
-      </Box>
+      </Box> */}
 
-      <Small
+      {/* <Small
         utilities={{
           d: { _: 'none', sm: 'block' }
         }}
       >
         Esports Graphics Designer
-      </Small>
+      </Small> */}
     </AnchorTag>
   )
 }

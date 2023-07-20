@@ -10046,7 +10046,7 @@ mark {
   position: relative;
   padding: 0.75rem 0rem;
   margin-bottom: 0rem;
-  background-color: rgba(0, 0, 0, 0.0509803922);
+  background-color: #212529;
 }
 .navbar > .container, .navbar > .container-xs, .navbar > .container-sm, .navbar > .container-md, .navbar > .container-lg, .navbar > .container-xl, .navbar > .container-fluid {
   display: flex;
@@ -10108,6 +10108,7 @@ mark {
 }
 .navbar__menu .nav__link {
   padding: 1rem 1.5rem;
+  color: #f0f2f5;
 }
 .navbar__menu--right {
   margin-left: auto;

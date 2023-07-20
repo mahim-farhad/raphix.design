@@ -3,7 +3,7 @@
   position: relative;
   padding: $spacer-3 $spacer-0;
   margin-bottom: $spacer-0;
-  background-color: $surface;
+  background-color: $gray-900;
 
   &>.container,
   &>.container-fluid {
@@ -81,6 +81,7 @@
 
     .nav__link {
       padding: $spacer-4 $spacer-6;
+      color: $light;
     }
 
     &--right {
