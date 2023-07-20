@@ -8,6 +8,7 @@ import classNames from "classnames"
 
 function DynamicLink({
   path,
+  onClick,
   classes,
   utilities,
   style,
@@ -16,6 +17,7 @@ function DynamicLink({
   return (
     <Link
       to={path}
+      onClick={onClick}
       className={classNames(
         classes,
         utilities &&

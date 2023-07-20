@@ -109,7 +109,7 @@ function Expertise() {
                         className='circular-link__text'
                         href='#circlePath'
                       >
-                        View to see more jersey designs
+                        VIEW TO SEE MORE JERSEY DESIGNS
                       </textPath>
                     </text>
                   </svg>
@@ -128,7 +128,7 @@ function Expertise() {
           >
             <Swiper
               autoHeight={false}
-              slidesPerView={1}
+              slidesPerView={2}
               spaceBetween={24}
               loop={true}
               autoplay={{
@@ -160,15 +160,28 @@ function Expertise() {
               ]}
             >
               {
-                data && data.map((design, index) => {
-                  return (
-                    <SwiperSlide
-                      key={index}
-                    >
-                      {
-                        loading
-                          ? <SkeletonLoading />
-                          :
+                loading
+                  ?
+                  <>
+                    <SwiperSlide>
+                      <SkeletonLoading />
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                      <SkeletonLoading />
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                      <SkeletonLoading />
+                    </SwiperSlide>
+                  </>
+                  :
+                  data && data.map((design, index) => {
+                    return (
+                      <SwiperSlide
+                        key={index}
+                      >
+                        {
                           <ArticleCard
                             title={design.attributes.title}
                             slug={design.attributes.slug}
@@ -176,10 +189,10 @@ function Expertise() {
                             thumbnail={design.attributes.thumbnail.data.attributes.url}
                             uploadedAt={design.attributes.uploadedAt}
                           />
-                      }
-                    </SwiperSlide>
-                  )
-                })
+                        }
+                      </SwiperSlide>
+                    )
+                  })
               }
             </Swiper>
           </Column>

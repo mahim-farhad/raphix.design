@@ -38,7 +38,7 @@ function Navbar({
 }
 
 Navbar.defaultProps = {
-  expand: 'xl'
+  expand: 'md'
 }
 
 Navbar.propTypes = {

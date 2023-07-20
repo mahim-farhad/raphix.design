@@ -1,15 +1,10 @@
-import Box from '../../layouts/Box'
-
-import {
-  AnchorTag,
-  Small
-} from '../../components/Typography'
 import Icon from '../../components/Icon'
+import DynamicLink from '../../components/DynamicLink'
 
 function NavbarBrand() {
   return (
-    <AnchorTag
-      path='https://mistiaq.github.io'
+    <DynamicLink
+      path='/'
       classes={[
         'navbar__brand'
       ]}
@@ -17,26 +12,10 @@ function NavbarBrand() {
       <Icon
         name='brand'
         classes={[
-          'icon--3xl'
+          'navbar__brand-icon'
         ]}
       />
-
-      {/* <Box
-        classes={[
-          'navbar__brand-text'
-        ]}
-      >
-        Raphix Design <br />
-      </Box> */}
-
-      {/* <Small
-        utilities={{
-          d: { _: 'none', sm: 'block' }
-        }}
-      >
-        Esports Graphics Designer
-      </Small> */}
-    </AnchorTag>
+    </DynamicLink>
   )
 }
 

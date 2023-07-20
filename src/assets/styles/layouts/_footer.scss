@@ -4,6 +4,19 @@
   &__top {
     padding: $spacer-10 $spacer-0;
     background-color: $background;
+
+    .nav__link {
+      font-weight: $font-weight-bold;
+      padding: $spacer-2 $spacer-0;
+
+      &:first-child {
+        padding-top: 0rem;
+      }
+
+      &:last-child {
+        padding-bottom: 0rem;
+      }
+    }
   }
 
   &__bottom {

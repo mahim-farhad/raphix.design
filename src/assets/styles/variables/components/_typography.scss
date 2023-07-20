@@ -53,12 +53,14 @@ $font-sizes: (
   ) !default;
 
 // -------------------------------- //
-$font-weight-lighter: lighter !default;
+$font-weight-lighter: 300 !default;
 $font-weight-light: 300 !default;
 $font-weight-base: 400 !default;
-$font-weight-bold: 500 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
 $font-weight-semi-bold: 600 !default;
-$font-weight-bolder: 700 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: 800 !default;
 
 $font-weights: (
   lighter: $font-weight-lighter,
@@ -152,7 +154,7 @@ $display-fonts: (
 // -------------------------------- //
 $p-font-family: $font-family-base !default;
 $p-font-size: $font-size-base !default;
-$p-font-weight: $font-weight-base !default;
+$p-font-weight: $font-weight-semi-bold !default;
 $p-line-height: $line-height-paragraph !default;
 
 // -------------------------------- //

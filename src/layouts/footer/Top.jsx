@@ -77,10 +77,11 @@ const Brand = () => {
         mb: { _: 6 }
       }}
     >
-      <img
-        src="https://raven.gg/content/themes/zoa-child/image/logo-white.svg"
-        alt="Raven"
-        className='w-50px'
+      <Icon
+        name='brand'
+        classes={[
+          'icon--3xl'
+        ]}
       />
 
       <Heading
@@ -98,16 +99,6 @@ const Brand = () => {
 const Navigations = () => {
   return (
     <Box>
-      <Heading
-        as="h6"
-        utilities={{
-          mt: { _: 0 },
-          mb: { _: 4 }
-        }}
-      >
-        Navigations
-      </Heading>
-
       <Nav
         vertical
       >
@@ -116,11 +107,6 @@ const Navigations = () => {
             <NavLink
               key={index}
               path={`/${navigation.path}`}
-              utilities={{
-                py: { _: 2 },
-                px: { _: 0 },
-
-              }}
             >
               {navigation.name}
             </NavLink>
@@ -134,16 +120,6 @@ const Navigations = () => {
 const Services = () => {
   return (
     <Box>
-      <Heading
-        as="h6"
-        utilities={{
-          mt: { _: 0 },
-          mb: { _: 4 }
-        }}
-      >
-        Services
-      </Heading>
-
       <Nav
         vertical
       >
@@ -152,11 +128,6 @@ const Services = () => {
             <NavLink
               key={index}
               path='/services'
-              utilities={{
-                py: { _: 2 },
-                px: { _: 0 },
-
-              }}
             >
               {service}
             </NavLink>
@@ -170,15 +141,14 @@ const Services = () => {
 const Payments = () => {
   return (
     <Box>
-      <Heading
-        as="h6"
+      <Paragraph
         utilities={{
           mt: { _: 0 },
-          mb: { _: 4 }
+          mb: { _: 6 }
         }}
       >
-        Payment Methods
-      </Heading>
+        All secure payment methods
+      </Paragraph>
 
       <ul
         className='footer__payments'
@@ -207,7 +177,7 @@ const Payments = () => {
 const Newsletter = () => {
   return (
     <Box>
-      <Heading
+      {/* <Heading
         as="h6"
         utilities={{
           mt: { _: 0 },
@@ -215,7 +185,7 @@ const Newsletter = () => {
         }}
       >
         Newsletter
-      </Heading>
+      </Heading> */}
 
       <Paragraph
         utilities={{
@@ -324,13 +294,13 @@ function Top() {
           </Column>
 
           <Column
-            col={{ _: 12, sm: 4, md: 3, lg: 2 }}
+            col={{ _: 6, sm: 4, md: 3, lg: 2 }}
           >
             <Navigations />
           </Column>
 
           <Column
-            col={{ _: 12, sm: 4, md: 3, lg: 2 }}
+            col={{ _: 6, sm: 4, md: 3, lg: 2 }}
           >
             <Services />
           </Column>

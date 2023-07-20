@@ -1,7 +1,8 @@
 .navbar {
-  // z-index: $z-index-navbar;
-  position: relative;
-  padding: $spacer-3 $spacer-0;
+  z-index: $z-index-navbar;
+  // position: fixed;
+  width: 100%;
+  padding: $spacer-2 $spacer-0;
   margin-bottom: $spacer-0;
   background-color: $gray-900;
 
@@ -26,20 +27,13 @@
     color: $font-color;
     opacity: 1;
 
-    &-text {
-      font-family: $headings-font-family;
-      font-size: $font-size-xl;
-      font-weight: 800;
-      letter-spacing: 1px;
-
-      & small {
-        font-weight: 600;
-      }
+    &-icon {
+      width: $spacer-8;
+      height: $spacer-8;
     }
   }
 
   &__toggler {
-    z-index: $z-index-navbar-toggler;
     margin-left: $spacer-2;
 
     .bar-1 {
@@ -80,7 +74,9 @@
     justify-content: end;
 
     .nav__link {
+      font-family: $headings-font-family;
       padding: $spacer-4 $spacer-6;
+      text-transform: uppercase;
       color: $light;
     }
 
@@ -101,18 +97,19 @@
               display: none;
             }
           }
-
-          .divider {
-            display: none;
-          }
         }
 
         @include media-breakpoint-up($next) {
-          padding: $spacer-6 $spacer-0;
+          padding: $spacer-4 $spacer-0;
 
           .navbar {
             &__brand {
-              margin-right: $spacer-6;
+              margin-right: $spacer-8;
+
+              &-icon {
+                width: $spacer-9;
+                height: $spacer-9;
+              }
             }
 
             &__toggler {
