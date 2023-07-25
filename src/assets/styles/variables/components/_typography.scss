@@ -1,6 +1,6 @@
-// -------------------------------- //
-$font-family-serif: 'Nunito Sans', serif !default;
-$font-family-sans-serif: 'Kanit', Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif: 'Nunito Sans',
+  sans-serif !default;
+$font-family-serif: 'Kanit', Helvetica, Arial, sans-serif !default;
 $font-family-monospace: SFMono-Regular,
   Menlo,
   Monaco,
@@ -8,17 +8,20 @@ $font-family-monospace: SFMono-Regular,
   "Liberation Mono",
   "Courier New",
   monospace !default;
-$font-family-base: $font-family-serif !default;
+
+$font-family-base: $font-family-sans-serif !default;
 $font-family-code: $font-family-monospace !default;
 
 $font-family: (
   serif: $font-family-serif,
+  sans-serif: $font-family-sans-serif,
   monospace: $font-family-monospace,
   base: $font-family-base,
   code: $font-family-code,
   ) !default;
 
 // -------------------------------- //
+
 $font-size-root: null !default;
 $font-size-base: 1rem !default;
 $font-size-xxs: $font-size-base * 0.65 !default;
@@ -53,10 +56,10 @@ $font-sizes: (
   ) !default;
 
 // -------------------------------- //
+
 $font-weight-lighter: 300 !default;
 $font-weight-light: 300 !default;
 $font-weight-base: 400 !default;
-$font-weight-regular: 400 !default;
 $font-weight-medium: 500 !default;
 $font-weight-semi-bold: 600 !default;
 $font-weight-bold: 700 !default;
@@ -72,101 +75,104 @@ $font-weights: (
   ) !default;
 
 // -------------------------------- //
-$line-height-body: 1.42857143 !default;
 
-$line-height-h1: 1.25 !default;
-$line-height-h2: 1.3 !default;
-$line-height-h3: 1.375 !default;
-$line-height-h4: 1.375 !default;
-$line-height-h5: 1.375 !default;
-$line-height-h6: 1.625 !default;
-
-$line-height-paragraph: 1.6 !default;
-
-$line-height-lead: 1.625 !default;
-
-$lh-btn: 1.4 !default;
-
-$line-height-link: 1.4 !default;
-
-$line-heights: (
-  body: $line-height-body,
-
-  h1: $line-height-h1,
-  h2: $line-height-h2,
-  h3: $line-height-h3,
-  h4: $line-height-h4,
-  h5: $line-height-h5,
-  h6: $line-height-h6,
-
-  p: $line-height-paragraph,
-
-  lead: $line-height-lead,
-
-  btn: $lh-btn,
-
-  link: $line-height-link,
-  ) !default;
-
-// -------------------------------- //
 $letter-spacing-tighter: -0.05rem !default;
 $letter-spacing-base: 0rem !default;
-$letter-spacing-wider: .05rem !default;
-
-$letter-spacing-h1: 0.1rem !default;
-
-$letter-spacing-link: -0.025rem !default;
+$letter-spacing-wider: 0.05rem !default;
 
 $letter-spacings: (
   tighter: $letter-spacing-tighter,
   base: $letter-spacing-base,
   wider: $letter-spacing-wider,
-
-  h1: $letter-spacing-h1,
-  h2: $letter-spacing-h1,
-  h3: $letter-spacing-h1,
-  h4: $letter-spacing-h1,
-  h5: $letter-spacing-h1,
-  h6: $letter-spacing-h1,
-
-  link: $letter-spacing-link,
   ) !default;
 
 // -------------------------------- //
+
+$body-font-family: $font-family-sans-serif !default;
+$body-font-size: $font-size-base !default;
+$body-font-weight: $font-weight-base !default;
+$body-line-height: 1.3 !default;
+
+// -------------------------------- //
+
 $headings-font-family: 'Fjalla One',
   sans-serif;
+
+$h1-font-size: $font-size-5xl !default;
+$h2-font-size: $font-size-3xl !default;
+$h3-font-size: $font-size-xxl !default;
+$h4-font-size: $font-size-xl !default;
+$h5-font-size: $font-size-lg !default;
+$h6-font-size: $font-size-base !default;
+
 $headings-font-weight: $font-weight-bold !default;
 
+$h1-line-height: 1.3 !default;
+$h2-line-height: 1.3 !default;
+$h3-line-height: 1.3 !default;
+$h4-line-height: 1.3 !default;
+$h5-line-height: 1.3 !default;
+$h6-line-height: 1.3 !default;
+
+$headings-letter-spacing: 0.005em !default;
+
 // -------------------------------- //
+
 $display-fonts: (
-  font-family: $headings-font-family,
-  font-sizes: (1: $font-size-8xl,
-    2: $font-size-7xl,
-    3: $font-size-6xl,
-    4: $font-size-5xl,
-    5: $font-size-4xl,
-    6: $font-size-3xl,
-  ),
-  font-weight: $font-weight-bolder,
-  line-height: $line-height-paragraph,
+  h1: $font-size-8xl,
+  h2: $font-size-7xl,
+  h3: $font-size-6xl,
+  h4: $font-size-5xl,
+  h5: $font-size-4xl,
+  h6: $font-size-3xl,
   ) !default;
 
 // -------------------------------- //
+
 $p-font-family: $font-family-base !default;
 $p-font-size: $font-size-base !default;
 $p-font-weight: $font-weight-semi-bold !default;
-$p-line-height: $line-height-paragraph !default;
+$p-line-height: 1.6 !default;
 
 // -------------------------------- //
-$lead-font-size: $font-size-lg !default;
-$lead-font-weight: $font-weight-bold !default;
-$lead-line-height: $line-height-lead !default;
 
-// -------------------------------- //
 $sub-sup-font-size: $font-size-xs !default;
-
 $dt-font-weight: $font-weight-bold !default;
+
+// -------------------------------- //
 
 $legend-margin-bottom: $spacer-2 !default;
 $legend-font-size: $font-size-xxl !default;
 $legend-font-weight: null !default;
+
+// -------------------------------- //
+
+$link-line-height: 1.5 !default;
+$link-letter-spacing: -0.025rem !default;
+
+// -------------------------------- //
+
+$btn-font-family: 'Fjalla One',
+  sans-serif !default;
+
+$btn-font-size-sm: $font-size-sm !default;
+$btn-font-size-base: $font-size-base !default;
+$btn-font-size-lg: $font-size-base !default;
+
+$btn-font-weight: $font-weight-bold !default;
+
+$btn-line-height-sm: 1.25rem !default;
+$btn-line-height-base: 1.5 !default;
+$btn-line-height-lg: 1.75 !default;
+
+// -------------------------------- //
+
+$input-control-font-family: $btn-font-family !default;
+
+$input-control-font-size-sm: $btn-font-size-sm !default;
+$input-control-font-size-base: $btn-font-size-base !default;
+$input-control-font-size-lg: $btn-font-size-lg !default;
+
+$input-control-font-weight: $btn-font-weight !default;
+
+$input-control-line-height: $btn-line-height-base !default;

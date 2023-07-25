@@ -8,7 +8,7 @@
   font-family: $btn-font-family;
   @include font-size($btn-font-size-base);
   font-weight: $btn-font-weight;
-  line-height: $btn-lh-base;
+  line-height: $btn-line-height-base;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -22,7 +22,7 @@
   background-size: 150%;
   background-position-x: 25%;
   outline: 0;
-  border: $btn-border-width solid $btn-border-color;
+  border: $btn-border-width solid transparent;
   @include border-radius($btn-border-radius-base);
   @include transition($btn-transition);
 
@@ -35,41 +35,23 @@
     @include box-shadow(none);
   }
 
-  // &__icon {
-  //   &.icon {
-  //     width: 1.25rem;
-  //     height: 1.25rem;
-  //   }
-  // }
-
-  &--xs {
-    @include button-size($btn-height-xs,
-      $btn-padding-y-xs,
-      $btn-padding-x-xs,
-      $btn-font-size-xs,
-      $btn-border-radius-xs);
-
-    &.btn--icon-only {
-      width: $btn-icon-only-width-sm;
-      padding: $btn-icon-only-padding-sm;
-    }
-  }
-
   &--sm {
     @include button-size($btn-height-sm,
       $btn-padding-y-sm,
       $btn-padding-x-sm,
       $btn-font-size-sm,
-      $btn-border-radius-sm);
+      $btn-line-height-sm,
+      $btn-border-radius-sm,
+    );
 
     &.btn--icon-only {
       width: $btn-icon-only-width-sm;
-      padding: $btn-icon-only-padding-sm;
+      padding: $spacer-0;
     }
 
-    .btn__icon {
-      width: $spacer-4;
-      height: $spacer-4;
+    &>.btn__icon {
+      width: $spacer-5;
+      height: $spacer-5;
     }
   }
 
@@ -78,11 +60,18 @@
       $btn-padding-y-lg,
       $btn-padding-x-lg,
       $btn-font-size-lg,
-      $btn-border-radius-lg);
+      $btn-line-height-lg,
+      $btn-border-radius-lg,
+    );
 
     &.btn--icon-only {
       width: $btn-icon-only-width-lg;
-      padding: $btn-icon-only-padding-lg;
+      padding: $spacer-0;
+    }
+
+    &>.btn__icon {
+      width: $spacer-6;
+      height: $spacer-6;
     }
   }
 
@@ -125,7 +114,7 @@
   }
 
   &--link {
-    line-height: $btn-link-lh;
+    line-height: $btn-link-line-height;
     text-decoration: none;
 
     &:hover {
@@ -144,13 +133,33 @@
 
   &--icon-only {
     width: $btn-icon-only-width-base;
-    padding: $btn-icon-only-padding-base;
+    padding: $spacer-0;
 
-    .btn__icon {
+    &>.btn__icon {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
+  }
+}
+
+.btn-group,
+.btn-group--vertical {
+  position: relative;
+  display: inline-flex;
+  gap: $spacer-3;
+  vertical-align: middle;
+
+  >.btn {
+    position: relative;
+    flex: 1 1 auto;
+  }
+
+  >.btn:hover,
+  >.btn:focus,
+  >.btn:active,
+  >.btn.active {
+    z-index: 1;
   }
 }

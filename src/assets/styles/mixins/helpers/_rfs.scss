@@ -1,4 +1,4 @@
-$rfs-base-value: 1.5rem !default;
+$rfs-base-value: $spacer !default;
 $rfs-unit: rem !default;
 
 @if $rfs-unit !=rem and $rfs-unit !=px {

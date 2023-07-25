@@ -67,7 +67,6 @@ Button.propTypes = {
   value: PropTypes.string,
   disabled: PropTypes.bool,
   size: PropTypes.oneOf([
-    'xs',
     'sm',
     'lg'
   ]),
@@ -77,15 +76,16 @@ Button.propTypes = {
     'outline',
     'text'
   ]),
-  // color: PropTypes.oneOf([
-  //   'primary',
-  //   'secondary',
-  //   'info',
-  //   'success',
-  //   'warning',
-  //   'error'
-  // ]),
-  color: PropTypes.string,
+  color: PropTypes.oneOf([
+    'primary',
+    'secondary',
+    'light',
+    'dark',
+    'info',
+    'success',
+    'warning',
+    'error'
+  ]),
   extended: PropTypes.bool,
   iconOnly: PropTypes.bool,
   classes: PropTypes.array,

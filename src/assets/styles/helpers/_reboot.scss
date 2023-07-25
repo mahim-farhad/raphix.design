@@ -29,10 +29,10 @@
 body {
   padding: $spacer-0;
   margin: $spacer-0;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  line-height: $line-height-body;
+  font-family: $body-font-family;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
   text-align: left;
   color: $body-color;
   background-color: $body-bg;
@@ -42,14 +42,14 @@ body {
 
 hr {
   margin: 0 0;
-  background-color: $font-color;
+  background-color: $hr-bg-color;
   opacity: 0.25;
   border: 0;
 }
 
-// hr:not([size]) {
-//   height: 0.0635rem;
-// }
+hr:not([size]) {
+  height: 0.0635rem;
+}
 
 ol,
 ul {
@@ -136,7 +136,7 @@ kbd {
   @include font-size($font-size-sm);
   color: $white;
   background-color: $gray-900;
-  // @include border-radius($border-radius-sm);
+  @include border-radius($border-radius-sm);
 
   kbd {
     padding: 0;

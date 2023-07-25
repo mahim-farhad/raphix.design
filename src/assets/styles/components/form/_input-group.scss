@@ -1,39 +1,92 @@
 .input-group {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: stretch;
   width: 100%;
-  background-color: transparent;
-  border: $input-group-border-width solid $input-group-border-color;
+  background-color: $light;
+  border: 0;
   @include border-radius(0);
-  @include box-shadow(0);
+  @include box-shadow(none);
   @include transition($input-group-transition);
+
+  &>.input-group__control {
+    position: relative;
+    flex: 1 1 0%;
+    min-width: 0;
+
+    &:focus {
+      z-index: 3;
+    }
+
+    &:not(:first-child) {
+      padding-left: 0;
+      @include border-top-left-radius(0);
+      @include border-bottom-left-radius(0);
+    }
+
+    &:not(:last-child) {
+      padding-right: 0;
+      @include border-top-right-radius(0);
+      @include border-bottom-right-radius(0);
+    }
+  }
 
   &--sm {
     .input-group__control {
       height: $btn-height-sm;
-      padding: $btn-padding-y-sm $btn-padding-x-sm;
+      padding: $input-control-padding-y-sm $input-control-padding-x-sm;
+      font-size: $input-control-font-size-sm;
+    }
+
+    .input-group__icon {
+      width: $input-control-height-sm;
+
+      &>.icon {
+        width: $spacer-4;
+        height: $spacer-4;
+      }
     }
   }
 
   &--lg {
+    .btn {
+      height: auto;
+      width: $btn-height-lg;
+    }
+
     .input-group__control {
       height: $btn-height-lg;
-      padding: $btn-padding-y-lg 1.5rem;
+      padding: $input-control-padding-y-lg $input-control-padding-x-lg;
+      font-size: $input-control-font-size-lg;
+    }
+
+    .input-group__icon {
+      width: $input-control-height-lg;
     }
   }
 
-  &--newsletter {
-    flex-wrap: nowrap;
-    padding: $spacer-3;
+  &.focused {
+    box-shadow: 0 3px 9px transparent, 3px 4px 8px rgba($primary, 10%);
+  }
 
-    .input-group__control {
-      padding: $spacer-0 $spacer-3 $spacer-0 $spacer-0;
+  &.valid {
+    .input-group__icon--append {
+      color: $primary;
     }
 
-    .btn {
-      box-shadow: none;
+    .textfield__helper-text {
+      color: $primary;
+    }
+  }
+
+  &.invalid {
+    .input-group__icon--append {
+      color: $error;
+    }
+
+    .textfield__helper-text {
+      color: $error;
     }
   }
 }

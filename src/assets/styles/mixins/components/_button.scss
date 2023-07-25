@@ -11,10 +11,6 @@
   &:hover {
     @include colored-box-shadows-hover($bg-color);
   }
-
-  .btn__icon {
-    fill: $color;
-  }
 }
 
 @mixin button-tonal-variant($color,
@@ -28,10 +24,6 @@
 
   &:hover {
     background-color: $hover-bg-color;
-  }
-
-  .btn__icon {
-    fill: $color;
   }
 }
 
@@ -48,10 +40,6 @@
   &:hover {
     background-color: $hover-bg-color;
   }
-
-  .btn__icon {
-    fill: $color;
-  }
 }
 
 @mixin button-text-variant($color,
@@ -66,20 +54,18 @@
   &:hover {
     color: if($color ==dark, $hover-bg-color, $primary);
   }
-
-  .btn__icon {
-    fill: $color;
-  }
 }
 
 @mixin button-size($height,
   $padding-y,
   $padding-x,
   $font-size,
+  $line-height,
   $border-radius,
 ) {
   height: $height;
   padding: $padding-y $padding-x;
   @include font-size($font-size);
+  line-height: $line-height;
   @include border-radius($border-radius);
 }

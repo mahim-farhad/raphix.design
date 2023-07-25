@@ -1,8 +1,6 @@
-import React from "react"
+import PropTypes from 'prop-types'
 
-import PropTypes, { node } from "prop-types"
-
-import classNames from "classnames"
+import classNames from 'classnames'
 
 function Heading({
   as,
@@ -13,18 +11,18 @@ function Heading({
   children
 }) {
   return (
-    <React.Fragment>
-      {(as === "h1" && (
+    <>
+      {(as === 'h1' && (
         <h1
           className={classNames(
-            { [`display-1`]: display },
+            { [`display-h1`]: display },
             classes,
             utilities &&
             Object.entries(utilities).map(
               ([utility, value]) =>
                 value &&
                 Object.entries(value).map(([breakpoint, values]) =>
-                  breakpoint === "_"
+                  breakpoint === '_'
                     ? `${utility}-${values}`
                     : `${utility}-${breakpoint}-${values}`
                 )
@@ -35,17 +33,17 @@ function Heading({
           {children}
         </h1>
       )) ||
-        (as === "h2" && (
+        (as === 'h2' && (
           <h2
             className={classNames(
-              { [`display-2`]: display },
+              { [`display-h2`]: display },
               classes,
               utilities &&
               Object.entries(utilities).map(
                 ([utility, value]) =>
                   value &&
                   Object.entries(value).map(([breakpoint, values]) =>
-                    breakpoint === "_"
+                    breakpoint === '_'
                       ? `${utility}-${values}`
                       : `${utility}-${breakpoint}-${values}`
                   )
@@ -56,17 +54,17 @@ function Heading({
             {children}
           </h2>
         )) ||
-        (as === "h3" && (
+        (as === 'h3' && (
           <h3
             className={classNames(
-              { [`display-3`]: display },
+              { [`display-h3`]: display },
               classes,
               utilities &&
               Object.entries(utilities).map(
                 ([utility, value]) =>
                   value &&
                   Object.entries(value).map(([breakpoint, values]) =>
-                    breakpoint === "_"
+                    breakpoint === '_'
                       ? `${utility}-${values}`
                       : `${utility}-${breakpoint}-${values}`
                   )
@@ -77,17 +75,17 @@ function Heading({
             {children}
           </h3>
         )) ||
-        (as === "h4" && (
+        (as === 'h4' && (
           <h4
             className={classNames(
-              { [`display-4`]: display },
+              { [`display-h4`]: display },
               classes,
               utilities &&
               Object.entries(utilities).map(
                 ([utility, value]) =>
                   value &&
                   Object.entries(value).map(([breakpoint, values]) =>
-                    breakpoint === "_"
+                    breakpoint === '_'
                       ? `${utility}-${values}`
                       : `${utility}-${breakpoint}-${values}`
                   )
@@ -98,17 +96,17 @@ function Heading({
             {children}
           </h4>
         )) ||
-        (as === "h5" && (
+        (as === 'h5' && (
           <h5
             className={classNames(
-              { [`display-5`]: display },
+              { [`display-h5`]: display },
               classes,
               utilities &&
               Object.entries(utilities).map(
                 ([utility, value]) =>
                   value &&
                   Object.entries(value).map(([breakpoint, values]) =>
-                    breakpoint === "_"
+                    breakpoint === '_'
                       ? `${utility}-${values}`
                       : `${utility}-${breakpoint}-${values}`
                   )
@@ -119,17 +117,17 @@ function Heading({
             {children}
           </h5>
         )) ||
-        (as === "h6" && (
+        (as === 'h6' && (
           <h6
             className={classNames(
-              { [`display-6`]: display },
+              { [`display-h6`]: display },
               classes,
               utilities &&
               Object.entries(utilities).map(
                 ([utility, value]) =>
                   value &&
                   Object.entries(value).map(([breakpoint, values]) =>
-                    breakpoint === "_"
+                    breakpoint === '_'
                       ? `${utility}-${values}`
                       : `${utility}-${breakpoint}-${values}`
                   )
@@ -140,7 +138,7 @@ function Heading({
             {children}
           </h6>
         ))}
-    </React.Fragment>
+    </>
   )
 }
 
@@ -159,7 +157,7 @@ function Paragraph({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -187,7 +185,7 @@ function Blockquote({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -217,7 +215,7 @@ function AnchorTag({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -245,7 +243,7 @@ function Small({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -273,7 +271,7 @@ function Mark({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -301,7 +299,7 @@ function Span({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -329,7 +327,7 @@ function Address({
           ([utility, value]) =>
             value &&
             Object.entries(value).map(([breakpoint, values]) =>
-              breakpoint === "_"
+              breakpoint === '_'
                 ? `${utility}-${values}`
                 : `${utility}-${breakpoint}-${values}`
             )
@@ -343,9 +341,9 @@ function Address({
 }
 
 Heading.propTypes = {
-  as: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]).isRequired,
+  as: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']).isRequired,
   display: PropTypes.bool,
-  children: node,
+  children: PropTypes.node,
 }
 
 export {

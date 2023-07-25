@@ -10,7 +10,7 @@ const Image = ({
 }) => {
   return (
     <img
-      src={`https://raphix-design-app.onrender.com${src}`}
+      src={`http://localhost:1337${src}`}
       alt={alt}
       loading='lazy'
       className={classNames(
@@ -35,7 +35,7 @@ Image.propTypes = {
   src: PropTypes.any,
   alt: PropTypes.string,
   classes: PropTypes.array,
-  utilities: PropTypes.any,
+  utilities: PropTypes.any
 }
 
 export default Image

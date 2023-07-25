@@ -100,11 +100,12 @@
 
 // forms
 //
+@import "./components/form/form-group";
+@import "./components/form/form-check";
 @import "./components/form/input-group";
 @import "./components/form/input-label";
 @import "./components/form/input-icon";
 @import "./components/form/input-control";
-@import "./components/form/form-check";
 //
 // ============================================== //
 
@@ -131,6 +132,5 @@
 // ============================================== //
 //
 @import "../styles/pages/collection";
-@import "../styles/pages/about";
 //
 // ============================================== //

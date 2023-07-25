@@ -26,7 +26,7 @@ function ProductGallery({
   return (
     <Swiper
       slidesPerView={'auto'}
-      spaceBetween={24}
+      spaceBetween={12}
       freeMode={true}
       speed={1000}
       modules={[
@@ -82,7 +82,8 @@ function ProductGallery({
 ProductGallery.propTypes = {
   gallery: PropTypes.array,
   gallerySlider: PropTypes.bool,
-  setGallerySlider: PropTypes.func
+  setGallerySlider: PropTypes.func,
+  setInitialSlideNumber: PropTypes.num
 }
 
 export default ProductGallery

@@ -24,7 +24,7 @@ $border-radius-lg: 0.5rem !default;
 $border-radius-xl: 0.75rem !default;
 $border-radius-xxl: 1rem !default;
 $border-radius-section: 10rem !default;
-$border-radius-pill: 50% !default;
+$border-radius-circle: 50% !default;
 
 $border-radius: (
   0: $border-radius-0,
@@ -35,7 +35,18 @@ $border-radius: (
   xl: $border-radius-xl,
   xxl: $border-radius-xxl,
   section: $border-radius-section,
-  circle: $border-radius-pill,
+  circle: $border-radius-circle,
   ) !default;
 
-$border-width-btn: $border-width-1;
+$btn-border-width: 0.0630rem !default;
+$btn-border-radius-sm: 1rem !default;
+$btn-border-radius-base: 1rem !default;
+$btn-border-radius-lg: 1rem !default;
+
+$input-group-border-width: $btn-border-width !default;
+$input-group-border-color: $gray-400 !default;
+$input-group-border-radius-base: $btn-border-radius-base !default;
+
+$input-control-border-radius-sm: $btn-border-radius-sm !default;
+$input-control-border-radius-base: $btn-border-radius-base !default;
+$input-control-border-radius-lg: $btn-border-radius-lg !default;

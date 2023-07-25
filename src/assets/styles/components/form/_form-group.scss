@@ -1,3 +1,30 @@
 .form-group {
   position: relative;
+
+  &--inline {
+    display: flex;
+    column-gap: $spacer-2;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: $spacer-0 $spacer-2;
+    background-color: $light;
+
+    .input-group {
+      position: relative;
+      flex: 1 1 0%;
+      min-width: 0;
+
+      .input-group__control {
+        padding: $spacer-0 $spacer-2 !important;
+        font-size: $font-size-base;
+      }
+
+      .input-group__icon {
+        &>.icon {
+          width: $spacer-5;
+          height: $spacer-5;
+        }
+      }
+    }
+  }
 }

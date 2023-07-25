@@ -21,7 +21,7 @@
   @include transition($input-control-transition);
 
   &::placeholder {
-    color: $gray-600;
+    color: $gray-400;
   }
 
   &:focus {
@@ -36,25 +36,42 @@
     opacity: $disabled-opacity;
   }
 
-  .input-group>& {
-    position: relative;
-    flex: 1 1 0%;
-    min-width: 0;
+  &[type="file"] {
+    padding-top: $spacer-2;
+    padding-bottom: $spacer-2;
+    overflow: hidden;
 
-    &:focus {
-      z-index: 3;
+    &:not(:disabled):not([readonly]) {
+      cursor: pointer;
     }
+  }
 
-    &:not(:first-child) {
-      padding-left: 0;
-      @include border-top-left-radius(0);
-      @include border-bottom-left-radius(0);
-    }
+  &::file-selector-button {
+    height: 100%;
+    margin-inline-end: $spacer-4;
+    pointer-events: none;
+    color: $light;
+    background-color: $dark;
+    border-width: 0;
+    border-inline-end-width: 0;
+    border-radius: 0;
+    @include transition($input-control-transition);
+  }
 
-    &:not(:last-child) {
-      padding-right: 0;
-      @include border-top-right-radius(0);
-      @include border-bottom-right-radius(0);
-    }
+  &::-webkit-file-upload-button {
+    height: 100%;
+    padding-right: $spacer-4;
+    padding-left: $spacer-4;
+    pointer-events: none;
+    color: $light;
+    background-color: $dark;
+    border-width: 0;
+    border-inline-end-width: 0;
+    border-radius: 0rem;
+    @include transition($input-control-transition);
+  }
+
+  &:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: $input-file-button-hover-bg;
   }
 }

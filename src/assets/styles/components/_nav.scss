@@ -11,13 +11,14 @@
     position: relative;
     display: block;
     padding: $spacer-4 $spacer-6;
+    font-family: $body-font-family;
     @include font-size($font-size-base);
     font-weight: 600;
-    line-height: $line-height-link;
+    line-height: $link-line-height;
     text-transform: capitalize;
     user-select: none;
     color: $font-color;
-    // background-color: #e1e1e1;
+    background-color: transparent;
     @include border-radius(0);
     @include transition(inherit);
 

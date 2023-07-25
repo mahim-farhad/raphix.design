@@ -13,7 +13,7 @@
   user-select: none;
   overflow: hidden;
   background-color: $primary;
-  border: $btn-border-width solid $btn-border-color;
+  border: $btn-border-width solid transparent;
   @include border-radius($btn-border-radius-sm);
   @include transition($btn-transition);
 

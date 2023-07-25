@@ -1,8 +1,9 @@
 import classNames from 'classnames'
 
+import Divider from '../../components/Divider'
+
 import Top from './Top'
 import Bottom from './Bottom'
-import Social from '../Social'
 
 function Footer() {
   return (
@@ -11,9 +12,9 @@ function Footer() {
         'footer'
       )}
     >
-      <Social />
-
       <Top />
+
+      <Divider />
 
       <Bottom />
     </footer>

@@ -15,16 +15,13 @@ const useFetch = (url) => {
       setLoading(true)
 
       try {
-        const res = await Request.get(url)
+        const response = await Request.get(url)
 
-        setData(res.data.data)
-
-        setTimeout(() => {
-          setLoading(false)
-        }, 1000)
+        setData(response.data.data)
       } catch (err) {
-        setError(err)
-
+        setError(err.message)
+        setData(null)
+      } finally {
         setLoading(false)
       }
     }
