@@ -5,7 +5,7 @@ import {
 } from 'react-helmet-async'
 
 import Button from '../../components/Button'
-import ArticleCard from '../../components/card/article/ArticleCard'
+import DesignCard from '../../components/card/design/DesignCard'
 
 import Main from '../../layouts/Main'
 import Section from '../../layouts/Section'
@@ -91,7 +91,7 @@ function Designs() {
                     col={{ _: 6, md: 6, lg: 4, xl: 3 }}
                     key={index}
                   >
-                    <ArticleCard
+                    <DesignCard
                       title={'Esports Jersey Design'}
                       slug={'esports-jersey-design'}
                       excerpt={'USD 50.00 $'}

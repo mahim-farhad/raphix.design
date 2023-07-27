@@ -1,8 +1,8 @@
 @if $enable-grid-classes {
   .row {
     display: flex;
+    row-gap: $grid-gutter;
     flex-wrap: wrap;
-    margin-right: $spacer-0;
     margin-right: $grid-gutter * -0.5;
     margin-left: $grid-gutter * -0.5;
 

@@ -4,12 +4,10 @@ import {
   Helmet
 } from 'react-helmet-async'
 
-import Image from '../../components/Image'
+import Divider from '../../components/Divider'
 
 import Main from '../../layouts/Main'
-import Expertise from '../../layouts/sections/Expertise'
-
-import BGHeader from '../../assets/images/bg-header.png'
+import CollectionPreview from './CollectionPreview'
 
 function Home() {
   return (
@@ -18,14 +16,13 @@ function Home() {
         <title>Raphix Design</title>
       </Helmet>
 
-      <Image
-        src={BGHeader}
-        classes={['w-100']}
-      />
+      <Divider />
 
       <Main>
-        <Expertise />
+        <CollectionPreview />
       </Main>
+
+      <Divider />
     </React.Fragment>
   )
 }

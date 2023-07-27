@@ -6,15 +6,13 @@ import Box from '../../../layouts/Box'
 
 import Thumbnail from './Thumbnail'
 import Body from './Body'
-// import Footer from './Footer'
 
-function ArticleCard({
+function DesignCard({
   key,
   title,
   slug,
   excerpt,
   thumbnail,
-  // uploadedAt
 }) {
   return (
     <article
@@ -40,16 +38,12 @@ function ArticleCard({
           slug={slug}
           excerpt={excerpt}
         />
-
-        {/* <Footer
-          uploadedAt={uploadedAt}
-        /> */}
       </Box>
     </article>
   )
 }
 
-ArticleCard.propTypes = {
+DesignCard.propTypes = {
   key: PropTypes.string,
   title: PropTypes.string,
   slug: PropTypes.string,
@@ -58,4 +52,4 @@ ArticleCard.propTypes = {
   uploadedAt: PropTypes.string
 }
 
-export default ArticleCard
+export default DesignCard

@@ -2,8 +2,6 @@ import PropTypes from 'prop-types'
 
 import classNames from 'classnames'
 
-import Box from './Box'
-
 function Row({
   classes,
   utilities,
@@ -11,16 +9,25 @@ function Row({
   children
 }) {
   return (
-    <Box
-      classes={[
+    <div
+      className={classNames(
         'row',
-        classes
-      ]}
-      utilities={utilities}
+        classes,
+        utilities &&
+        Object.entries(utilities).map(
+          ([utility, value]) =>
+            value &&
+            Object.entries(value).map(([breakpoint, values]) =>
+              breakpoint === '_'
+                ? `${utility}-${values}`
+                : `${utility}-${breakpoint}-${values}`
+            )
+        )
+      )}
       style={style}
     >
       {children}
-    </Box>
+    </div>
   )
 }
 
@@ -34,6 +41,7 @@ function Column({
   return (
     <div
       className={classNames(
+        'col',
         col &&
         Object.entries(col).map(
           ([breakpoint, value]) =>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nunito+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&family=Teko:wght@300;400;500;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -7804,7 +7804,7 @@ h5,
 h6 {
   margin-top: 0rem;
   margin-bottom: 0rem;
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Teko", sans-serif;
   font-weight: 700;
   letter-spacing: 0.005em;
   color: #f3f3f3;
@@ -8485,7 +8485,7 @@ mark {
   height: 3rem;
   padding: 0.75rem 2rem;
   margin-bottom: 0rem;
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
@@ -9820,7 +9820,7 @@ mark {
   width: 100%;
   height: 3rem;
   padding: 0.75rem 1rem;
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Teko", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
@@ -9922,28 +9922,26 @@ mark {
 }
 .section {
   position: relative;
-  overflow: hidden;
   padding: 8rem 0rem;
-}
-.section__bg {
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  filter: brightness(0.5);
+  overflow: hidden;
 }
 .section__title {
   letter-spacing: 0.01em;
+  text-align: center;
   text-transform: uppercase;
+}
+.section__title-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(1.7rem + 8.4vw);
+  opacity: 0.25;
+}
+@media (min-width: 1200px) {
+  .section__title-bg {
+    font-size: 8rem;
+  }
 }
 .section__title-wrapper {
   display: flex;
@@ -9952,67 +9950,36 @@ mark {
   text-align: center;
   height: 100%;
   padding: 1.5rem;
-  background-color: transparent;
+  background-color: #212529;
 }
 .section__title-wrapper:hover {
   text-decoration: underline;
   transition: 0.3s all ease-in-out;
 }
-.section--collections:last-child {
-  padding-bottom: 8rem;
-  border: 0;
-}
-.section--collections + .section--collections {
-  padding-top: 8rem;
-}
-.section--mpl-social .container, .section--mpl-social .container-xl, .section--mpl-social .container-lg, .section--mpl-social .container-md, .section--mpl-social .container-sm, .section--mpl-social .container-xs {
-  width: 50rem;
-}
-
-.mpl-social {
-  display: block;
-  text-align: center;
-  color: #f8f9fa;
-}
-.mpl-social__icon {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.mpl-social__icon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  transform: skew(-4deg);
-  display: block;
-  background-color: rgb(0, 0, 0);
-  border-radius: 5px;
-  transition: background-color 0.2s ease-in-out;
-}
-.mpl-social__icon .icon {
-  position: absolute;
-  width: 2.15rem;
-  height: 2.15rem;
-  color: #212529;
-}
-.mpl-social__icon::after {
-  content: "";
-  display: block;
-  padding-top: 75%;
-}
-.mpl-social__name {
-  display: block;
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-}
 
 @media (min-width: 48rem) {
-  .section__title-wrapper {
-    background-color: #1b1b1b;
+  .collection-preview__thumbnail {
+    margin-right: -66.66666667%;
+  }
+  .collection-preview__col:first-child {
+    margin-left: 66.66666667%;
+  }
+  .collection-preview__col:nth-child(2) {
+    margin-left: 66.66666667%;
+  }
+}
+@media (min-width: 74rem) {
+  .collection-preview__thumbnail {
+    margin-right: -50%;
+  }
+  .collection-preview__col:first-child {
+    margin-left: 50%;
+  }
+  .collection-preview__col:nth-child(2) {
+    margin-left: 0%;
+  }
+  .collection-preview__col:nth-child(3) {
+    margin-left: 50%;
   }
 }
 .container, .container-xl, .container-lg, .container-md, .container-sm, .container-xs,
@@ -10050,8 +10017,8 @@ mark {
 }
 .row {
   display: flex;
+  row-gap: 1.5rem;
   flex-wrap: wrap;
-  margin-right: 0rem;
   margin-right: -0.75rem;
   margin-left: -0.75rem;
 }
@@ -10552,7 +10519,7 @@ mark {
   justify-content: end;
 }
 .navbar__menu .nav__link {
-  font-family: "Fjalla One", sans-serif;
+  font-family: "Teko", sans-serif;
   padding: 1rem 1.5rem;
   text-transform: uppercase;
   color: #f8f9fa;
@@ -10887,30 +10854,4 @@ mark {
   max-width: 100vw;
   max-height: 100vh;
   pointer-events: none;
-}
-
-@media (min-width: 48rem) {
-  .customgrid {
-    margin-right: -66.66666667%;
-  }
-  .jersey-collections .col-6:first-child {
-    margin-left: 66.66666667%;
-  }
-  .jersey-collections .col-6:nth-child(2) {
-    margin-left: 66.66666667%;
-  }
-}
-@media (min-width: 74rem) {
-  .customgrid {
-    margin-right: -50%;
-  }
-  .jersey-collections .col-6:first-child {
-    margin-left: 50%;
-  }
-  .jersey-collections .col-6:nth-child(2) {
-    margin-left: 0%;
-  }
-  .jersey-collections .col-6:nth-child(3) {
-    margin-left: 50%;
-  }
 }/*# sourceMappingURL=styles.css.map */
