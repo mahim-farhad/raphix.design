@@ -22,30 +22,26 @@
     }
 
     &-social {
-      gap: $spacer-3;
+      gap: $spacer-2;
       padding: $spacer-2 $spacer-0;
 
       .nav__link--icon-only {
         width: 2.25rem;
         height: 2.25rem;
-        background-color: #f1f1f1;
+        background-color: $light;
       }
     }
 
     &-payments {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $spacer-4;
+      gap: $spacer-2;
       align-items: center;
-      padding: $spacer-2 $spacer-0;
-      margin-bottom: $spacer-0;
-      list-style: none;
+      padding-top: $spacer-2;
+      padding-bottom: $spacer-2;
 
       & li {
         position: relative;
-        width: 4rem;
+        width: 3.5rem;
         height: 2.25rem;
-        padding: 0rem;
         color: #6c757d;
         background-color: $light;
 

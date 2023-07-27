@@ -1,205 +1,216 @@
-import {
-  Swiper,
-  SwiperSlide
-} from 'swiper/react'
-
-import {
-  Autoplay,
-  Navigation,
-  Pagination
-} from 'swiper/modules'
-
-import 'swiper/css'
-
 import useFetch from '../../hooks/useFetch'
 
-import {
-  Heading,
-  Paragraph
-} from '../../components/Typography'
 import DynamicLink from '../../components/DynamicLink'
 import Icon from '../../components/Icon'
-import SkeletonLoading from '../../components/card/SkeletonLoading'
-import ArticleCard from '../../components/card/article/ArticleCard'
 
-import Section from '../../layouts/Section'
-import Container from '../../layouts/Container'
+import Section from '../Section'
+import Container from '../Container'
 import {
   Row,
   Column
-} from '../../layouts/Grid'
-import Box from '../../layouts/Box'
+} from '../Grid'
+import Box from '../Box'
 
-function Expertise() {
+function Collections() {
   const {
     data,
     loading
   } = useFetch('designs?populate=*')
 
   return (
-    <Section
-      classes={[
-        'section--designs'
-      ]}
-    >
+    <Section>
       <Container
         fluid
       >
         <Row
           utilities={{
-            'row-gap': { _: 8 }
+            'row-gap': { _: 6 }
           }}
         >
           <Column
-            col={{ _: 12, md: 6, lg: 4, xl: 3 }}
+            col={{ _: 12, md: 8, xl: 6 }}
+            classes={['customgrid']}
           >
-            <Box
-              classes={[
-                'section__title-wrapper'
-              ]}
+            <a
+              className='product-link'
+              href='https://fabrilife.com/gallery?refinementList%5Btype%5D%5B0%5D=mens%20jacket'
             >
-              <Box>
-                <Heading
-                  as='h4'
+              <div>
+                <img
+                  src='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+                  className='w-100'
+                />
+              </div>
+            </a>
+          </Column>
+
+          <Column
+            col={{ _: 12 }}
+          >
+            <Row
+              classes={[
+                'jersey-collections'
+              ]}
+              utilities={{
+                'row-gap': { _: 6 }
+              }}
+            >
+              {
+                data && data.map((design) => {
+                  return (
+                    <>
+                      <Column
+                        key={design.id}
+                        col={{ _: 6, md: 4, xl: 3 }}
+                      >
+                        <a className="product-link" href="/product/71880-mens-urban-edition-premium-t-shirt-inspired">
+                          <div className="home-product">
+                            {/* <img src={'http://localhost:1337' + design.attributes.thumbnail.data.attributes.url} /> */}
+                            <img src='https://fabrilife.com/products/6382186056854-square.jpg' />
+
+                            {/* <div className="product-info">
+                          <div className="product-name">Mens Urban Edition Premium T-shirt - Inspired</div>
+                        </div> */}
+
+                            {/* <div className="product-price">
+                                <div>
+                                <strong>৳ 685.00</strong> <strike>৳ 785.00</strike>
+                                </div>
+                              </div> */}
+                          </div>
+                        </a>
+                      </Column>
+
+                      <Column
+                        key={design.id}
+                        col={{ _: 6, md: 4, xl: 3 }}
+                      >
+                        <a className="product-link" href="/product/71880-mens-urban-edition-premium-t-shirt-inspired">
+                          <div className="home-product">
+                            {/* <img src={'http://localhost:1337' + design.attributes.thumbnail.data.attributes.url} /> */}
+                            <img src='https://fabrilife.com/products/6382186056854-square.jpg' />
+
+                            {/* <div className="product-info">
+                          <div className="product-name">Mens Urban Edition Premium T-shirt - Inspired</div>
+                        </div> */}
+
+                            {/* <div className="product-price">
+                                <div>
+                                <strong>৳ 685.00</strong> <strike>৳ 785.00</strike>
+                                </div>
+                              </div> */}
+                          </div>
+                        </a>
+                      </Column>
+
+                      <Column
+                        key={design.id}
+                        col={{ _: 6, md: 4, xl: 3 }}
+                      >
+                        <a className="product-link" href="/product/71880-mens-urban-edition-premium-t-shirt-inspired">
+                          <div className="home-product">
+                            {/* <img src={'http://localhost:1337' + design.attributes.thumbnail.data.attributes.url} /> */}
+                            <img src='https://fabrilife.com/products/6382186056854-square.jpg' />
+
+                            {/* <div className="product-info">
+                          <div className="product-name">Mens Urban Edition Premium T-shirt - Inspired</div>
+                        </div> */}
+
+                            {/* <div className="product-price">
+                                <div>
+                                <strong>৳ 685.00</strong> <strike>৳ 785.00</strike>
+                                </div>
+                              </div> */}
+                          </div>
+                        </a>
+                      </Column>
+
+                      <Column
+                        key={design.id}
+                        col={{ _: 6, md: 4, xl: 3 }}
+                      >
+                        <a className="product-link" href="/product/71880-mens-urban-edition-premium-t-shirt-inspired">
+                          <div className="home-product">
+                            {/* <img src={'http://localhost:1337' + design.attributes.thumbnail.data.attributes.url} /> */}
+                            <img src='https://fabrilife.com/products/6382186056854-square.jpg' />
+
+                            {/* <div className="product-info">
+                          <div className="product-name">Mens Urban Edition Premium T-shirt - Inspired</div>
+                        </div> */}
+
+                            {/* <div className="product-price">
+                                <div>
+                                <strong>৳ 685.00</strong> <strike>৳ 785.00</strike>
+                                </div>
+                              </div> */}
+                          </div>
+                        </a>
+                      </Column>
+                    </>
+                  )
+                })
+              }
+
+              <Column
+                col={{ _: 6, md: 4, xl: 3 }}
+              >
+                <Box
                   classes={[
-                    'section__title'
+                    'section__title-wrapper'
                   ]}
                 >
-                  ESPORTS JERSEY Designs
-                </Heading>
-
-                <Paragraph
-                  utilities={{
-                    mb: { _: 7 }
-                  }}
-                >
-                  2021-2023 design
-                </Paragraph>
-
-                <DynamicLink
-                  classes={[
-                    'circular-link'
-                  ]}
-                  utilities={{
-                    position: { _: 'relative' }
-                  }}
-                >
-                  <svg
-                    width='150px'
-                    height='150px'
-                    viewBox='0 0 100 100'
-                    xmlns='http://www.w3.org/2000/svg'
+                  <DynamicLink
+                    classes={[
+                      'circular-link'
+                    ]}
+                    utilities={{
+                      position: { _: 'relative' }
+                    }}
                   >
-                    <path
-                      id='circlePath'
-                      fill='none'
-                      d='
+                    <svg
+                      viewBox='0 0 100 100'
+                      xmlns='http://www.w3.org/2000/svg'
+                      className='w-150px w-md-200px h-150px h-md-200px'
+                    >
+                      <path
+                        id='circlePath'
+                        fill='none'
+                        d='
                     M 10, 50
                     a 40,40 0 1,1 80,0
                     a 40,40 0 1,1 -80,0
                     '
+                      />
+
+                      <text
+                        fontSize='8'
+                        fontWeight='bold'
+                        fill='currentColor'
+                      >
+                        <textPath
+                          className='circular-link__text'
+                          href='#circlePath'
+                        >
+                          VIEW TO SEE MORE JERSEY DESIGNS
+                        </textPath>
+                      </text>
+                    </svg>
+
+                    <Icon
+                      name='arrow-long-right'
+                      classes={[
+                        'icon--xl'
+                      ]}
                     />
-
-                    <text
-                      fontSize='12'
-                      fontWeight='bold'
-                      fill='currentColor'
-                    >
-                      <textPath
-                        className='circular-link__text'
-                        href='#circlePath'
-                      >
-                        VIEW TO SEE MORE JERSEY DESIGNS
-                      </textPath>
-                    </text>
-                  </svg>
-
-                  <Icon
-                    name='arrow-long-right'
-                    classes={['icon--2xl']}
-                  />
-                </DynamicLink>
-              </Box>
-            </Box>
-          </Column>
-
-          <Column
-            col={{ _: 12, md: 6, lg: 8, xl: 9 }}
-          >
-            <Swiper
-              autoHeight={false}
-              slidesPerView={2}
-              spaceBetween={24}
-              loop={true}
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: true
-              }}
-              navigation={true}
-              pagination={false}
-              breakpoints={{
-                600: {
-                  slidesPerView: 2
-                },
-                750: {
-                  slidesPerView: 1,
-                  spaceBetween: 0
-                },
-                1000: {
-                  slidesPerView: 2
-                },
-                1200: {
-                  slidesPerView: 3
-                }
-              }}
-              speed={1000}
-              modules={[
-                Autoplay,
-                Navigation,
-                Pagination
-              ]}
-            >
-              {
-                loading
-                  ?
-                  <>
-                    <SwiperSlide>
-                      <SkeletonLoading />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                      <SkeletonLoading />
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                      <SkeletonLoading />
-                    </SwiperSlide>
-                  </>
-                  :
-                  data && data.map((design, index) => {
-                    return (
-                      <SwiperSlide
-                        key={index}
-                      >
-                        {
-                          <ArticleCard
-                            title={design.attributes.title}
-                            slug={design.attributes.slug}
-                            excerpt={'USD 50.00 $'}
-                            thumbnail={design.attributes.thumbnail.data.attributes.url}
-                            uploadedAt={design.attributes.uploadedAt}
-                          />
-                        }
-                      </SwiperSlide>
-                    )
-                  })
-              }
-            </Swiper>
+                  </DynamicLink>
+                </Box>
+              </Column>
+            </Row>
           </Column>
         </Row>
       </Container>
-    </Section>
+    </Section >
   )
 }
 
-export default Expertise
+export default Collections

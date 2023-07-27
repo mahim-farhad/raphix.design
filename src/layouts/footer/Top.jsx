@@ -1,11 +1,13 @@
 import {
   Heading,
+  Paragraph,
   Small
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
 import Button from '../../components/Button'
 import Nav from '../../components/nav/Nav'
 import NavLink from '../../components/nav/NavLink'
+import Image from '../../components/Image'
 import Textfield from '../../components/Textfield'
 
 import Container from '../Container'
@@ -13,7 +15,7 @@ import {
   Row,
   Column
 } from '../Grid'
-import Box from '../Box';
+import Box from '../Box'
 
 const socials = [
   {
@@ -33,13 +35,13 @@ const socials = [
   },
   {
     id: 4,
-    path: 'https://twitch.com',
-    name: 'twitch'
+    path: 'https://behance.com',
+    name: 'behance'
   },
   {
     id: 5,
-    path: 'https://linked-in.com',
-    name: 'linked-in'
+    path: 'https://youtube.com',
+    name: 'youtube'
   }
 ]
 
@@ -75,7 +77,7 @@ const services = [
   {
     id: 3,
     path: 'bBespoke-merchandise',
-    name: 'Bespoke Merchandise'
+    name: 'Merchandise'
   }
 ]
 
@@ -121,7 +123,8 @@ const Brand = () => {
       <Heading
         as="h5"
         utilities={{
-          mb: { _: 0 }
+          mb: { _: 0 },
+          text: { _: 'uppercase' }
         }}
       >
         Raphix Design <br />
@@ -134,43 +137,57 @@ const Brand = () => {
   )
 }
 
-const Socials = () => {
+const Newsletter = () => {
   return (
     <Box>
-      <Heading
+      <Paragraph
         as='h5'
         utilities={{
           mb: { _: 2 }
         }}
       >
-        Follow Me
-      </Heading>
+        Subscribe to the weekly newsletter <br />
+        for all the latest updates
+      </Paragraph>
 
-      <Nav
+      <Box
         classes={[
-          'footer__nav-social'
+          'form-group',
+          'form-group--inline',
         ]}
+        utilities={{
+          w: { _: 100, sm: 75, xl: 50 },
+          mb: { _: 2 }
+        }}
       >
-        {
-          socials && socials.map((social) => (
-            <NavLink
-              key={social.id}
-              path={`${social.path}`}
-              iconOnly
-              classes={[
-                'btn btn--icon-only btn--fill-primary'
-              ]}
-            >
-              <Icon
-                name={social.name}
-                classes={[
-                  'nav__icon'
-                ]}
-              />
-            </NavLink>
-          ))
-        }
-      </Nav>
+        <Textfield
+          type='email'
+          placeholder='example@mail.com'
+        />
+
+        <Button
+          size='sm'
+          utilities={{
+            d: { _: 'none', sm: 'inline-block' },
+            rounded: { _: 0 }
+          }}
+        >
+          Subscribe
+        </Button>
+
+        <Button
+          size='sm'
+          iconOnly
+          utilities={{
+            d: { sm: 'none' },
+            rounded: { _: 0 }
+          }}
+        >
+          <Icon
+            name='arrow-long-right'
+          />
+        </Button>
+      </Box>
     </Box>
   )
 }
@@ -229,14 +246,17 @@ const Payments = () => {
       <Heading
         as='h5'
         utilities={{
-          mb: { _: 2 }
+          mb: { _: 2 },
+          text: { _: 'uppercase' },
         }}
       >
         All secure payment methods
       </Heading>
 
-      <ul
-        className='footer__nav-payments'
+      <Nav
+        classes={[
+          'footer__nav-payments'
+        ]}
       >
         {
           paymentMethodImages.map(({
@@ -247,81 +267,53 @@ const Payments = () => {
             <li
               key={id}
             >
-              <img
+              <Image
                 src={src}
                 alt={name}
               />
             </li>
           ))
         }
-      </ul>
+      </Nav>
     </Box>
   )
 }
 
-const Newsletter = () => {
+const Socials = () => {
   return (
-    <Box
-      utilities={{
-        mt: { _: 2 }
-      }}
-    >
-      <Box
-        classes={[
-          'form-group',
-          'form-group--inline',
-        ]}
+    <Box>
+      <Heading
+        as='h5'
         utilities={{
-          w: { _: 100, sm: 75, xl: 50 },
-          mb: { _: 2 }
+          mb: { _: 2 },
+          text: { _: 'uppercase' }
         }}
       >
-        <Textfield
-          type='email'
-          placeholder='example@mail.com'
-        />
+        Follow Me
+      </Heading>
 
-        <Button
-          size='sm'
-          utilities={{
-            d: { _: 'none', sm: 'inline-block' },
-            rounded: { _: 0 }
-          }}
-        >
-          Subscribe
-        </Button>
-
-        <Button
-          size='sm'
-          iconOnly
-          utilities={{
-            d: { sm: 'none' },
-            rounded: { _: 0 }
-          }}
-        >
-          <Icon
-            name='arrow-long-right'
-          />
-        </Button>
-      </Box>
-
-      <Box
+      <Nav
         classes={[
-          'form-group',
-          'form-group--check'
+          'footer__nav-social'
         ]}
       >
-        <input
-          type="checkbox"
-          className='form-group__check-input form-group__check-input--checkbox'
-        />
-
-        <label
-          className='form-group__check-label'
-        >
-          I have read the privacy policy and accept it.
-        </label>
-      </Box>
+        {
+          socials && socials.map((social) => (
+            <NavLink
+              key={social.id}
+              path={`${social.path}`}
+              iconOnly
+            >
+              <Icon
+                name={social.name}
+                classes={[
+                  'nav__icon'
+                ]}
+              />
+            </NavLink>
+          ))
+        }
+      </Nav>
     </Box>
   )
 }
@@ -338,7 +330,7 @@ function Top() {
       >
         <Row
           utilities={{
-            'row-gap': { _: 8 }
+            'row-gap': { _: 9 }
           }}
         >
           <Column
@@ -353,8 +345,8 @@ function Top() {
             <Heading
               as='h4'
               utilities={{
-                w: { md: 75, lg: 100 }
-
+                w: { md: 75 },
+                mt: { _: 2 }
               }}
             >
               ORDER YOUR TEAMS CUSTOM ESPORTS JERSEYS WITH

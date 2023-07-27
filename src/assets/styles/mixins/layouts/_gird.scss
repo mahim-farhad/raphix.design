@@ -2,17 +2,17 @@
   @if $size {
     flex: 0 0 auto;
     width: percentage(divide($size, $columns));
-  } @else {
+  }
+
+  @else {
     flex: 1 1 0;
     max-width: 100%;
   }
 }
 
-@mixin make-grid-columns(
-  $columns: $grid-columns,
+@mixin make-grid-columns($columns: $grid-columns,
   $gutter: $grid-gutter,
-  $breakpoints: $grid-breakpoints
-) {
+  $breakpoints: $grid-breakpoints) {
   @each $breakpoint in map-keys($breakpoints) {
     $infix: breakpoint-infix($breakpoint, $breakpoints);
 
@@ -26,7 +26,7 @@
         width: auto;
       }
 
-      @if $columns > 0 {
+      @if $columns >0 {
         @for $i from 1 through $columns {
           .col#{$infix}-#{$i} {
             @include make-col($i, $columns);

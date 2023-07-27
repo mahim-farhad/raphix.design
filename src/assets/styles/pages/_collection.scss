@@ -109,3 +109,43 @@
     }
   }
 }
+
+@include media-breakpoint-up(md) {
+  .customgrid {
+    margin-right: - percentage(divide(8, 12));
+  }
+
+  .jersey-collections {
+    .col-6 {
+      &:first-child {
+        margin-left: percentage(divide(8, 12));
+      }
+
+      &:nth-child(2) {
+        margin-left: percentage(divide(8, 12));
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .customgrid {
+    margin-right: - percentage(divide(6, 12));
+  }
+
+  .jersey-collections {
+    .col-6 {
+      &:first-child {
+        margin-left: percentage(divide(6, 12));
+      }
+
+      &:nth-child(2) {
+        margin-left: percentage(divide(0, 12));
+      }
+
+      &:nth-child(3) {
+        margin-left: percentage(divide(6, 12));
+      }
+    }
+  }
+}

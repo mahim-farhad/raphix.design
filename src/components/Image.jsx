@@ -10,7 +10,7 @@ const Image = ({
 }) => {
   return (
     <img
-      src={`http://localhost:1337${src}`}
+      src={src}
       alt={alt}
       loading='lazy'
       className={classNames(

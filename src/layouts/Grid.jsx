@@ -26,6 +26,7 @@ function Row({
 
 function Column({
   col,
+  classes,
   utilities,
   style,
   children
@@ -40,6 +41,7 @@ function Column({
               ? `col-${value}`
               : `col-${breakpoint}-${value}`
         ),
+        classes,
         utilities &&
         Object.entries(utilities).map(
           ([utility, value]) =>

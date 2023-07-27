@@ -20,7 +20,7 @@ function Thumbnail({
       ]}
     >
       <Image
-        src={thumbnail}
+        src={`http://localhost:1337${thumbnail}`}
         alt={title}
         classes={[
           'card__thumbnail-img'

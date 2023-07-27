@@ -10751,28 +10751,24 @@ mark {
   padding-bottom: 0rem;
 }
 .footer__nav-social {
-  gap: 0.75rem;
+  gap: 0.5rem;
   padding: 0.5rem 0rem;
 }
 .footer__nav-social .nav__link--icon-only {
   width: 2.25rem;
   height: 2.25rem;
-  background-color: #f1f1f1;
+  background-color: #f8f9fa;
 }
 .footer__nav-payments {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
-  padding: 0.5rem 0rem;
-  margin-bottom: 0rem;
-  list-style: none;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .footer__nav-payments li {
   position: relative;
-  width: 4rem;
+  width: 3.5rem;
   height: 2.25rem;
-  padding: 0rem;
   color: #6c757d;
   background-color: #f8f9fa;
 }
@@ -10891,4 +10887,30 @@ mark {
   max-width: 100vw;
   max-height: 100vh;
   pointer-events: none;
+}
+
+@media (min-width: 48rem) {
+  .customgrid {
+    margin-right: -66.66666667%;
+  }
+  .jersey-collections .col-6:first-child {
+    margin-left: 66.66666667%;
+  }
+  .jersey-collections .col-6:nth-child(2) {
+    margin-left: 66.66666667%;
+  }
+}
+@media (min-width: 74rem) {
+  .customgrid {
+    margin-right: -50%;
+  }
+  .jersey-collections .col-6:first-child {
+    margin-left: 50%;
+  }
+  .jersey-collections .col-6:nth-child(2) {
+    margin-left: 0%;
+  }
+  .jersey-collections .col-6:nth-child(3) {
+    margin-left: 50%;
+  }
 }/*# sourceMappingURL=styles.css.map */
