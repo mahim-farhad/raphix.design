@@ -74,8 +74,10 @@
     justify-content: end;
 
     .nav__link {
-      font-family: $headings-font-family;
       padding: $spacer-4 $spacer-6;
+      padding-bottom: calc($spacer-3 - 2px);
+      font-family: $headings-font-family;
+      font-size: $font-size-lg;
       text-transform: uppercase;
       color: $light;
     }
@@ -100,15 +102,14 @@
         }
 
         @include media-breakpoint-up($next) {
-          padding: $spacer-4 $spacer-0;
 
           .navbar {
             &__brand {
               margin-right: $spacer-8;
 
               &-icon {
-                width: $spacer-9;
-                height: $spacer-9;
+                width: $spacer-8;
+                height: $spacer-8;
               }
             }
 

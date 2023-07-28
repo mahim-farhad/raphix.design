@@ -4,6 +4,7 @@ import DynamicLink from '../../components/DynamicLink'
 import Divider from '../../components/Divider'
 import Icon from '../../components/Icon'
 import Image from '../../components/Image'
+import CollectionCard from '../../components/card/collection/CollectionCard'
 
 import Section from '../../layouts/Section'
 import Container from '../../layouts/Container'
@@ -13,13 +14,15 @@ import {
 } from '../../layouts/Grid'
 import Box from '../../layouts/Box'
 
-const CollectionPreviewCard = () => {
+const CollectionPreviewCard = ({
+  image
+}) => {
   return (
     <DynamicLink
       path='https://fabrilife.com/gallery?refinementList%5Btype%5D%5B0%5D=mens%20jacket'
     >
       <Image
-        src='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+        src={image}
         utilities={{
           w: { _: 100 }
         }}
@@ -52,7 +55,12 @@ function CollectionPreview() {
             <Column
               col={{ _: 12 }}
             >
-              <div className='position-relative mb-9'>
+              <Box
+                utilities={{
+                  position: { _: 'relative' },
+                  mb: { _: 9 }
+                }}
+              >
                 <h1
                   className='section__title-bg'
                 >
@@ -64,7 +72,7 @@ function CollectionPreview() {
                 >
                   Shop by Jerseys
                 </h2>
-              </div>
+              </Box>
             </Column>
           </Row>
 
@@ -75,7 +83,9 @@ function CollectionPreview() {
                 'collection-preview__thumbnail'
               ]}
             >
-              <CollectionPreviewCard />
+              <CollectionPreviewCard
+                image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+              />
             </Column>
 
             <Column
@@ -93,7 +103,9 @@ function CollectionPreview() {
                             'collection-preview__col'
                           ]}
                         >
-                          <CollectionPreviewCard />
+                          <CollectionPreviewCard
+                            image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+                          />
                         </Column>
 
                         {
@@ -105,7 +117,9 @@ function CollectionPreview() {
                             ]}
                             col={{ _: 6, md: 4, xl: 3 }}
                           >
-                            <CollectionPreviewCard />
+                            <CollectionPreviewCard
+                              image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+                            />
                           </Column>
                         }
                       </>
@@ -200,7 +214,7 @@ function CollectionPreview() {
                 <h2
                   className='section__title'
                 >
-                  Shop by Categories
+                  Shop by Banners
                 </h2>
               </div>
             </Column>
@@ -213,7 +227,9 @@ function CollectionPreview() {
                 'collection-preview__thumbnail'
               ]}
             >
-              <CollectionPreviewCard />
+              <CollectionCard
+                image='https://i.pinimg.com/564x/17/fb/f4/17fbf496823f2480a0bd4a10b93ac94e.jpg'
+              />
             </Column>
 
             <Column
@@ -226,13 +242,40 @@ function CollectionPreview() {
                       <>
                         <Column
                           key={design.id}
-                          col={{ _: 6, md: 4, xl: 3 }}
+                          col={{ _: 12, md: 4, xl: 3 }}
                           classes={[
                             'collection-preview__col'
                           ]}
                         >
-                          <CollectionPreviewCard />
+                          <CollectionCard
+                            image='https://i.pinimg.com/564x/f9/82/b0/f982b0aeede29c04cedb9990152bb3bf.jpg'
+                          />
                         </Column>
+
+                        <Column
+                          key={design.id}
+                          col={{ _: 12, md: 4, xl: 3 }}
+                          classes={[
+                            'collection-preview__col'
+                          ]}
+                        >
+                          <CollectionCard
+                            image='https://i.pinimg.com/564x/f9/82/b0/f982b0aeede29c04cedb9990152bb3bf.jpg'
+                          />
+                        </Column>
+
+                        <Column
+                          key={design.id}
+                          col={{ _: 12, md: 4, xl: 3 }}
+                          classes={[
+                            'collection-preview__col'
+                          ]}
+                        >
+                          <CollectionCard
+                            image='https://i.pinimg.com/564x/f9/82/b0/f982b0aeede29c04cedb9990152bb3bf.jpg'
+                          />
+                        </Column>
+
 
                         {
                           index >= 1 &&
@@ -241,9 +284,11 @@ function CollectionPreview() {
                             classes={[
                               'collection-preview__col'
                             ]}
-                            col={{ _: 6, md: 4, xl: 3 }}
+                            col={{ _: 12, md: 4, xl: 3 }}
                           >
-                            <CollectionPreviewCard />
+                            <CollectionCard
+                              image='https://i.pinimg.com/564x/f9/82/b0/f982b0aeede29c04cedb9990152bb3bf.jpg'
+                            />
                           </Column>
                         }
                       </>
@@ -252,7 +297,7 @@ function CollectionPreview() {
                 }
 
                 <Column
-                  col={{ _: 6, sm: 'auto', md: 4, xl: 3 }}
+                  col={{ _: 12, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -270,37 +315,7 @@ function CollectionPreview() {
                         position: { _: 'relative' }
                       }}
                     >
-                      <svg
-                        viewBox='0 0 100 100'
-                        xmlns='http://www.w3.org/2000/svg'
-                        className='w-100px w-md-150px w-lg-200px h-100px h-md-150px h-lg-200px'
-                      >
-                        <path
-                          id='circlePath'
-                          fill='none'
-                          d='M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0'
-                        />
-
-                        <text
-                          fontSize='8'
-                          fontWeight='bold'
-                          fill='currentColor'
-                        >
-                          <textPath
-                            className='circular-link__text'
-                            href='#circlePath'
-                          >
-                            VIEW MORE JERSEY COLLECTION DESIGNS
-                          </textPath>
-                        </text>
-                      </svg>
-
-                      <Icon
-                        name='arrow-long-right'
-                        classes={[
-                          'icon--xl'
-                        ]}
-                      />
+                      VIEW MORE COLLECTIONS
                     </DynamicLink>
                   </Box>
                 </Column>

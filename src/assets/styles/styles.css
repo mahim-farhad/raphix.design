@@ -8486,8 +8486,8 @@ mark {
   padding: 0.75rem 2rem;
   margin-bottom: 0rem;
   font-family: "Teko", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: calc(1.025rem + 0.3vw);
+  font-weight: 500;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
@@ -8509,6 +8509,11 @@ mark {
   border: 0.063rem solid transparent;
   transition: all 0.25s ease-in-out;
 }
+@media (min-width: 1200px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .btn {
     transition: none;
@@ -8524,8 +8529,13 @@ mark {
 .btn--sm {
   height: 2.25rem;
   padding: 0.5rem 1.25rem;
-  font-size: 0.875rem;
+  font-size: calc(1.0125rem + 0.15vw);
   line-height: 1.25rem;
+}
+@media (min-width: 1200px) {
+  .btn--sm {
+    font-size: 1.125rem;
+  }
 }
 .btn--sm.btn--icon-only {
   width: 2.25rem;
@@ -9365,6 +9375,116 @@ mark {
     align-items: center;
   }
 }
+.design-thumbnail {
+  position: relative;
+  height: 0;
+  padding: 0;
+  padding-bottom: 50%;
+  margin: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 4px 6px -1px rgba(83, 236, 152, 0.1), 0 2px 4px -1px rgba(83, 236, 152, 0.06);
+}
+.design-thumbnail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent 0%, transparent 8.1%, rgba(0, 0, 0, 0.001) 15.5%, rgba(0, 0, 0, 0.003) 22.5%, rgba(0, 0, 0, 0.005) 29%, rgba(0, 0, 0, 0.008) 35.3%, rgba(0, 0, 0, 0.011) 41.2%, rgba(0, 0, 0, 0.014) 47.1%, rgba(0, 0, 0, 0.016) 52.9%, rgba(0, 0, 0, 0.019) 58.8%, rgba(0, 0, 0, 0.022) 64.7%, rgba(0, 0, 0, 0.025) 71%, rgba(0, 0, 0, 0.027) 77.5%, rgba(0, 0, 0, 0.029) 84.5%, rgba(0, 0, 0, 0.03) 91.9%, rgba(0, 0, 0, 0.03) 100%);
+}
+.design-thumbnail__placeholder {
+  margin: 0;
+  overflow: hidden;
+}
+.design-thumbnail__placeholder::before {
+  content: "";
+  display: block;
+  padding-top: 50%;
+}
+.design-thumbnail__placeholder-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.design-thumbnail__placeholder > * {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.design-thumbnail__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.design-thumbnail__link span {
+  position: absolute;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.design-thumbnail__overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, black);
+  border-radius: 8px;
+  transition: opacity 300ms ease;
+}
+.design-thumbnail__content {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.design-thumbnail__title {
+  color: #f8f9fa;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.design-thumbnail__actions {
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+.design-thumbnail__action {
+  pointer-events: auto;
+}
+.design-thumbnail:hover .design-thumbnail__overlay {
+  opacity: 1;
+}
+
 .dropup {
   position: relative;
 }
@@ -9745,7 +9865,7 @@ mark {
 .input-group--sm .input-group__control {
   height: 2.25rem;
   padding: 0.5rem 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
 }
 .input-group--sm .input-group__icon {
   width: 2.25rem;
@@ -9821,8 +9941,8 @@ mark {
   height: 3rem;
   padding: 0.75rem 1rem;
   font-family: "Teko", sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: calc(1.025rem + 0.3vw);
+  font-weight: 500;
   line-height: 1.5;
   text-transform: inherit;
   text-decoration: inherit;
@@ -9839,6 +9959,11 @@ mark {
   border: 0;
   box-shadow: none;
   transition: all 0.25s ease-in-out;
+}
+@media (min-width: 1200px) {
+  .input-group__control {
+    font-size: 1.25rem;
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .input-group__control {
@@ -10519,8 +10644,10 @@ mark {
   justify-content: end;
 }
 .navbar__menu .nav__link {
-  font-family: "Teko", sans-serif;
   padding: 1rem 1.5rem;
+  padding-bottom: calc(0.75rem - 2px);
+  font-family: "Teko", sans-serif;
+  font-size: 1.125rem;
   text-transform: uppercase;
   color: #f8f9fa;
 }
@@ -10533,15 +10660,12 @@ mark {
   }
 }
 @media (min-width: 36rem) {
-  .navbar--expand-sm {
-    padding: 1rem 0rem;
-  }
   .navbar--expand-sm .navbar__brand {
     margin-right: 3rem;
   }
   .navbar--expand-sm .navbar__brand-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   .navbar--expand-sm .navbar__toggler {
     display: none;
@@ -10553,15 +10677,12 @@ mark {
   }
 }
 @media (min-width: 48rem) {
-  .navbar--expand-md {
-    padding: 1rem 0rem;
-  }
   .navbar--expand-md .navbar__brand {
     margin-right: 3rem;
   }
   .navbar--expand-md .navbar__brand-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   .navbar--expand-md .navbar__toggler {
     display: none;
@@ -10573,15 +10694,12 @@ mark {
   }
 }
 @media (min-width: 62rem) {
-  .navbar--expand-lg {
-    padding: 1rem 0rem;
-  }
   .navbar--expand-lg .navbar__brand {
     margin-right: 3rem;
   }
   .navbar--expand-lg .navbar__brand-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   .navbar--expand-lg .navbar__toggler {
     display: none;
@@ -10593,22 +10711,16 @@ mark {
   }
 }
 @media (min-width: 74rem) {
-  .navbar--expand-xl {
-    padding: 1rem 0rem;
-  }
   .navbar--expand-xl .navbar__brand {
     margin-right: 3rem;
   }
   .navbar--expand-xl .navbar__brand-icon {
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
   }
   .navbar--expand-xl .navbar__toggler {
     display: none;
   }
-}
-.navbar--expand {
-  padding: 1rem 0rem;
 }
 .navbar--expand .navbar__menu:not(.navbar__menu--right) {
   display: none;
@@ -10617,8 +10729,8 @@ mark {
   margin-right: 3rem;
 }
 .navbar--expand .navbar__brand-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
 }
 .navbar--expand .navbar__toggler {
   display: none;
