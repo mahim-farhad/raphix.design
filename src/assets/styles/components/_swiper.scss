@@ -71,4 +71,59 @@
       }
     }
   }
+
+  &--reviews {
+    min-height: 350px;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: auto;
+      right: 0;
+      bottom: 0;
+      padding: 1.125rem;
+    }
+
+    .swiper-button-prev {
+      right: 3rem;
+      left: auto;
+    }
+
+    .swiper-pagination {
+      z-index: 1;
+      position: absolute;
+      bottom: $spacer-0;
+      justify-content: flex-start;
+      padding: 0.875rem $spacer-0;
+
+      .swiper-pagination-bullet {
+        width: $spacer-2;
+        height: $spacer-2;
+        background-color: transparent;
+        border: 1px solid;
+        border-radius: 50%;
+
+        &-active {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.progress {
+  height: 20px;
+  overflow: hidden;
+  background-color: #ffffff;
+
+  &-bar {
+    float: left;
+    width: 0%;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: $primary;
+    transition: width .6s ease;
+  }
 }

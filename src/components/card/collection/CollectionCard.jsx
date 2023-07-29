@@ -1,11 +1,7 @@
 import {
-  Link
-} from 'react-router-dom'
-
-import {
-  Heading,
-  Span
+  Heading
 } from '../../Typography'
+import DynamicLink from '../../DynamicLink'
 
 function CollectionCard({
   image
@@ -21,12 +17,12 @@ function CollectionCard({
         />
       </figure>
 
-      <Link
+      <DynamicLink
         // to={`/designs/${design.slug}`}
         className='design-thumbnail__link'
       >
         {/* <Span>{design.title}</Span> */}
-      </Link>
+      </DynamicLink>
 
       <div className='design-thumbnail__overlay'>
         <div className='design-thumbnail__content'>

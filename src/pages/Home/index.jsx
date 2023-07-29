@@ -7,7 +7,9 @@ import {
 import Divider from '../../components/Divider'
 
 import Main from '../../layouts/Main'
+
 import CollectionPreview from './CollectionPreview'
+import Reviews from './Reviews'
 
 function Home() {
   return (
@@ -20,6 +22,10 @@ function Home() {
 
       <Main>
         <CollectionPreview />
+
+        <Divider />
+
+        <Reviews />
       </Main>
 
       <Divider />
