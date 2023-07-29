@@ -8,6 +8,7 @@ import Divider from '../../components/Divider'
 
 import Main from '../../layouts/Main'
 
+import PageHeader from './PageHeader'
 import CollectionPreview from './CollectionPreview'
 import Reviews from './Reviews'
 
@@ -21,6 +22,10 @@ function Home() {
       <Divider />
 
       <Main>
+        <PageHeader />
+
+        <Divider />
+
         <CollectionPreview />
 
         <Divider />

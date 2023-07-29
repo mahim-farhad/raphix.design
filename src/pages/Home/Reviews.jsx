@@ -174,11 +174,7 @@ function Reviews() {
           </Column>
         </Row>
 
-        <Row
-          utilities={{
-            'row-gap': { _: 9 },
-          }}
-        >
+        <Row>
           <Column
             col={{ _: 12, md: 5, xl: 4 }}
             utilities={{
@@ -192,7 +188,11 @@ function Reviews() {
           </Column>
 
           <Column
-            col={{ _: 12, md: 7, xl: 7 }}>
+            col={{ _: 12, md: 7, xl: 7 }}
+            utilities={{
+              mb: { _: 9, md: 0 }
+            }}
+          >
             <Box
               utilities={{
                 d: { _: 'flex' },
@@ -218,6 +218,7 @@ function Reviews() {
                 utilities={{
                   d: { _: 'flex' },
                   'align-items': { _: 'center' },
+                  'justify-content': { _: 'center' },
                   gap: { _: 4 },
                   bg: { _: 'dark' },
                   rounded: { _: 'xxl' },
@@ -289,6 +290,9 @@ function Reviews() {
 
               <Heading
                 as='h4'
+                utilities={{
+                  my: { _: 3 }
+                }}
               >
                 50+ Customer Ratings
               </Heading>

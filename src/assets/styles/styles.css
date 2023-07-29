@@ -9408,7 +9408,7 @@ mark {
 .progress {
   height: 20px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: #212529;
 }
 .progress-bar {
   float: left;
@@ -9416,7 +9416,7 @@ mark {
   height: 100%;
   font-size: 12px;
   line-height: 20px;
-  color: #fff;
+  color: #0e0d0d;
   text-align: center;
   background-color: #53ec98;
   transition: width 0.6s ease;

@@ -113,7 +113,7 @@
 .progress {
   height: 20px;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: $dark;
 
   &-bar {
     float: left;
@@ -121,7 +121,7 @@
     height: 100%;
     font-size: 12px;
     line-height: 20px;
-    color: #fff;
+    color: #0e0d0d;
     text-align: center;
     background-color: $primary;
     transition: width .6s ease;
