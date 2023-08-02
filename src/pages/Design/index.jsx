@@ -12,6 +12,8 @@ import {
 
 import useFetch from '../../hooks/useFetch'
 
+import Divider from '../../components/Divider'
+
 import Main from '../../layouts/Main'
 import Section from '../../layouts/Section'
 import Container from '../../layouts/Container'
@@ -85,6 +87,8 @@ function Design() {
               </Container>
             </Section>
           </Main>
+
+          <Divider />
 
           {
             gallerySlider &&

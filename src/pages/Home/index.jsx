@@ -7,10 +7,13 @@ import {
 import Divider from '../../components/Divider'
 
 import Main from '../../layouts/Main'
+import Box from '../../layouts/Box'
 
-import PageHeader from './PageHeader'
+// import PageHeader from './PageHeader'
 import CollectionPreview from './CollectionPreview'
 import Reviews from './Reviews'
+
+import bgHeader from '../../assets/images/bg-header.png'
 
 function Home() {
   return (
@@ -19,13 +22,15 @@ function Home() {
         <title>Raphix Design</title>
       </Helmet>
 
-      <Divider />
+      <Box>
+        <img
+          src={bgHeader}
+          alt=""
+          className='w-100'
+        />
+      </Box>
 
       <Main>
-        <PageHeader />
-
-        <Divider />
-
         <CollectionPreview />
 
         <Divider />

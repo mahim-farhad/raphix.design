@@ -27,7 +27,7 @@ import {
 } from '../../layouts/Grid'
 import Box from '../../layouts/Box'
 
-const SeactionHeading = () => {
+const SectionHeading = () => {
   return (
     <Box
       classes={[
@@ -156,11 +156,7 @@ function Reviews() {
   } = useFetch('designs?populate=*')
 
   return (
-    <Section
-      classes={[
-        'collection-preview'
-      ]}
-    >
+    <Section>
       <Container>
         <Row
           utilities={{
@@ -170,7 +166,7 @@ function Reviews() {
           <Column
             col={{ _: 12 }}
           >
-            <SeactionHeading />
+            <SectionHeading />
           </Column>
         </Row>
 

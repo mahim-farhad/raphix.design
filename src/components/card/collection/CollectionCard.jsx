@@ -1,45 +1,69 @@
+import PropTypes from 'prop-types'
+
+import DynamicLink from '../../DynamicLink'
 import {
   Heading
 } from '../../Typography'
-import DynamicLink from '../../DynamicLink'
+import Image from '../../Image'
+import Box from '../../Box'
 
 function CollectionCard({
-  image
+  title,
+  slug,
+  thumbnail
 }) {
   return (
-    <div className='design-thumbnail'>
+    <Box
+      classes={[
+        'design-thumbnail'
+      ]}
+    >
       <figure className='design-thumbnail__placeholder'>
-        <img
-          src={image}
-          // alt={design.title}
+        <Image
+          src={thumbnail}
+          alt={title}
           className='design-thumbnail__placeholder-img'
           loading='lazy'
         />
       </figure>
 
       <DynamicLink
-        // to={`/designs/${design.slug}`}
+        path={`/collections/${slug}`}
         className='design-thumbnail__link'
       >
-        {/* <Span>{design.title}</Span> */}
+        {title}
       </DynamicLink>
 
-      <div className='design-thumbnail__overlay'>
-        <div className='design-thumbnail__content'>
+      <Box
+        classes={[
+          'design-thumbnail__overlay'
+        ]}
+      >
+        <Box
+          classes={[
+            'design-thumbnail__content'
+          ]}
+        >
           <Heading
-            as='h6'
+            as='h4'
             classes={['design-thumbnail__title']}
             utilities={{
               w: { _: 75 },
               mb: { _: 0 },
             }}
           >
-            {/* {design.title} */}
+            {title}
           </Heading>
-        </div>
-      </div>
-    </div>
+        </Box>
+      </Box>
+    </Box>
   )
+}
+
+CollectionCard.propTypes = {
+  title: PropTypes.string,
+  slug: PropTypes.string,
+  thumbnail: PropTypes.url
 }
 
 export default CollectionCard

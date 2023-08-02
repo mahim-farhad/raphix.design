@@ -4,6 +4,8 @@ import {
   Helmet
 } from 'react-helmet-async'
 
+import useFetch from '../../hooks/useFetch'
+
 import Button from '../../components/Button'
 import DesignCard from '../../components/card/design/DesignCard'
 
@@ -63,6 +65,11 @@ const designsData = [
 ]
 
 function Designs() {
+  const {
+    data,
+    loading
+  } = useFetch('designs?populate=*')
+
   return (
     <React.Fragment>
       <Helmet>
@@ -86,16 +93,16 @@ function Designs() {
               </Column>
 
               {
-                designsData.map((design, index) => (
+                data && data.map((design) => (
                   <Column
+                    key={design.id}
                     col={{ _: 6, md: 6, lg: 4, xl: 3 }}
-                    key={index}
                   >
                     <DesignCard
-                      title={'Esports Jersey Design'}
-                      slug={'esports-jersey-design'}
+                      title={design.attributes.title}
+                      slug={design.attributes.slug}
                       excerpt={'USD 50.00 $'}
-                      thumbnail={design.thumbnail}
+                      thumbnail={design.attributes.thumbnail.data.attributes.url}
                       uploadedAt={'01/05/2022'}
                     />
                   </Column>

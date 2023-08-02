@@ -78,7 +78,7 @@ function GallerySlider({
                     ]}
                   >
                     <Image
-                      src={`${gallery.attributes.url}`}
+                      src={`http://localhost:1337${gallery.attributes.url}`}
                       alt=''
                     />
                   </Span>

@@ -77,7 +77,7 @@ function CollectionPreview() {
             ]}
           >
             <CollectionCard
-              image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+              thumbnail='https://mir-s3-cdn-cf.behance.net/project_modules/1400/e4ca49173999109.649a2ee5e7859.png'
             />
           </Column>
 
@@ -86,7 +86,7 @@ function CollectionPreview() {
           >
             <Row>
               {
-                data && data.map((design, index) => {
+                data && data.map((design) => {
                   return (
                     <>
                       <Column
@@ -97,48 +97,11 @@ function CollectionPreview() {
                         ]}
                       >
                         <CollectionCard
-                          image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
+                          title={design.attributes.title}
+                          slug={design.attributes.slug}
+                          thumbnail={`http://localhost:1337${design.attributes.thumbnail.data.attributes.url}`}
                         />
                       </Column>
-
-                      <Column
-                        key={design.id}
-                        col={{ _: 6, md: 4, xl: 3 }}
-                        classes={[
-                          'collection-preview__col'
-                        ]}
-                      >
-                        <CollectionCard
-                          image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
-                        />
-                      </Column>
-
-                      <Column
-                        key={design.id}
-                        col={{ _: 6, md: 4, xl: 3 }}
-                        classes={[
-                          'collection-preview__col'
-                        ]}
-                      >
-                        <CollectionCard
-                          image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
-                        />
-                      </Column>
-
-                      {
-                        index >= 1 &&
-                        <Column
-                          key={design.id}
-                          classes={[
-                            'collection-preview__col'
-                          ]}
-                          col={{ _: 6, md: 4, xl: 3 }}
-                        >
-                          <CollectionCard
-                            image='https://fabrilife.com/image-gallery/638a77dd0caa8-square.jpg'
-                          />
-                        </Column>
-                      }
                     </>
                   )
                 })
