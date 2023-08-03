@@ -18,7 +18,6 @@ import {
   Column
 } from '../../layouts/Grid'
 import Box from '../../layouts/Box'
-import Button from '../../components/Button'
 
 function Error404() {
   return (
@@ -34,10 +33,18 @@ function Error404() {
               <Column
                 col={{ _: 12 }}
               >
-                <Box>
+                <Box
+                  utilities={{
+                    text: { _: 'center', md: 'left' }
+                  }}
+                >
                   <Heading
                     as='h1'
                     display
+                    utilities={{
+                      pt: { _: 3 },
+                      'line-height': { _: 1 }
+                    }}
                   >
                     404
                   </Heading>
@@ -46,7 +53,9 @@ function Error404() {
                     as='h4'
                     display
                     utilities={{
-                      mb: { _: 4 }
+                      pt: { _: 2 },
+                      mb: { _: 4 },
+                      'line-height': { _: 1 }
                     }}
                   >
                     Page Not found!
@@ -63,7 +72,7 @@ function Error404() {
                   </Paragraph>
 
                   <DynamicLink
-                    path='/home'
+                    path='/'
                     classes={[
                       'btn btn--fill-primary'
                     ]}

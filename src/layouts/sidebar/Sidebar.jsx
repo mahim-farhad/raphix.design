@@ -11,7 +11,6 @@ import Divider from '../../components/Divider'
 
 import Box from '../Box'
 import Backdrop from '../Backdrop'
-// import NavbarBrand from '../navbar/NavbarBrand'
 
 import SidebarMenu from './SidebarMenu'
 

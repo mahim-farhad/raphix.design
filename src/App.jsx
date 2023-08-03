@@ -38,6 +38,8 @@ function App() {
         setSidebarSlide={setSidebarSlide}
       />
 
+      <Divider />
+
       <Sidebar
         sidebarSlide={sidebarSlide}
         setSidebarSlide={setSidebarSlide}

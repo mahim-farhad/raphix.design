@@ -51,7 +51,7 @@ function SidebarMenu() {
       ]}
     >
       <Heading
-        as='h6'
+        as='h3'
       >
         Menu
       </Heading>
@@ -84,7 +84,7 @@ function SidebarMenu() {
       />
 
       <Heading
-        as='h6'
+        as='h3'
         utilities={{
           mt: { _: 3 }
         }}

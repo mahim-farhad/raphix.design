@@ -10628,9 +10628,9 @@ mark {
   z-index: 999;
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   bottom: 0;
-  width: 20rem;
+  width: 12rem;
   max-width: 100%;
   height: 100vh;
   opacity: 0;
@@ -10640,7 +10640,7 @@ mark {
 }
 .sidebar-wrapper .backdrop {
   z-index: -1;
-  transform: translateX(100%);
+  transform: translateX(-100%);
 }
 .sidebar-wrapper.show {
   opacity: 1;
@@ -10658,7 +10658,7 @@ mark {
 }
 
 .sidebar {
-  transform: translateX(100%);
+  transform: translateX(-100%);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -10706,8 +10706,8 @@ mark {
   z-index: 999;
   position: relative;
   width: 100%;
+  padding: 0.5rem 0rem;
   background-color: transparent;
-  border-bottom: 1px solid #dee2e6;
 }
 .navbar--fixed {
   position: fixed;
@@ -10964,7 +10964,7 @@ mark {
   padding: 0.5rem 0rem;
   font-size: 0.875rem;
   font-weight: 700;
-  color: #f8f9fa;
+  color: #2b2929;
 }
 .footer__nav .nav__link:first-child {
   padding-top: 0rem;

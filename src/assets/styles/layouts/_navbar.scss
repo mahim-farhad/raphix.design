@@ -2,8 +2,8 @@
   z-index: $z-index-navbar;
   position: relative;
   width: 100%;
+  padding: $spacer-2 $spacer-0;
   background-color: transparent;
-  border-bottom: 1px solid $hr-bg-color;
 
   &--fixed {
     position: fixed;

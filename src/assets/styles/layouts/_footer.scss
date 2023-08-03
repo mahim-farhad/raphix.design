@@ -10,7 +10,7 @@
       padding: $spacer-2 $spacer-0;
       @include font-size($font-size-sm);
       font-weight: $font-weight-bold;
-      color: $light;
+      color: $font-color;
 
       &:first-child {
         padding-top: $spacer-0;
