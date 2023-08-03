@@ -47,9 +47,8 @@ $theme-colors: (
   dark: $dark,
   ) !default;
 
-$background: rgb(0, 0, 0
-);
-$surface: #1b1b1b;
+$background: #ffffff;
+$surface: #ececec;
 $surface-variant: #202020;
 
 $layout-colors: (
@@ -58,7 +57,7 @@ $layout-colors: (
   surface-variant: $surface-variant,
   ) !default;
 
-$font-color: #f3f3f3;
+$font-color: #2b2929;
 
 $info: #1A73E8 !default;
 $success: #4CAF50 !default;
@@ -183,7 +182,7 @@ $component-active-bg: $primary !default;
 $body-color: $font-color !default;
 $body-bg: $background !default;
 
-$hr-bg-color: $dark !default;
+$hr-bg-color: $gray-300 !default;
 
 $headings-color: $font-color !default;
 

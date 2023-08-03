@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  padding: $spacer-10 $spacer-0;
+  padding: $spacer-8 $spacer-0;
   overflow: hidden;
 
   &__heading {
@@ -28,6 +28,8 @@
 
 @include media-breakpoint-up(md) {
   .section {
+    padding: $spacer-10 $spacer-0;
+
     &__title-bg {
       transform: translate(-50%, -52%);
     }

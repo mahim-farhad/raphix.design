@@ -4,11 +4,11 @@ import {
   Helmet
 } from 'react-helmet-async'
 
+import DynamicLink from '../../components/DynamicLink'
 import {
   Heading,
   Paragraph
 } from '../../components/Typography'
-import DynamicLink from '../../components/DynamicLink'
 
 import Container from '../../layouts/Container'
 import Main from '../../layouts/Main'
@@ -17,12 +17,14 @@ import {
   Row,
   Column
 } from '../../layouts/Grid'
+import Box from '../../layouts/Box'
+import Button from '../../components/Button'
 
 function Error404() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Raphix Design | 404 Not Found</title>
+        <title>404 Not Found | Raphix Design</title>
       </Helmet>
 
       <Main>
@@ -32,19 +34,17 @@ function Error404() {
               <Column
                 col={{ _: 12 }}
               >
-                <center>
+                <Box>
                   <Heading
                     as='h1'
                     display
-                    utilities={{
-                      mb: { _: 4 }
-                    }}
                   >
                     404
                   </Heading>
 
                   <Heading
                     as='h4'
+                    display
                     utilities={{
                       mb: { _: 4 }
                     }}
@@ -54,21 +54,26 @@ function Error404() {
 
                   <Paragraph
                     utilities={{
-                      mb: { _: 8 }
+                      w: { sm: 50 },
+                      mb: { _: 7 }
                     }}
                   >
-                    Either something went wrong or this page does not exist anymore.
+                    Either something went wrong or
+                    this page does not exist anymore.
                   </Paragraph>
 
                   <DynamicLink
                     path='/home'
                     classes={[
-                      'btn btn--fill-primary btn--link'
+                      'btn btn--fill-primary'
                     ]}
+                    utilities={{
+                      mb: { _: 5 }
+                    }}
                   >
-                    Go to home page
+                    Go Back
                   </DynamicLink>
-                </center>
+                </Box>
               </Column>
             </Row>
           </Container>

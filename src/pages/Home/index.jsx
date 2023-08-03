@@ -19,7 +19,7 @@ function Home() {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Raphix Design</title>
+        <title>Esports graphics designer | Raphix Design</title>
       </Helmet>
 
       <Box>
@@ -37,8 +37,6 @@ function Home() {
 
         <Reviews />
       </Main>
-
-      <Divider />
     </React.Fragment>
   )
 }

@@ -4,7 +4,7 @@ import DynamicLink from '../../components/DynamicLink'
 import {
   Heading
 } from '../../components/Typography'
-import CollectionCard from '../../components/card/collection/CollectionCard'
+import CollectionCard from '../../components/collection/CollectionCard'
 
 import Section from '../../layouts/Section'
 import Container from '../../layouts/Container'
@@ -145,28 +145,3 @@ function CollectionPreview() {
 }
 
 export default CollectionPreview
-
-{/* <svg
-  viewBox='0 0 100 100'
-  xmlns='http://www.w3.org/2000/svg'
-  className='w-100px w-md-150px w-lg-200px h-100px h-md-150px h-lg-200px'
->
-  <path
-    id='circlePath'
-    fill='none'
-    d='M 10, 50 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0'
-  />
-
-  <text
-    fontSize='12'
-    fontWeight='bold'
-    fill='currentColor'
-  >
-    <textPath
-      className='circular-link__text'
-      href='#circlePath'
-    >
-      VIEW MORE COLLECTION
-    </textPath>
-  </text>
-</svg> */}

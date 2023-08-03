@@ -4,10 +4,10 @@ import classNames from 'classnames'
 
 import Container from '../Container'
 
+import NavbarToggler from './NavbarToggler'
 import NavbarBrand from './NavbarBrand'
 import NavbarMenu from './NavbarMenu'
 import NavbarMenuRight from './NavbarMenuRight'
-import NavbarToggler from './NavbarToggler'
 
 function Navbar({
   expand,
@@ -22,16 +22,16 @@ function Navbar({
       )}
     >
       <Container fluid>
+        <NavbarToggler
+          sidebarSlide={sidebarSlide}
+          setSidebarSlide={setSidebarSlide}
+        />
+
         <NavbarBrand />
 
         <NavbarMenu />
 
         <NavbarMenuRight />
-
-        <NavbarToggler
-          sidebarSlide={sidebarSlide}
-          setSidebarSlide={setSidebarSlide}
-        />
       </Container>
     </nav>
   )

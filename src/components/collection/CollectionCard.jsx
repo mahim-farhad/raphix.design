@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
-import DynamicLink from '../../DynamicLink'
+import DynamicLink from '../DynamicLink'
 import {
   Heading
-} from '../../Typography'
-import Image from '../../Image'
-import Box from '../../Box'
+} from '../Typography'
+import Image from '../Image'
+import Box from '../Box'
 
 function CollectionCard({
   title,
@@ -22,7 +22,7 @@ function CollectionCard({
         <Image
           src={thumbnail}
           alt={title}
-          className='design-thumbnail__placeholder-img'
+          classes='design-thumbnail__placeholder-img'
           loading='lazy'
         />
       </figure>

@@ -1,10 +1,15 @@
 .navbar {
   z-index: $z-index-navbar;
-  // position: fixed;
+  position: relative;
   width: 100%;
-  padding: $spacer-2 $spacer-0;
-  margin-bottom: $spacer-0;
-  background-color: $gray-900;
+  background-color: transparent;
+  border-bottom: 1px solid $hr-bg-color;
+
+  &--fixed {
+    position: fixed;
+    top: $spacer-0;
+    background-color: $background;
+  }
 
   &>.container,
   &>.container-fluid {
@@ -34,7 +39,7 @@
   }
 
   &__toggler {
-    margin-left: $spacer-2;
+    margin-right: $spacer-2;
 
     .bar-1 {
       animation: ease 0.33s top-2 forwards;
@@ -50,7 +55,7 @@
     }
 
     .menu-icon {
-      margin-left: auto;
+      margin-right: auto;
     }
 
     &.active {
@@ -79,7 +84,7 @@
       font-family: $headings-font-family;
       font-size: $font-size-lg;
       text-transform: uppercase;
-      color: $light;
+      color: $font-color;
     }
 
     &--right {
@@ -102,6 +107,7 @@
         }
 
         @include media-breakpoint-up($next) {
+          padding: $spacer-2 $spacer-0;
 
           .navbar {
             &__brand {

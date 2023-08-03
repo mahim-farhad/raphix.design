@@ -13,6 +13,8 @@ import {
 
 import './assets/styles/styles.css'
 
+import Divider from './components/Divider'
+
 import Header from './layouts/header/Header'
 import Sidebar from './layouts/sidebar/Sidebar'
 import Footer from './layouts/footer/Footer'
@@ -20,7 +22,7 @@ import Footer from './layouts/footer/Footer'
 import Home from './pages/Home'
 import Designs from './pages/Designs'
 import Design from './pages/Design'
-import Error404 from './pages/Error'
+import Error404 from './pages/Error404'
 
 function App() {
   const [sidebarSlide, setSidebarSlide] = useState(false)
@@ -81,6 +83,8 @@ function App() {
           }
         />
       </Routes>
+
+      <Divider />
 
       <Footer />
     </HelmetProvider>
