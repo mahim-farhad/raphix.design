@@ -1,4 +1,4 @@
-// import Icon from '../../components/Icon'
+import Icon from '../../components/Icon'
 import Nav from '../../components/nav/Nav'
 import NavLink from '../../components/nav/NavLink'
 
@@ -33,20 +33,22 @@ function SidebarMenu() {
           name,
           path
         }) => (
-          <NavLink
-            key={id}
-            path={path}
-            extended
-            utilities={{
-              'justify-content': { _: 'between' }
-            }}
-          >
-            {name}
+          <>
+            <NavLink
+              key={id}
+              path={path}
+              extended
+              utilities={{
+                'justify-content': { _: 'between' }
+              }}
+            >
+              {name}
 
-            {/* <Icon
-              name='chevron-down'
-            /> */}
-          </NavLink>
+              <Icon
+                name='chevron-down'
+              />
+            </NavLink>
+          </>
         ))
       }
     </Nav>
