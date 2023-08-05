@@ -8,10 +8,12 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import Divider from '../../components/Divider'
+import Textfield from '../../components/Textfield'
 
 import Box from '../Box'
 import Backdrop from '../Backdrop'
 
+import Header from './Header'
 import SidebarMenu from './SidebarMenu'
 
 function useOutsideClick(
@@ -35,7 +37,11 @@ function useOutsideClick(
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
-  }, [ref, modal, setModal])
+  }, [
+    ref,
+    modal,
+    setModal
+  ])
 }
 
 function Sidebar({
@@ -61,34 +67,28 @@ function Sidebar({
           'sidebar'
         )}
       >
-        {/* <Box
-          classes={[
-            'sidebar__header'
-          ]}
-        >
-          <NavbarBrand />
-        </Box> */}
-
-        <Divider
-          utilities={{
-            mb: { _: 6 }
-          }}
+        <Header
+          sidebarSlide={sidebarSlide}
+          setSidebarSlide={setSidebarSlide}
         />
 
-        <SidebarMenu />
+        <Divider />
 
-        {/* <Divider
-          utilities={{
-            my: { _: 6 }
-          }}
-        /> */}
-
-        {/* <Box
+        <Box
           classes={[
-            'sidebar__footer'
+            'form-group',
           ]}
         >
-        </Box> */}
+          <Textfield
+            type='text'
+            appendIcon='search'
+            placeholder='Search...'
+          />
+        </Box>
+
+        <Divider />
+
+        <SidebarMenu />
       </aside>
     </Box>
   )

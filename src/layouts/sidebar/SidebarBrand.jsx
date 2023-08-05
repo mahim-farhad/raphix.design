@@ -1,7 +1,7 @@
 import DynamicLink from '../../components/DynamicLink'
 import Icon from '../../components/Icon'
 
-function NavbarBrand() {
+function SidebarBrand() {
   return (
     <DynamicLink
       path='/'
@@ -19,4 +19,4 @@ function NavbarBrand() {
   )
 }
 
-export default NavbarBrand
+export default SidebarBrand

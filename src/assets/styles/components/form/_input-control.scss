@@ -2,6 +2,7 @@
   display: block;
   width: 100%;
   height: $btn-height-base;
+  min-height: 100%;
   padding: $input-control-padding-y-base $input-control-padding-x-base;
   font-family: $input-control-font-family;
   @include font-size($input-control-font-size-base);

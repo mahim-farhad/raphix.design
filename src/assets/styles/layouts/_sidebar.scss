@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15rem;
+  width: 20rem;
   max-width: 100%;
   height: 100vh;
   opacity: 0;
@@ -41,37 +41,30 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding-right: $spacer-6;
+  padding-top: $spacer-0;
   padding-bottom: $spacer-6;
-  padding-left: $spacer-6;
   opacity: 0;
   visibility: hidden;
   overflow-y: overlay;
   background-color: $background;
   transition: all 0.5s ease;
 
-  .navbar__brand-svg {
-    display: none;
-  }
-
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: $spacer-6;
-    padding-bottom: $spacer-6;
+    padding: $spacer-4;
+    padding-top: calc($spacer-3 * 0.5);
+    padding-bottom: calc($spacer-3 * 0.5);
   }
 
   &__menu {
+    padding: $spacer-0 $spacer-4;
+
     .nav__link {
       width: 100%;
-      padding-right: $spacer-0;
-      padding-left: $spacer-0;
+      padding: $spacer-2 $spacer-0;
       color: $dark;
-
-      .nav__icon {
-        fill: $dark;
-      }
     }
   }
 

@@ -12,26 +12,24 @@ import {
   Row,
   Column
 } from '../Grid'
-import Box from '../Box'
 
 import NavbarToggler from './NavbarToggler'
-import NavbarBrand from './NavbarBrand'
-import NavbarMenu from './NavbarMenu'
-import NavbarMenuRight from './NavbarMenuRight'
+import Center from './Center'
+import Right from './Right'
 
 function Navbar({
   sidebarSlide,
   setSidebarSlide
 }) {
-  const [navbarFixed, setNavbarFixed] = useState(false)
+  const [navbarSticky, setNavbarSticky] = useState(false)
 
   useEffect(() => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') {
-        if (window.scrollY >= 70) {
-          setNavbarFixed(true)
+        if (window.scrollY >= 60) {
+          setNavbarSticky(true)
         } else {
-          setNavbarFixed(false)
+          setNavbarSticky(false)
         }
       }
     }
@@ -50,7 +48,7 @@ function Navbar({
       className={classNames(
         'navbar',
         {
-          ['navbar--sticky']: navbarFixed
+          ['navbar--sticky']: navbarSticky
         }
       )}
     >
@@ -77,31 +75,19 @@ function Navbar({
           <Column
             col={{ _: 6, lg: 7, xl: 8 }}
           >
-            <Box
-              utilities={{
-                d: { _: 'flex' },
-                'align-items': { _: 'center' },
-                'justify-content': { _: 'center', lg: 'start' }
-              }}
-            >
-              <NavbarBrand />
-
-              <NavbarMenu />
-            </Box>
+            <Center />
           </Column>
 
           <Column
             col={{ _: 3, lg: 5, xl: 4 }}
           >
-            <NavbarMenuRight />
+            <Right />
           </Column>
         </Row>
       </Container>
     </nav>
   )
 }
-
-// Navbar.defaultProps = {}
 
 Navbar.propTypes = {
   sidebarSlide: PropTypes.bool,

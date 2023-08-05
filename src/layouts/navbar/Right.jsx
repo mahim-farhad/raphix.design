@@ -2,9 +2,9 @@ import Icon from '../../components/Icon'
 import Button from '../../components/Button'
 import Textfield from '../../components/Textfield'
 
-import Box from '../../components/Box'
+import Box from '../Box'
 
-function NavbarMenuRight() {
+function Right() {
   return (
     <Box
       utilities={{
@@ -24,7 +24,8 @@ function NavbarMenuRight() {
         }}
       >
         <Textfield
-          type='email'
+          size='lg'
+          type='text'
           prependIcon='search'
           placeholder='Search...'
         />
@@ -50,4 +51,4 @@ function NavbarMenuRight() {
   )
 }
 
-export default NavbarMenuRight
+export default Right

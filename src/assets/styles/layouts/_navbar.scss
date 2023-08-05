@@ -2,14 +2,13 @@
   z-index: $z-index-navbar;
   position: fixed;
   top: $spacer-0;
+  right: $spacer-0;
+  left: $spacer-0;
   width: 100%;
-  padding: $spacer-2 $spacer-0;
+  padding-top: calc(($spacer-3 * 0.5));
+  padding-bottom: calc(($spacer-3 * 0.5));
   background-color: $background;
-
-  &--sticky {
-    transition: 0.3s all;
-    box-shadow: 0 1px 3px rgba($black, 0.1);
-  }
+  transition: 0.3s all;
 
   &__brand {
     display: flex;
@@ -57,12 +56,9 @@
   }
 
   &__menu {
-    display: flex;
-    align-items: center;
-
     .nav__link {
-      padding: $spacer-4 $spacer-6;
-      padding-top: $spacer-5;
+      padding-top: $spacer-6;
+      padding-bottom: calc($spacer-5 - ($spacer-1 * 0.5));
       font-family: $headings-font-family;
       font-size: $font-size-lg;
       line-height: 1;
@@ -71,14 +67,19 @@
     }
   }
 
+  &--sticky {
+    box-shadow: 0 2px 4px rgba($black, 0.15);
+  }
+
   @include media-breakpoint-down(lg) {
-    &__menu:not(.navbar__menu--right) {
+    &__menu {
       display: none;
     }
   }
 
   @include media-breakpoint-up(lg) {
-    padding: $spacer-2 $spacer-0;
+    padding-top: $spacer-0;
+    padding-bottom: $spacer-0;
 
     &__brand {
       margin-right: $spacer-6;

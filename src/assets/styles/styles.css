@@ -9249,9 +9249,9 @@ mark {
   transform: translate(-50%, -50%);
 }
 .nav--vertical {
-  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
+  width: 100%;
 }
 
 :root {
@@ -10058,6 +10058,7 @@ mark {
   display: block;
   width: 100%;
   height: 3rem;
+  min-height: 100%;
   padding: 0.75rem 1rem;
   font-family: "Teko", sans-serif;
   font-size: calc(1.025rem + 0.3vw);
@@ -10576,7 +10577,7 @@ mark {
   }
 }
 .header {
-  padding-bottom: 70px;
+  padding-top: 3.75rem;
 }
 
 .backdrop {
@@ -10596,7 +10597,7 @@ mark {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15rem;
+  width: 20rem;
   max-width: 100%;
   height: 100vh;
   opacity: 0;
@@ -10629,33 +10630,29 @@ mark {
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  padding-right: 1.5rem;
+  padding-top: 0rem;
   padding-bottom: 1.5rem;
-  padding-left: 1.5rem;
   opacity: 0;
   visibility: hidden;
   overflow-y: overlay;
   background-color: #ffffff;
   transition: all 0.5s ease;
 }
-.sidebar .navbar__brand-svg {
-  display: none;
-}
 .sidebar__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+  padding: 1rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+}
+.sidebar__menu {
+  padding: 0rem 1rem;
 }
 .sidebar__menu .nav__link {
   width: 100%;
-  padding-right: 0rem;
-  padding-left: 0rem;
+  padding: 0.5rem 0rem;
   color: #212529;
-}
-.sidebar__menu .nav__link .nav__icon {
-  fill: #212529;
 }
 .sidebar__footer {
   margin-top: auto;
@@ -10672,13 +10669,13 @@ mark {
   z-index: 999;
   position: fixed;
   top: 0rem;
+  right: 0rem;
+  left: 0rem;
   width: 100%;
-  padding: 0.5rem 0rem;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
   background-color: #ffffff;
-}
-.navbar--sticky {
   transition: 0.3s all;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .navbar__brand {
   display: flex;
@@ -10711,27 +10708,27 @@ mark {
 .navbar__toggler.active .bar-3 {
   animation: ease 0.33s bottom forwards;
 }
-.navbar__menu {
-  display: flex;
-  align-items: center;
-}
 .navbar__menu .nav__link {
-  padding: 1rem 1.5rem;
-  padding-top: 1.25rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.125rem;
   font-family: "Teko", sans-serif;
   font-size: 1.125rem;
   line-height: 1;
   text-transform: uppercase;
   color: #2b2929;
 }
+.navbar--sticky {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
 @media (max-width: 61.98rem) {
-  .navbar__menu:not(.navbar__menu--right) {
+  .navbar__menu {
     display: none;
   }
 }
 @media (min-width: 62rem) {
   .navbar {
-    padding: 0.5rem 0rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
   }
   .navbar__brand {
     margin-right: 1.5rem;
