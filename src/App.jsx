@@ -20,8 +20,8 @@ import Sidebar from './layouts/sidebar/Sidebar'
 import Footer from './layouts/footer/Footer'
 
 import Home from './pages/Home'
-import Designs from './pages/Designs'
-import Design from './pages/Design'
+import Collections from './pages/Designs'
+import Collection from './pages/Design'
 import Error404 from './pages/Error404'
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
 
       <Routes>
         <Route
-          path='/home'
+          path='/'
           exact
           element={
             <Home />
@@ -55,7 +55,7 @@ function App() {
         />
 
         <Route
-          path='/'
+          path='/home'
           exact
           element={
             <Home />
@@ -66,7 +66,7 @@ function App() {
           path='/collections'
           exact
           element={
-            <Designs />
+            <Collections />
           }
         />
 
@@ -74,7 +74,7 @@ function App() {
           path='/collections/:slug'
           exact
           element={
-            <Design />
+            <Collection />
           }
         />
 

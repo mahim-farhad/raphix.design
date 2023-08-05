@@ -7,13 +7,10 @@ import {
 import Divider from '../../components/Divider'
 
 import Main from '../../layouts/Main'
-import Box from '../../layouts/Box'
 
 // import PageHeader from './PageHeader'
 import CollectionPreview from './CollectionPreview'
 import Reviews from './Reviews'
-
-import bgHeader from '../../assets/images/bg-header.png'
 
 function Home() {
   return (
@@ -21,14 +18,6 @@ function Home() {
       <Helmet>
         <title>Esports graphics designer | Raphix Design</title>
       </Helmet>
-
-      <Box>
-        <img
-          src={bgHeader}
-          alt=""
-          className='w-100'
-        />
-      </Box>
 
       <Main>
         <CollectionPreview />

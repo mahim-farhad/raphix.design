@@ -1,5 +1,5 @@
 .footer {
-  background-color: $background;
+  background-color: transparent;
 
   &__top {
     padding: $spacer-8 $spacer-0;
@@ -62,7 +62,7 @@
 
   &__copyright-text {
     @include font-size($font-size-sm);
-    font-weight: $font-weight-base;
+    font-weight: $font-weight-bold;
     text-align: center;
   }
 }
@@ -72,36 +72,5 @@
     &__top {
       padding: $spacer-10 $spacer-0;
     }
-
-    &__bottom {
-      padding-top: $spacer-8;
-      padding-bottom: $spacer-8;
-    }
   }
 }
-
-// &__link-list {
-//   gap: $spacer-0;
-//   row-gap: $spacer-4;
-//   padding: $spacer-0 $spacer-8;
-
-//   .nav__list {
-//     display: flex;
-//     align-items: center;
-
-//     &+.nav__list {
-//       margin-left: $spacer-4;
-
-//       &::before {
-//         content: "";
-//         transform: skewX(-20deg) rotate(180deg);
-//         display: inline-block;
-//         width: calc($spacer-1 * 0.5);
-//         height: $spacer-4;
-//         margin-right: $spacer-4;
-//         vertical-align: middle;
-//         background: $gray-400;
-//       }
-//     }
-//   }
-// }

@@ -1,53 +1,52 @@
 import Icon from '../../components/Icon'
-import Nav from '../../components/nav/Nav'
-import NavLink from '../../components/nav/NavLink'
+import Button from '../../components/Button'
+import Textfield from '../../components/Textfield'
 
-const links = [
-  {
-    id: 1,
-    path: '/',
-    iconName: 'search'
-  },
-  {
-    id: 2,
-    path: '/cart',
-    iconName: 'cart'
-  },
-  {
-    id: 3,
-    path: '/user',
-    iconName: 'user'
-  }
-]
+import Box from '../../components/Box'
 
 function NavbarMenuRight() {
   return (
-    <Nav
-      classes={[
-        'navbar__menu',
-        'navbar__menu--right',
-      ]}
+    <Box
+      utilities={{
+        d: { _: 'flex' },
+        'align-items': { _: 'center' },
+        'justify-content': { _: 'end' }
+      }}
     >
-      {
-        links.map(({
-          id,
-          path,
-          iconName
-        }) => (
-          <NavLink
-            key={id}
-            path={path}
-            utilities={{
-              pr: { _: 0 }
-            }}
-          >
-            <Icon
-              name={iconName}
-            />
-          </NavLink>
-        ))
-      }
-    </Nav>
+      <Box
+        classes={[
+          'form-group',
+        ]}
+        utilities={{
+          flex: { _: 'fill' },
+          d: { _: 'none', lg: 'block' },
+          mr: { _: 2 }
+        }}
+      >
+        <Textfield
+          type='email'
+          prependIcon='search'
+          placeholder='Search...'
+        />
+      </Box>
+
+      <Button
+        size='sm'
+        variant='text'
+        color='dark'
+        iconOnly
+      >
+        <Icon
+          name='cart'
+          classes={[
+            'btn__icon'
+          ]}
+          style={{
+            transform: 'translate(-15%, -50%)'
+          }}
+        />
+      </Button>
+    </Box>
   )
 }
 

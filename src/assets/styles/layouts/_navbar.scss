@@ -1,36 +1,20 @@
 .navbar {
   z-index: $z-index-navbar;
-  position: relative;
+  position: fixed;
+  top: $spacer-0;
   width: 100%;
   padding: $spacer-2 $spacer-0;
-  background-color: transparent;
+  background-color: $background;
 
-  &--fixed {
-    position: fixed;
-    top: $spacer-0;
-    background-color: $background;
-  }
-
-  &>.container,
-  &>.container-fluid {
-    display: flex;
-    flex-wrap: inherit;
-    align-items: center;
-    justify-content: space-between;
+  &--sticky {
+    transition: 0.3s all;
+    box-shadow: 0 1px 3px rgba($black, 0.1);
   }
 
   &__brand {
     display: flex;
-    gap: $spacer-4;
     align-items: center;
-    font-family: $font-family-serif;
-    @include font-size($font-size-lg);
-    font-weight: $font-weight-bold;
-    line-height: 1;
-    text-transform: uppercase;
-    white-space: nowrap;
-    color: $font-color;
-    opacity: 1;
+    justify-content: center;
 
     &-icon {
       width: $spacer-8;
@@ -39,14 +23,16 @@
   }
 
   &__toggler {
-    margin-right: $spacer-2;
+    .menu-icon {
+      margin-right: auto;
+    }
 
     .bar-1 {
       animation: ease 0.33s top-2 forwards;
     }
 
-
     .bar-2 {
+      width: 75%;
       animation: ease 0.33s scaled-2 forwards;
     }
 
@@ -54,9 +40,6 @@
       animation: ease 0.33s bottom-2 forwards;
     }
 
-    .menu-icon {
-      margin-right: auto;
-    }
 
     &.active {
       .bar-1 {
@@ -76,55 +59,29 @@
   &__menu {
     display: flex;
     align-items: center;
-    justify-content: end;
 
     .nav__link {
       padding: $spacer-4 $spacer-6;
-      padding-bottom: calc($spacer-3 - 2px);
+      padding-top: $spacer-5;
       font-family: $headings-font-family;
       font-size: $font-size-lg;
+      line-height: 1;
       text-transform: uppercase;
       color: $font-color;
     }
+  }
 
-    &--right {
-      margin-left: auto;
+  @include media-breakpoint-down(lg) {
+    &__menu:not(.navbar__menu--right) {
+      display: none;
     }
   }
 
-  &--expand {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint, $grid-breakpoints);
-      $infix: breakpoint-infix($next, $grid-breakpoints);
+  @include media-breakpoint-up(lg) {
+    padding: $spacer-2 $spacer-0;
 
-      &#{$infix} {
-        @include media-breakpoint-down($next) {
-          .navbar {
-            &__menu:not(.navbar__menu--right) {
-              display: none;
-            }
-          }
-        }
-
-        @include media-breakpoint-up($next) {
-          padding: $spacer-2 $spacer-0;
-
-          .navbar {
-            &__brand {
-              margin-right: $spacer-8;
-
-              &-icon {
-                width: $spacer-8;
-                height: $spacer-8;
-              }
-            }
-
-            &__toggler {
-              display: none;
-            }
-          }
-        }
-      }
+    &__brand {
+      margin-right: $spacer-6;
     }
   }
 }
