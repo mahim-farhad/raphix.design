@@ -107,9 +107,9 @@ $h6-font-size: $font-size-base !default;
 
 $headings-font-weight: $font-weight-semi-bold !default;
 
-$h1-line-height: 1.3 !default;
-$h2-line-height: 1.3 !default;
-$h3-line-height: 1.3 !default;
+$h1-line-height: 1 !default;
+$h2-line-height: 1 !default;
+$h3-line-height: 1 !default;
 $h4-line-height: 1.3 !default;
 $h5-line-height: 1.3 !default;
 $h6-line-height: 1.3 !default;
@@ -132,7 +132,7 @@ $display-fonts: (
 $p-font-family: $font-family-base !default;
 $p-font-size: $font-size-base !default;
 $p-font-weight: $font-weight-semi-bold !default;
-$p-line-height: 1.6 !default;
+$p-line-height: 1.5 !default;
 
 // -------------------------------- //
 
@@ -173,6 +173,6 @@ $input-control-font-size-sm: $btn-font-size-sm !default;
 $input-control-font-size-base: $btn-font-size-base !default;
 $input-control-font-size-lg: $btn-font-size-lg !default;
 
-$input-control-font-weight: $btn-font-weight !default;
+$input-control-font-weight: $font-weight-base !default;
 
 $input-control-line-height: $btn-line-height-base !default;

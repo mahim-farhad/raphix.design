@@ -33,7 +33,7 @@ const links = [
   },
   {
     id: 5,
-    name: 'Login/Register',
+    name: 'Login / Register',
     iconName: 'user',
     path: '/login'
   }
@@ -60,6 +60,7 @@ function Menu() {
         >
           Categories
         </Heading>
+
         {
           loading
             ?
@@ -106,6 +107,7 @@ function Menu() {
         >
           Menu
         </Heading>
+
         {
           links.map(({
             id,
