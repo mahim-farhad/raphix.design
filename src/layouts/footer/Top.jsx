@@ -1,13 +1,12 @@
 import {
   Heading,
-  Paragraph,
-  Small
+  Paragraph
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
 import Button from '../../components/Button'
+import Image from '../../components/Image'
 import Nav from '../../components/nav/Nav'
 import NavLink from '../../components/nav/NavLink'
-import Image from '../../components/Image'
 import Textfield from '../../components/Textfield'
 
 import Container from '../Container'
@@ -120,19 +119,23 @@ const Brand = () => {
         ]}
       />
 
-      <Heading
-        as="h5"
-        utilities={{
-          mb: { _: 0 },
-          text: { _: 'uppercase' }
-        }}
-      >
-        Raphix Design <br />
+      <Box>
+        <Heading
+          as='h3'
+        >
+          Raphix Design
+        </Heading>
 
-        <Small>
+        <Heading
+          as='h5'
+          utilities={{
+            pt: { _: 0 },
+            opacity: { _: 5 }
+          }}
+        >
           eSports Graphics Designer
-        </Small>
-      </Heading>
+        </Heading>
+      </Box>
     </Box>
   )
 }
@@ -285,7 +288,7 @@ const Socials = () => {
       <Heading
         as='h5'
         utilities={{
-          mb: { _: 2 },
+          mb: { _: 4 },
           text: { _: 'uppercase' }
         }}
       >
@@ -330,7 +333,7 @@ function Top() {
       >
         <Row
           utilities={{
-            'row-gap': { _: 9 }
+            'row-gap': { _: 6 }
           }}
         >
           <Column
@@ -345,8 +348,7 @@ function Top() {
             <Heading
               as='h4'
               utilities={{
-                w: { md: 75 },
-                mt: { _: 2 }
+                w: { md: 75 }
               }}
             >
               ORDER YOUR TEAMS CUSTOM ESPORTS JERSEYS WITH

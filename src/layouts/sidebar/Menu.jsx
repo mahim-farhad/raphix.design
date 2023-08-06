@@ -23,7 +23,7 @@ const links = [
   {
     id: 3,
     name: 'Contact Information',
-    path: '/esports'
+    path: '/contact'
   },
   {
     id: 4,
@@ -79,15 +79,13 @@ function Menu() {
             </>
             :
             data && data.map((category) => (
-              <>
-                <NavLink
-                  key={category.id}
-                  path={category.attributes.type}
-                  extended
-                >
-                  {category.attributes.type}
-                </NavLink>
-              </>
+              <NavLink
+                key={category.id}
+                path={category.attributes.type}
+                extended
+              >
+                {category.attributes.type}
+              </NavLink>
             ))
         }
       </Nav>
@@ -115,21 +113,19 @@ function Menu() {
             iconName,
             path
           }) => (
-            <>
-              <NavLink
-                key={id}
-                path={path}
-                extended
-              >
-                {
-                  iconName &&
-                  <Icon
-                    name={iconName}
-                  />
-                }
-                {name}
-              </NavLink>
-            </>
+            <NavLink
+              key={id}
+              path={path}
+              extended
+            >
+              {
+                iconName &&
+                <Icon
+                  name={iconName}
+                />
+              }
+              {name}
+            </NavLink>
           ))
         }
       </Nav>

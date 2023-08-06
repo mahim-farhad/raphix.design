@@ -57,11 +57,12 @@ h6 {
 $font-size in $display-fonts {
   .display-#{$heading} {
     font-size: $font-size;
+    line-height: 1;
   }
 }
 
 p {
-  padding-top: calc($spacer-1 * 0.5);
+  // padding-top: calc($spacer-1 * 0.5);
   margin-top: $spacer-0;
   margin-bottom: $spacer-0;
   font-family: $p-font-family;
