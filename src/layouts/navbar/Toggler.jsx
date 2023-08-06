@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 
 import {
+  SidebarSlider
+} from '../../contexts/SidebarContext'
+
+import {
   Span
 } from '../../components/Typography'
 import Button from '../../components/Button'
@@ -34,18 +38,20 @@ const MenuIcon = () => {
   )
 }
 
-function NavbarToggler({
-  sidebarSlide,
-  setSidebarSlide
-}) {
+function Toggler() {
+  const {
+    sidebarSlide,
+    setSidebarSlide
+  } = SidebarSlider()
+
   return (
     <Button
       onClick={() => {
-        setSidebarSlide(true)
-
-        document.body.style.width = '100%'
         document.body.style.position = 'absolute'
+        document.body.style.width = '100%'
         document.body.style.overflow = 'hidden'
+
+        setSidebarSlide(true)
       }}
       size='sm'
       variant='text'
@@ -60,9 +66,9 @@ function NavbarToggler({
   )
 }
 
-NavbarToggler.propTypes = {
+Toggler.propTypes = {
   sidebarSlide: PropTypes.bool,
   setSidebarSlide: PropTypes.func
 }
 
-export default NavbarToggler
+export default Toggler

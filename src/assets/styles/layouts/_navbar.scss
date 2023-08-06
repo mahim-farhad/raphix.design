@@ -11,15 +11,7 @@
   transition: 0.3s all;
 
   &__brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0.875rem;
-    padding-bottom: calc(($spacer-5 * 0.5));
-    font-family: $headings-font-family;
-    font-size: $font-size-xxl;
-    font-weight: 600;
-    line-height: 1;
+    display: block;
 
     &-icon {
       width: $spacer-8;

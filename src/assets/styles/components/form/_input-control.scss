@@ -4,11 +4,12 @@
   height: $btn-height-base;
   min-height: 100%;
   padding: $input-control-padding-y-base $input-control-padding-x-base;
+  padding-top: $spacer-4;
   font-family: $input-control-font-family;
-  @include font-size($input-control-font-size-base);
+  font-size: $input-control-font-size-base;
   font-weight: $input-control-font-weight;
   line-height: $input-control-line-height;
-  text-transform: inherit;
+  text-transform: uppercase;
   text-decoration: inherit;
   letter-spacing: 0.009375em;
   appearance: none;

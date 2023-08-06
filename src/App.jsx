@@ -1,8 +1,4 @@
 import {
-  useState
-} from 'react'
-
-import {
   Routes,
   Route
 } from 'react-router-dom'
@@ -12,6 +8,8 @@ import {
 } from 'react-helmet-async'
 
 import './assets/styles/styles.css'
+
+import SidebarProvider from './contexts/SidebarContext'
 
 import Divider from './components/Divider'
 
@@ -25,70 +23,64 @@ import Collection from './pages/Design'
 import Error404 from './pages/Error404'
 
 function App() {
-  const [sidebarSlide, setSidebarSlide] = useState(false)
-
   const helmetContext = {}
 
   return (
     <HelmetProvider
       context={helmetContext}
     >
-      <Header
-        sidebarSlide={sidebarSlide}
-        setSidebarSlide={setSidebarSlide}
-      />
+      <SidebarProvider>
+        <Header />
 
-      <Divider />
+        <Divider />
 
-      <Sidebar
-        sidebarSlide={sidebarSlide}
-        setSidebarSlide={setSidebarSlide}
-      />
+        <Sidebar />
 
-      <Routes>
-        <Route
-          path='/'
-          exact
-          element={
-            <Home />
-          }
-        />
+        <Routes>
+          <Route
+            path='/'
+            exact
+            element={
+              <Home />
+            }
+          />
 
-        <Route
-          path='/home'
-          exact
-          element={
-            <Home />
-          }
-        />
+          <Route
+            path='/home'
+            exact
+            element={
+              <Home />
+            }
+          />
 
-        <Route
-          path='/collections'
-          exact
-          element={
-            <Collections />
-          }
-        />
+          <Route
+            path='/collections'
+            exact
+            element={
+              <Collections />
+            }
+          />
 
-        <Route
-          path='/collections/:slug'
-          exact
-          element={
-            <Collection />
-          }
-        />
+          <Route
+            path='/collections/:slug'
+            exact
+            element={
+              <Collection />
+            }
+          />
 
-        <Route
-          path='*'
-          element={
-            <Error404 />
-          }
-        />
-      </Routes>
+          <Route
+            path='*'
+            element={
+              <Error404 />
+            }
+          />
+        </Routes>
 
-      <Divider />
+        <Divider />
 
-      <Footer />
+        <Footer />
+      </SidebarProvider>
     </HelmetProvider>
   )
 }

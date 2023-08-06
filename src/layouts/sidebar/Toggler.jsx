@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
 
 import {
+  SidebarSlider
+} from '../../contexts/SidebarContext'
+
+import {
   Span
 } from '../../components/Typography'
 import Button from '../../components/Button'
@@ -38,10 +42,12 @@ const MenuIcon = () => {
   )
 }
 
-function Toggler({
-  sidebarSlide,
-  setSidebarSlide
-}) {
+function Toggler() {
+  const {
+    sidebarSlide,
+    setSidebarSlide
+  } = SidebarSlider()
+
   return (
     <Button
       onClick={() => {

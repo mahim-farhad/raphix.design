@@ -5,8 +5,6 @@ import classNames from 'classnames'
 import Navbar from '../navbar/Navbar'
 
 function Header({
-  sidebarSlide,
-  setSidebarSlide,
   classes,
   utilities,
   style
@@ -29,17 +27,12 @@ function Header({
       )}
       style={style}
     >
-      <Navbar
-        sidebarSlide={sidebarSlide}
-        setSidebarSlide={setSidebarSlide}
-      />
+      <Navbar />
     </header>
   )
 }
 
 Header.propTypes = {
-  sidebarSlide: PropTypes.bool,
-  setSidebarSlide: PropTypes.func,
   classes: PropTypes.array,
   utilities: PropTypes.object,
   style: PropTypes.object

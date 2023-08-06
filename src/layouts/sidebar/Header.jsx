@@ -1,33 +1,20 @@
-import PropTypes from 'prop-types'
-
 import Box from '../Box'
 
-import SidebarBrand from './SidebarBrand'
+import Brand from './Brand'
 import Toggler from './Toggler'
 
-function Header({
-  sidebarSlide,
-  setSidebarSlide
-}) {
+function Header() {
   return (
     <Box
       classes={[
         'sidebar__header'
       ]}
     >
-      <SidebarBrand />
+      <Brand />
 
-      <Toggler
-        sidebarSlide={sidebarSlide}
-        setSidebarSlide={setSidebarSlide}
-      />
+      <Toggler />
     </Box>
   )
-}
-
-Header.propTypes = {
-  sidebarSlide: PropTypes.bool,
-  setSidebarSlide: PropTypes.func
 }
 
 export default Header

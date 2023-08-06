@@ -58,6 +58,16 @@
     padding-bottom: calc($spacer-3 * 0.5);
   }
 
+  &__brand {
+    display: block;
+    padding-top: 0.875rem;
+    padding-bottom: calc(($spacer-5 * 0.5));
+    font-family: $headings-font-family;
+    font-size: $font-size-xxl;
+    font-weight: 600;
+    line-height: 1;
+  }
+
   &__menu {
     padding: $spacer-4 $spacer-4;
 
@@ -65,6 +75,10 @@
       width: 100%;
       padding: $spacer-2 $spacer-0;
       color: $dark;
+
+      &:last-child {
+        padding-bottom: $spacer-0;
+      }
     }
   }
 

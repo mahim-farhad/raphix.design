@@ -19,51 +19,6 @@ import {
 
 import Filters from './Filters'
 
-const designsData = [
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/e4ca49173999109.649a2ee5e7859.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/343c56173999109.649a30d6f29f5.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/53e27a173999109.649a30d70054f.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/9d9c79174817139.64a8bc2107ff7.png',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/c1b718174141023.649c7fd0935b0.jpg',
-    uploadedAt: 5
-  },
-  {
-    title: 'Esports Jersey Designs',
-    slug: '',
-    price: 'USD 50.00 $',
-    thumbnail: 'https://mir-s3-cdn-cf.behance.net/project_modules/1400/8921d4174499077.64a3c98379454.png',
-    uploadedAt: 5
-  }
-]
-
 function Designs() {
   const {
     data,

@@ -1,12 +1,6 @@
-import Box from '../layouts/Box'
-
 function SkeletonBar() {
   return (
-    <Box
-      classes={[
-        'skeleton'
-      ]}
-    />
+    <div className='skeleton' />
   )
 }
 

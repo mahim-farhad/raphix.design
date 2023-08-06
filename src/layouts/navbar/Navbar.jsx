@@ -3,8 +3,6 @@ import {
   useEffect
 } from 'react'
 
-import PropTypes from 'prop-types'
-
 import classNames from 'classnames'
 
 import Container from '../Container'
@@ -13,14 +11,11 @@ import {
   Column
 } from '../Grid'
 
-import NavbarToggler from './NavbarToggler'
+import Toggler from './Toggler'
 import Center from './Center'
 import Right from './Right'
 
-function Navbar({
-  sidebarSlide,
-  setSidebarSlide
-}) {
+function Navbar() {
   const [navbarSticky, setNavbarSticky] = useState(false)
 
   useEffect(() => {
@@ -66,10 +61,7 @@ function Navbar({
               d: { lg: 'none' }
             }}
           >
-            <NavbarToggler
-              sidebarSlide={sidebarSlide}
-              setSidebarSlide={setSidebarSlide}
-            />
+            <Toggler />
           </Column>
 
           <Column
@@ -87,11 +79,6 @@ function Navbar({
       </Container>
     </nav>
   )
-}
-
-Navbar.propTypes = {
-  sidebarSlide: PropTypes.bool,
-  setSidebarSlide: PropTypes.func
 }
 
 export default Navbar

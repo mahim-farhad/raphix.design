@@ -1,11 +1,8 @@
-import {
-  useEffect,
-  useRef
-} from 'react'
-
-import PropTypes from 'prop-types'
-
 import classNames from 'classnames'
+
+import {
+  SidebarSlider
+} from '../../contexts/SidebarContext'
 
 import Divider from '../../components/Divider'
 import Textfield from '../../components/Textfield'
@@ -14,43 +11,13 @@ import Box from '../Box'
 import Backdrop from '../Backdrop'
 
 import Header from './Header'
-import SidebarMenu from './SidebarMenu'
+import Menu from './Menu'
 
-function useOutsideClick(
-  ref,
-  modal,
-  setModal
-) {
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setModal(false)
-
-        document.body.style.width = ''
-        document.body.style.position = ''
-        document.body.style.overflow = ''
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [
-    ref,
-    modal,
-    setModal
-  ])
-}
-
-function Sidebar({
-  sidebarSlide,
-  setSidebarSlide
-}) {
-  const wrapperRef = useRef(null)
-
-  useOutsideClick(wrapperRef, sidebarSlide, setSidebarSlide)
+function Sidebar() {
+  const {
+    wrapperRef,
+    sidebarSlide
+  } = SidebarSlider()
 
   return (
     <Box
@@ -67,10 +34,7 @@ function Sidebar({
           'sidebar'
         )}
       >
-        <Header
-          sidebarSlide={sidebarSlide}
-          setSidebarSlide={setSidebarSlide}
-        />
+        <Header />
 
         <Divider />
 
@@ -88,15 +52,10 @@ function Sidebar({
 
         <Divider />
 
-        <SidebarMenu />
+        <Menu />
       </aside>
     </Box>
   )
-}
-
-Sidebar.propTypes = {
-  sidebarSlide: PropTypes.bool,
-  setSidebarSlide: PropTypes.func
 }
 
 export default Sidebar

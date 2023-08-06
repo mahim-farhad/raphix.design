@@ -9,14 +9,12 @@ function NavbarBrand() {
         'navbar__brand'
       ]}
     >
-      {/* <Icon
+      <Icon
         name='brand'
         classes={[
           'navbar__brand-icon'
         ]}
-      /> */}
-
-      RAPHIX DESIGN
+      />
     </DynamicLink>
   )
 }
