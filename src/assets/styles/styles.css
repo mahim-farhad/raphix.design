@@ -10149,7 +10149,7 @@ mark {
 }
 .section__heading {
   position: relative;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 .section__title {
   padding-top: 0.5rem;
@@ -10824,8 +10824,6 @@ mark {
 .footer__nav-payments {
   gap: 0.5rem;
   align-items: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 .footer__nav-payments li {
   position: relative;

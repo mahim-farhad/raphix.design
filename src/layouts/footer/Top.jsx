@@ -3,6 +3,7 @@ import {
   Paragraph
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
+import Divider from '../../components/Divider'
 import Button from '../../components/Button'
 import Image from '../../components/Image'
 import Nav from '../../components/nav/Nav'
@@ -249,8 +250,7 @@ const Payments = () => {
       <Heading
         as='h5'
         utilities={{
-          mb: { _: 2 },
-          text: { _: 'uppercase' },
+          mb: { _: 4 }
         }}
       >
         All secure payment methods
@@ -288,8 +288,7 @@ const Socials = () => {
       <Heading
         as='h5'
         utilities={{
-          mb: { _: 4 },
-          text: { _: 'uppercase' }
+          mb: { _: 4 }
         }}
       >
         Follow Me
@@ -333,13 +332,19 @@ function Top() {
       >
         <Row
           utilities={{
-            'row-gap': { _: 6 }
+            'row-gap': { _: 4 }
           }}
         >
           <Column
             col={{ _: 12, lg: 6 }}
           >
             <Brand />
+          </Column>
+
+          <Column
+            col={{ _: 12 }}
+          >
+            <Divider />
           </Column>
 
           <Column
@@ -358,6 +363,12 @@ function Top() {
           </Column>
 
           <Column
+            col={{ _: 12 }}
+          >
+            <Divider />
+          </Column>
+
+          <Column
             col={{ _: 12, md: 6 }}
             utilities={{
               pr: { xl: 8 }
@@ -367,9 +378,21 @@ function Top() {
           </Column>
 
           <Column
+            col={{ _: 12, }}
+          >
+            <Divider />
+          </Column>
+
+          <Column
             col={{ _: 6, sm: 4, md: 3, lg: 2 }}
           >
             <Navigations />
+          </Column>
+
+          <Column
+            col={{ _: 12 }}
+          >
+            <Divider />
           </Column>
 
           <Column
@@ -379,9 +402,21 @@ function Top() {
           </Column>
 
           <Column
+            col={{ _: 12 }}
+          >
+            <Divider />
+          </Column>
+
+          <Column
             col={{ _: 12, md: 6 }}
           >
             <Payments />
+          </Column>
+
+          <Column
+            col={{ _: 12 }}
+          >
+            <Divider />
           </Column>
 
           <Column
