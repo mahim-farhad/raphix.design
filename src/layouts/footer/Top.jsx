@@ -1,9 +1,7 @@
 import {
-  Heading,
-  Paragraph
+  Heading
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
-import Divider from '../../components/Divider'
 import Button from '../../components/Button'
 import Image from '../../components/Image'
 import Nav from '../../components/nav/Nav'
@@ -76,7 +74,7 @@ const services = [
   },
   {
     id: 3,
-    path: 'bBespoke-merchandise',
+    path: 'merchandise',
     name: 'Merchandise'
   }
 ]
@@ -144,15 +142,15 @@ const Brand = () => {
 const Newsletter = () => {
   return (
     <Box>
-      <Paragraph
-        as='h5'
+      <Heading
+        as='h6'
         utilities={{
           mb: { _: 2 }
         }}
       >
         Subscribe to the weekly newsletter <br />
         for all the latest updates
-      </Paragraph>
+      </Heading>
 
       <Box
         classes={[
@@ -198,49 +196,45 @@ const Newsletter = () => {
 
 const Navigations = () => {
   return (
-    <Box>
-      <Nav
-        vertical
-        classes={[
-          'footer__nav'
-        ]}
-      >
-        {
-          navigations && navigations.map((navigation, index) => (
-            <NavLink
-              key={index}
-              path={`/${navigation.path}`}
-            >
-              {navigation.name}
-            </NavLink>
-          ))
-        }
-      </Nav>
-    </Box>
+    <Nav
+      vertical
+      classes={[
+        'footer__nav'
+      ]}
+    >
+      {
+        navigations && navigations.map((navigation, index) => (
+          <NavLink
+            key={index}
+            path={`/${navigation.path}`}
+          >
+            {navigation.name}
+          </NavLink>
+        ))
+      }
+    </Nav>
   )
 }
 
 const Services = () => {
   return (
-    <Box>
-      <Nav
-        vertical
-        classes={[
-          'footer__nav'
-        ]}
-      >
-        {
-          services && services.map((service) => (
-            <NavLink
-              key={service.id}
-              path={`/${service.path}`}
-            >
-              {service.name}
-            </NavLink>
-          ))
-        }
-      </Nav>
-    </Box>
+    <Nav
+      vertical
+      classes={[
+        'footer__nav'
+      ]}
+    >
+      {
+        services && services.map((service) => (
+          <NavLink
+            key={service.id}
+            path={`/${service.path}`}
+          >
+            {service.name}
+          </NavLink>
+        ))
+      }
+    </Nav>
   )
 }
 
@@ -332,19 +326,14 @@ function Top() {
       >
         <Row
           utilities={{
-            'row-gap': { _: 4 }
+            'row-gap': { _: 7 },
+            'align-items': { _: 'center' }
           }}
         >
           <Column
             col={{ _: 12, lg: 6 }}
           >
             <Brand />
-          </Column>
-
-          <Column
-            col={{ _: 12 }}
-          >
-            <Divider />
           </Column>
 
           <Column
@@ -363,12 +352,6 @@ function Top() {
           </Column>
 
           <Column
-            col={{ _: 12 }}
-          >
-            <Divider />
-          </Column>
-
-          <Column
             col={{ _: 12, md: 6 }}
             utilities={{
               pr: { xl: 8 }
@@ -378,21 +361,9 @@ function Top() {
           </Column>
 
           <Column
-            col={{ _: 12, }}
-          >
-            <Divider />
-          </Column>
-
-          <Column
             col={{ _: 6, sm: 4, md: 3, lg: 2 }}
           >
             <Navigations />
-          </Column>
-
-          <Column
-            col={{ _: 12 }}
-          >
-            <Divider />
           </Column>
 
           <Column
@@ -402,21 +373,9 @@ function Top() {
           </Column>
 
           <Column
-            col={{ _: 12 }}
-          >
-            <Divider />
-          </Column>
-
-          <Column
             col={{ _: 12, md: 6 }}
           >
             <Payments />
-          </Column>
-
-          <Column
-            col={{ _: 12 }}
-          >
-            <Divider />
           </Column>
 
           <Column

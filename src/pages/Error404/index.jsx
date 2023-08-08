@@ -42,8 +42,8 @@ function Error404() {
                     as='h1'
                     display
                     utilities={{
-                      pt: { _: 3 },
-                      'line-height': { _: 1 }
+                      bg: { _: 'dark' },
+                      color: { _: 'light' }
                     }}
                   >
                     404
@@ -53,9 +53,9 @@ function Error404() {
                     as='h4'
                     display
                     utilities={{
-                      pt: { _: 2 },
-                      mb: { _: 4 },
-                      'line-height': { _: 1 }
+                      my: { _: 4 },
+                      bg: { _: 'dark' },
+                      color: { _: 'light' }
                     }}
                   >
                     Page Not found!
@@ -77,7 +77,8 @@ function Error404() {
                       'btn btn--fill-primary'
                     ]}
                     utilities={{
-                      mb: { _: 5 }
+                      px: { _: 8 },
+                      mb: { _: 3 }
                     }}
                   >
                     Go Back

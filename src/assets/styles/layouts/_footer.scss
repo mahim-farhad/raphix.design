@@ -8,7 +8,7 @@
   &__nav {
     .nav__link {
       padding: $spacer-2 $spacer-0;
-      @include font-size($font-size-sm);
+      font-size: $font-size-sm;
       font-weight: $font-weight-bold;
       color: $font-color;
 
@@ -23,7 +23,7 @@
 
     &-social {
       gap: $spacer-2;
-      margin-bottom: $spacer-4;
+      margin-bottom: $spacer-3;
 
       .nav__link--icon-only {
         width: 2.25rem;
@@ -34,7 +34,7 @@
 
     &-payments {
       gap: $spacer-2;
-      align-items: center;
+      margin-bottom: $spacer-3;
 
       & li {
         position: relative;
@@ -54,8 +54,8 @@
   }
 
   &__bottom {
-    padding-top: $spacer-6;
-    padding-bottom: $spacer-6;
+    padding-top: $spacer-5;
+    padding-bottom: $spacer-5;
   }
 
   &__copyright-text {

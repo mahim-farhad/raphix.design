@@ -55,9 +55,19 @@ h6 {
 
 @each $heading,
 $font-size in $display-fonts {
-  .display-#{$heading} {
-    font-size: $font-size;
-    line-height: 1;
+  .display {
+    &-#{$heading} {
+      font-size: $font-size;
+      line-height: 1;
+    }
+
+    &-h1 {
+      padding-top: $spacer-3;
+    }
+
+    &-h4 {
+      padding-top: $spacer-2;
+    }
   }
 }
 
