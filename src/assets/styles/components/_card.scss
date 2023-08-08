@@ -106,6 +106,30 @@
       justify-content: space-between;
     }
   }
+
+  &--reviews {
+    padding: 0rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: $spacer-0;
+
+    .quote-icon {
+      max-width: 48px;
+      margin-bottom: $spacer-4;
+      opacity: 0.4;
+    }
+
+    .card__comment {
+      display: -webkit-box;
+      padding-top: 2px;
+      font-size: $font-size-xl;
+      text-transform: capitalize;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
 }
 
 .circular-link {

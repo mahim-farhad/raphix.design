@@ -65,14 +65,21 @@ $font-size in $display-fonts {
       padding-top: $spacer-3;
     }
 
+    &-h2 {
+      padding-top: calc($spacer-2 + ($spacer-1 * 0.5));
+    }
+
+    &-h3 {
+      padding-top: calc($spacer-2 + ($spacer-1 * 0.25));
+    }
+
     &-h4 {
-      padding-top: $spacer-2;
+      padding-top: calc($spacer-2 - ($spacer-1 * 0.25));
     }
   }
 }
 
 p {
-  // padding-top: calc($spacer-1 * 0.5);
   margin-top: $spacer-0;
   margin-bottom: $spacer-0;
   font-family: $p-font-family;

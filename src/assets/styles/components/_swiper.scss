@@ -1,7 +1,7 @@
 :root {
   --swiper-navigation-color: $light !important;
   --swiper-theme-color: $light !important;
-  --swiper-navigation-size: 20px !important;
+  --swiper-navigation-size: $spacer-5 !important;
 }
 
 .swiper {
@@ -17,7 +17,7 @@
     display: inline-block;
     padding: $spacer-6;
     cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: $gray-300;
 
     &::before,
     &::after {
@@ -29,7 +29,7 @@
       width: 0;
       height: calc($spacer-1 * 2.5);
       margin-top: -$spacer-2;
-      border-right: calc($spacer-1 * 0.5) solid $light;
+      border-right: calc($spacer-1 * 0.5) solid $gray-600;
     }
 
     &::after {
@@ -73,14 +73,14 @@
   }
 
   &--reviews {
-    min-height: 350px;
+    min-height: 300px;
 
     .swiper-button-prev,
     .swiper-button-next {
       top: auto;
       right: 0;
       bottom: 0;
-      padding: 1.125rem;
+      padding: $spacer-4;
     }
 
     .swiper-button-prev {
@@ -93,13 +93,12 @@
       position: absolute;
       bottom: $spacer-0;
       justify-content: flex-start;
-      padding: 0.875rem $spacer-0;
+      padding: $spacer-3 $spacer-0;
 
       .swiper-pagination-bullet {
         width: $spacer-2;
         height: $spacer-2;
-        background-color: transparent;
-        border: 1px solid;
+        background-color: $gray-300;
         border-radius: 50%;
 
         &-active {

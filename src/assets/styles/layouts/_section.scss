@@ -6,33 +6,26 @@
   &__heading {
     position: relative;
     margin-bottom: $spacer-4;
+    text-align: center;
   }
 
   &__title {
-    padding-top: $spacer-2;
-    text-align: center;
-    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     letter-spacing: 0.01em;
   }
 
   &__title-bg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -55%);
-    padding-top: $spacer-6;
-    @include font-size(9rem);
-    opacity: 0.25;
+    opacity: 0.125;
   }
 }
 
 @include media-breakpoint-up(md) {
   .section {
     padding: $spacer-10 $spacer-0;
-
-    &__title-bg {
-      transform: translate(-50%, -52%);
-    }
   }
 
   .collection-preview {
@@ -48,14 +41,6 @@
       &:nth-child(2) {
         margin-left: percentage(divide(8, 12));
       }
-    }
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  .section {
-    &__title-bg {
-      transform: translate(-50%, -50%);
     }
   }
 }

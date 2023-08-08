@@ -42,8 +42,7 @@ function Error404() {
                     as='h1'
                     display
                     utilities={{
-                      bg: { _: 'dark' },
-                      color: { _: 'light' }
+                      mt: { _: 'n1' }
                     }}
                   >
                     404
@@ -53,9 +52,7 @@ function Error404() {
                     as='h4'
                     display
                     utilities={{
-                      my: { _: 4 },
-                      bg: { _: 'dark' },
-                      color: { _: 'light' }
+                      mb: { _: 4 }
                     }}
                   >
                     Page Not found!
@@ -74,7 +71,7 @@ function Error404() {
                   <DynamicLink
                     path='/'
                     classes={[
-                      'btn btn--fill-primary'
+                      'btn btn--fill-light'
                     ]}
                     utilities={{
                       px: { _: 8 },

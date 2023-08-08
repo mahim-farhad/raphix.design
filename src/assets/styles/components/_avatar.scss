@@ -9,7 +9,7 @@
   // font-size: $avatar-font-size;
   color: $white;
   background-color: map-get($grays, 500);
-  border-radius: $border-radius-xl;
+  border-radius: $border-radius-circle;
   transition: all 0.2s ease-in-out;
 
   &__img {
