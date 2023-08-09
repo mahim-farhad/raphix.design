@@ -421,6 +421,62 @@ progress {
   top: 100% !important;
 }
 
+.right-auto {
+  right: auto !important;
+}
+
+.right-0 {
+  right: 0 !important;
+}
+
+.right-1 {
+  right: 1% !important;
+}
+
+.right-2 {
+  right: 2% !important;
+}
+
+.right-3 {
+  right: 3% !important;
+}
+
+.right-4 {
+  right: 4% !important;
+}
+
+.right-5 {
+  right: 5% !important;
+}
+
+.right-6 {
+  right: 6% !important;
+}
+
+.right-7 {
+  right: 7% !important;
+}
+
+.right-8 {
+  right: 8% !important;
+}
+
+.right-9 {
+  right: 9% !important;
+}
+
+.right-10 {
+  right: 10% !important;
+}
+
+.right-50 {
+  right: 50% !important;
+}
+
+.right-100 {
+  right: 100% !important;
+}
+
 .bottom-auto {
   bottom: auto !important;
 }
@@ -475,6 +531,62 @@ progress {
 
 .bottom-100 {
   bottom: 100% !important;
+}
+
+.left-auto {
+  left: auto !important;
+}
+
+.left-0 {
+  left: 0 !important;
+}
+
+.left-1 {
+  left: 1% !important;
+}
+
+.left-2 {
+  left: 2% !important;
+}
+
+.left-3 {
+  left: 3% !important;
+}
+
+.left-4 {
+  left: 4% !important;
+}
+
+.left-5 {
+  left: 5% !important;
+}
+
+.left-6 {
+  left: 6% !important;
+}
+
+.left-7 {
+  left: 7% !important;
+}
+
+.left-8 {
+  left: 8% !important;
+}
+
+.left-9 {
+  left: 9% !important;
+}
+
+.left-10 {
+  left: 10% !important;
+}
+
+.left-50 {
+  left: 50% !important;
+}
+
+.left-100 {
+  left: 100% !important;
 }
 
 .transform-scale-5 {
@@ -10219,21 +10331,16 @@ mark {
   overflow: hidden;
 }
 .section__heading {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 1rem;
+  padding-left: 1rem;
   margin-bottom: 1rem;
   text-align: center;
   background-color: rgba(83, 236, 152, 0.25);
 }
 .section__title {
   text-decoration: underline;
-}
-.section__title-bg {
-  font-size: 5rem;
-  opacity: 0.125;
 }
 .section--collections {
   margin: 1.25rem 0rem;
@@ -10242,8 +10349,6 @@ mark {
   .section {
     padding: 8rem 0rem;
   }
-}
-@media (min-width: 48rem) {
   .section--collections .collection-preview__col--thumbnail {
     margin-right: -66.66666667%;
   }
@@ -10252,15 +10357,6 @@ mark {
   }
   .section--collections .collection-preview__col:nth-child(2) {
     margin-left: 66.66666667%;
-  }
-  .section--collections-banner .collection-preview__col--thumbnail {
-    margin-right: 0;
-  }
-  .section--collections-banner .collection-preview__col:first-child {
-    margin-left: 0;
-  }
-  .section--collections-banner .collection-preview__col:nth-child(2) {
-    margin-left: 0;
   }
 }
 @media (min-width: 74rem) {
@@ -10725,6 +10821,7 @@ mark {
   right: 0rem;
   left: 0rem;
   width: 100%;
+  height: 3.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   background-color: #ffffff;
@@ -10732,7 +10829,7 @@ mark {
 }
 .navbar__brand {
   display: block;
-  padding-top: 0.3125rem;
+  padding-top: 0.375rem;
   font-family: "Teko", sans-serif;
   font-size: 1.875rem;
   font-weight: 500;

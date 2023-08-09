@@ -1,20 +1,8 @@
-import {
-  Swiper,
-  SwiperSlide
-} from 'swiper/react'
-
-import {
-  FreeMode,
-  Navigation,
-  Pagination
-} from 'swiper/modules'
-
 import 'swiper/css'
 
 import {
   Heading,
-  Paragraph,
-  Span
+  Paragraph
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
 import Button from '../../components/Button'
@@ -35,55 +23,116 @@ function PageHeader() {
       <Container>
         <Row
           utilities={{
-            'align-items': { _: 'center' },
-            'justify-content': { _: 'center' }
+            'align-items': { _: 'center' }
           }}
         >
           <Column
-            col={{ _: 12, md: 5, lg: 4 }}
+            col={{ _: 12, md: 6, lg: 8 }}
             utilities={{
-              order: { md: 2 },
               mb: { _: 9, md: 0 }
             }}
           >
-            <Box>
-              <span />
+            <Heading
+              as='h2'
+              display
+              utilities={{
+                mb: { _: 6 }
+              }}
+            >
+              Hi, I&#39;m Rafid Chowdhury
+            </Heading>
 
-              <img
-                src={Jersey}
-                alt=''
-              />
-            </Box>
+            <Heading
+              as='h2'
+              utilities={{
+                mb: { _: 6 }
+              }}
+            >
+              I&#39;m a esports graphics designer<br />
+              with award-winning branding,<br />
+              digital and print experience.
+            </Heading>
+
+            <Heading
+              as='h4'
+              utilities={{
+                mb: { _: 8 }
+              }}
+            >
+              I&#39;m a esports graphics designer
+              with award-winning <br />
+              branding, digital and print experience.
+            </Heading>
+
+            <Button>
+              Let&#39;s get to work
+
+              {/* <Icon
+                name='arrow-long-right'
+              /> */}
+            </Button>
           </Column>
 
           <Column
-            col={{ _: 12, md: 5, lg: 4 }}
+            col={{ _: 12, md: 6, lg: 4 }}
           >
-            <Heading
-              as='h1'
+            <div
+              className="position-relative"
             >
-              Jersey Shirts
-            </Heading>
+              <div
+                className="square position-absolute"
+              >
+                <Box
+                  utilities={{
+                    bg: { _: 'primary' }
+                  }}
+                >
+                  <Icon
+                    name='brand-white'
+                    classes={[
+                      'icon--4xl p-2'
+                    ]}
+                  />
+                </Box>
+              </div>
 
-            <Heading
-              as='h1'
-              display
-            >
-              NAVI BRAND
-            </Heading>
+              <div
+                className="circle d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src={Jersey}
+                  alt=''
+                />
+                <img
+                  src="https://uploads-ssl.webflow.com/60398d2e11f53121e992ac78/6039b6bf1be19f66f17a9876_Circle.png"
+                  loading="lazy"
+                  alt=""
+                  className='position-absolute'
+                  style={{
+                    zIndex: -1,
+                    width: '300px',
+                    height: '300px'
+                  }}
+                />
+              </div>
 
-            <Paragraph
-              utilities={{
-                my: { _: 8 }
-              }}
-            >
-              Navi Nation #BornToWin <br />
-              Longsleeve yellow -------
-            </Paragraph>
-
-            <Button>
-              More Detials
-            </Button>
+              <div
+                className="triangle position-absolute bottom-0 right-0"
+              >
+                <Box
+                  utilities={{
+                    bg: { _: 'primary' }
+                  }}
+                >
+                  <Icon
+                    name='brand-white'
+                    classes={[
+                      'icon--4xl p-2'
+                    ]}
+                  />
+                </Box>
+              </div>
+            </div>
           </Column>
         </Row>
       </Container>

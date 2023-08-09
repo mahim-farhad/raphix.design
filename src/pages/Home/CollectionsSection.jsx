@@ -1,9 +1,14 @@
+import {
+  motion,
+  useMotionValue,
+  useTransform
+} from 'framer-motion'
+
 import useFetch from '../../hooks/useFetch'
 
 import DynamicLink from '../../components/DynamicLink'
 import {
-  Heading,
-  Paragraph
+  Heading
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
 import Divider from '../../components/Divider'
@@ -28,19 +33,6 @@ const SeactionHeading = ({
         'section__heading'
       ]}
     >
-      <Box
-        utilities={{
-          bg: { _: 'primary' }
-        }}
-      >
-        <Icon
-          name='brand'
-          classes={[
-            'icon--4xl p-4'
-          ]}
-        />
-      </Box>
-
       <Heading
         as='h4'
         display
@@ -50,6 +42,19 @@ const SeactionHeading = ({
       >
         {subHeading}
       </Heading>
+
+      <Box
+        utilities={{
+          bg: { _: 'primary' }
+        }}
+      >
+        <Icon
+          name='brand-white'
+          classes={[
+            'icon--4xl p-3'
+          ]}
+        />
+      </Box>
 
       {/* <Heading
         as='h1'
@@ -69,6 +74,19 @@ function CollectionsSection() {
     data,
     loading
   } = useFetch('designs?populate=*')
+
+  const x = useMotionValue(200)
+  const y = useMotionValue(200)
+
+  const rotateX = useTransform(y, [0, 400], [5, -5])
+  const rotateY = useTransform(x, [0, 400], [-5, 5])
+
+  function handleMouse(event) {
+    const rect = event.currentTarget.getBoundingClientRect()
+
+    x.set(event.clientX - rect.left)
+    y.set(event.clientY - rect.top)
+  }
 
   return (
     <>
@@ -245,9 +263,47 @@ function CollectionsSection() {
                     'collection-preview__col'
                   ]}
                 >
-                  <Image
-                    src='https://cdn.dribbble.com/users/1141243/screenshots/12116815/media/ec22dff4ce2870fbdbbeeb8eaf49d7de.png?resize=800x600&vertical=center'
-                  />
+                  <motion.div
+                    style={{
+                      perspective: 500
+                    }}
+                    onMouseMove={handleMouse}
+                  >
+                    <motion.img
+                      src='https://cdn.dribbble.com/users/1141243/screenshots/12116815/media/ec22dff4ce2870fbdbbeeb8eaf49d7de.png?resize=800x600&vertical=center'
+                      alt=''
+                      style={{
+                        rotateX: rotateX,
+                        rotateY: rotateY
+                      }}
+                    />
+                  </motion.div>
+
+                  {/* <div
+                    className="card"
+                  >
+                    <a
+                      href="https://www.sierraplese.com/projects/west-palm-beach"
+                    >
+                      <div>
+                        <div>
+                          <h1>
+                            West Palm Beach
+                          </h1>
+
+                          <img src="https://uploads-ssl.webflow.com/60398d2e11f53121e992ac78/605293c155c7422d2c78080b_Line%202.png" loading="lazy" alt="" className="image-17" />
+
+                          <div
+                            className="text-block-12"
+                          >
+                            Website Design
+                          </div>
+
+                          <div className="card-highlight" />
+                        </div>
+                      </div>
+                    </a>
+                  </div> */}
                 </Column>
 
                 <Column
@@ -303,8 +359,8 @@ function CollectionsSection() {
               </Row>
             </Column>
           </Row>
-        </Container>
-      </Section>
+        </Container >
+      </Section >
 
       <Divider />
 

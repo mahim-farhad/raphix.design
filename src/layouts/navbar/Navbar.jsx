@@ -49,10 +49,14 @@ function Navbar() {
     >
       <Container
         fluid
+        utilities={{
+          h: { _: 100 }
+        }}
       >
         <Row
           utilities={{
-            'align-items': { _: 'center' }
+            'align-items': { _: 'center' },
+            h: { _: 100 }
           }}
         >
           <Column

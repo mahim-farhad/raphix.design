@@ -1,5 +1,5 @@
 import DynamicLink from '../../components/DynamicLink'
-import Icon from '../../components/Icon'
+// import Icon from '../../components/Icon'
 
 function NavbarBrand() {
   return (

@@ -634,9 +634,9 @@ $utilities: (
 
 $utilities: map-get-multiple($utilities, ("position",
       "top",
+      "right",
       "bottom",
-      "start",
-      "end",
+      "left",
       "transform",
       "vertical-align",
 
