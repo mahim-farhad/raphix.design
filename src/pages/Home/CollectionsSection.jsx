@@ -350,7 +350,7 @@ function CollectionsSection() {
             >
               <Row>
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -361,7 +361,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -372,7 +372,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -383,7 +383,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -394,7 +394,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -405,7 +405,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -416,7 +416,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -427,7 +427,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
