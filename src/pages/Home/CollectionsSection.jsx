@@ -112,7 +112,7 @@ function CollectionsSection() {
                       <>
                         <Column
                           key={design.id}
-                          col={{ _: 12, md: 4, xl: 3 }}
+                          col={{ _: 6, md: 4, xl: 3 }}
                           classes={[
                             'collection-preview__col'
                           ]}
@@ -134,7 +134,7 @@ function CollectionsSection() {
                       <>
                         <Column
                           key={design.id}
-                          col={{ _: 12, md: 4, xl: 3 }}
+                          col={{ _: 6, md: 4, xl: 3 }}
                           classes={[
                             'collection-preview__col'
                           ]}
@@ -156,7 +156,7 @@ function CollectionsSection() {
                       index < 1 &&
                       <Column
                         key={design.id}
-                        col={{ _: 12, md: 4, xl: 3 }}
+                        col={{ _: 6, md: 4, xl: 3 }}
                         classes={[
                           'collection-preview__col'
                         ]}
@@ -172,7 +172,7 @@ function CollectionsSection() {
                 }
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -232,7 +232,7 @@ function CollectionsSection() {
             >
               <Row>
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -243,7 +243,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -254,7 +254,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -265,7 +265,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -276,7 +276,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -287,18 +287,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
-                  classes={[
-                    'collection-preview__col'
-                  ]}
-                >
-                  <Image
-                    src='https://cdn.dribbble.com/userupload/3747848/file/original-1f372bc25bfd0f9e98f4ce4dcfbd1cb0.png?resize=752x564'
-                  />
-                </Column>
-
-                <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -309,7 +298,7 @@ function CollectionsSection() {
                 </Column>
 
                 <Column
-                  col={{ _: 12, md: 4, xl: 3 }}
+                  col={{ _: 6, md: 4, xl: 3 }}
                   classes={[
                     'collection-preview__col'
                   ]}
@@ -317,6 +306,38 @@ function CollectionsSection() {
                   <Image
                     src='https://cdn.dribbble.com/users/1141243/screenshots/15377900/media/8ae08ff9ace4f12ed20aeb1dc561305e.png?resize=1000x750&vertical=center'
                   />
+                </Column>
+
+
+                <Column
+                  col={{ _: 6, md: 4, xl: 3 }}
+                  classes={[
+                    'collection-preview__col'
+                  ]}
+                >
+                  <Box
+                    utilities={{
+                      d: { _: 'flex' },
+                      'align-items': { _: 'center' },
+                      'justify-content': { _: 'center' },
+                      w: { _: 100 },
+                      h: { _: 100 },
+                      bg: { _: 'dark' }
+                    }}
+                  >
+                    <DynamicLink
+                      classes={[
+                        'btn btn--tonal-primary btn--link'
+                      ]}
+                      utilities={{
+                        position: { _: 'relative' },
+                        pt: { _: 3 },
+                        pb: { _: 2 }
+                      }}
+                    >
+                      View More
+                    </DynamicLink>
+                  </Box>
                 </Column>
               </Row>
             </Column>
@@ -400,6 +421,28 @@ function CollectionsSection() {
                   ]}
                 >
                   <Image
+                    src='https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/9eacee162958623.Y3JvcCwyNTAwLDE5NTUsMCwyNA.png'
+                  />
+                </Column>
+
+                <Column
+                  col={{ _: 6, md: 4, xl: 3 }}
+                  classes={[
+                    'collection-preview__col'
+                  ]}
+                >
+                  <Image
+                    src='https://mir-s3-cdn-cf.behance.net/projects/max_808_webp/cab080168941157.Y3JvcCw4MDgsNjMyLDAsMA.jpg'
+                  />
+                </Column>
+
+                <Column
+                  col={{ _: 6, md: 4, xl: 3 }}
+                  classes={[
+                    'collection-preview__col'
+                  ]}
+                >
+                  <Image
                     src='https://mir-s3-cdn-cf.behance.net/projects/404_webp/5e6f5a175054241.Y3JvcCwyODE4LDIyMDQsOTAsMA.png'
                   />
                 </Column>
@@ -410,31 +453,29 @@ function CollectionsSection() {
                     'collection-preview__col'
                   ]}
                 >
-                  <Image
-                    src='https://cdn.dribbble.com/userupload/3747848/file/original-1f372bc25bfd0f9e98f4ce4dcfbd1cb0.png?resize=752x564'
-                  />
-                </Column>
-
-                <Column
-                  col={{ _: 6, md: 4, xl: 3 }}
-                  classes={[
-                    'collection-preview__col'
-                  ]}
-                >
-                  <Image
-                    src='https://cdn.dribbble.com/users/1141243/screenshots/11244257/media/baf8ddbf042dcc70ecad2df31e59993c.png?resize=800x600&vertical=center'
-                  />
-                </Column>
-
-                <Column
-                  col={{ _: 6, md: 4, xl: 3 }}
-                  classes={[
-                    'collection-preview__col'
-                  ]}
-                >
-                  <Image
-                    src='https://cdn.dribbble.com/users/1141243/screenshots/15377900/media/8ae08ff9ace4f12ed20aeb1dc561305e.png?resize=1000x750&vertical=center'
-                  />
+                  <Box
+                    utilities={{
+                      d: { _: 'flex' },
+                      'align-items': { _: 'center' },
+                      'justify-content': { _: 'center' },
+                      w: { _: 100 },
+                      h: { _: 100 },
+                      bg: { _: 'dark' }
+                    }}
+                  >
+                    <DynamicLink
+                      classes={[
+                        'btn btn--tonal-primary btn--link'
+                      ]}
+                      utilities={{
+                        position: { _: 'relative' },
+                        pt: { _: 3 },
+                        pb: { _: 2 }
+                      }}
+                    >
+                      View More
+                    </DynamicLink>
+                  </Box>
                 </Column>
               </Row>
             </Column>
