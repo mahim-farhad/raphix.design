@@ -329,18 +329,18 @@ function Top() {
           }}
         >
           <Column
-            col={{ _: 12, lg: 6 }}
+            col={{ _: 12, lg: 6, xl: 8 }}
           >
             <Brand />
           </Column>
 
           <Column
-            col={{ _: 12, lg: 6 }}
+            col={{ _: 12, lg: 6, xl: 4 }}
           >
             <Heading
               as='h4'
               utilities={{
-                w: { md: 75 }
+                w: { sm: 75, lg: 100 }
               }}
             >
               ORDER YOUR TEAMS CUSTOM ESPORTS JERSEYS WITH
@@ -350,7 +350,7 @@ function Top() {
           </Column>
 
           <Column
-            col={{ _: 12, md: 6 }}
+            col={{ _: 12, md: 6, xl: 8 }}
             utilities={{
               pr: { xl: 8 }
             }}
@@ -359,25 +359,25 @@ function Top() {
           </Column>
 
           <Column
-            col={{ _: 6, sm: 4, md: 3, lg: 2 }}
+            col={{ _: 6, sm: 4, md: 3, xl: 2 }}
           >
             <Navigations />
           </Column>
 
           <Column
-            col={{ _: 6, sm: 4, md: 3, lg: 2 }}
+            col={{ _: 6, sm: 4, md: 3, xl: 2 }}
           >
             <Services />
           </Column>
 
           <Column
-            col={{ _: 12, md: 6 }}
+            col={{ _: 12, sm: 6, xl: 8 }}
           >
             <Payments />
           </Column>
 
           <Column
-            col={{ _: 12, md: 6 }}
+            col={{ _: 12, sm: 6, xl: 4 }}
           >
             <Socials />
           </Column>

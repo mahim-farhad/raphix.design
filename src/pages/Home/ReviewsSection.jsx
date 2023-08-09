@@ -277,7 +277,7 @@ function ReviewsSection() {
           }}
         >
           <Column
-            col={{ _: 12, md: 6, xl: 5 }}
+            col={{ _: 12, md: 6, xl: 4 }}
             utilities={{
               mr: { md: 'auto' }
             }}
@@ -286,7 +286,7 @@ function ReviewsSection() {
           </Column>
 
           <Column
-            col={{ _: 12, md: 6, xl: 5 }}
+            col={{ _: 12, md: 6, xl: 4 }}
             utilities={{
               ml: { md: 'auto' }
             }}

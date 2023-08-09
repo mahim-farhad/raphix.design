@@ -5,13 +5,20 @@
   right: $spacer-0;
   left: $spacer-0;
   width: 100%;
-  padding-top: calc(($spacer-3 * 0.5));
-  padding-bottom: calc(($spacer-3 * 0.5));
+  padding-top: $spacer-3;
+  padding-bottom: $spacer-3;
   background-color: $background;
   transition: 0.3s all;
 
   &__brand {
     display: block;
+    padding-top: calc($spacer-1 + ($spacer-1 * 0.25));
+    font-family: $headings-font-family;
+    font-size: $font-size-3xl;
+    font-weight: $font-weight-medium;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
 
     &-icon {
       width: $spacer-8;

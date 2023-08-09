@@ -9164,7 +9164,6 @@ mark {
   color: #53ec98;
 }
 .btn--link {
-  line-height: 1.5;
   text-decoration: none;
 }
 .btn--link:hover {
@@ -9476,18 +9475,13 @@ mark {
 }
 .card__description {
   display: -webkit-box;
-  overflow: hidden;
+  padding-right: 1rem;
+  margin-bottom: 0rem;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  margin-bottom: 0rem;
+  overflow: hidden;
   opacity: 0.75;
-}
-.card__description p {
-  font-size: 1rem;
-}
-.card__description p:last-child {
-  margin-bottom: 0rem;
 }
 .card__footer {
   display: flex;
@@ -9564,7 +9558,7 @@ mark {
   background: transparent;
   border: 0;
   border-radius: 0;
-  box-shadow: 0 4px 6px -1px rgba(83, 236, 152, 0.1), 0 2px 4px -1px rgba(83, 236, 152, 0.06);
+  box-shadow: 0 0 40px -9px rgba(24, 44, 120, 0.5);
 }
 .design-thumbnail::after {
   content: "";
@@ -10226,18 +10220,19 @@ mark {
 }
 .section__heading {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1rem;
   margin-bottom: 1rem;
   text-align: center;
+  background-color: rgba(83, 236, 152, 0.25);
 }
 .section__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  letter-spacing: 0.01em;
+  text-decoration: underline;
 }
 .section__title-bg {
+  font-size: 5rem;
   opacity: 0.125;
 }
 .section--collections {
@@ -10730,13 +10725,20 @@ mark {
   right: 0rem;
   left: 0rem;
   width: 100%;
-  padding-top: 0.375rem;
-  padding-bottom: 0.375rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   background-color: #ffffff;
   transition: 0.3s all;
 }
 .navbar__brand {
   display: block;
+  padding-top: 0.3125rem;
+  font-family: "Teko", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .navbar__brand-icon {
   width: 3rem;

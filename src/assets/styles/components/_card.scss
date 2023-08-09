@@ -56,20 +56,13 @@
 
   &__description {
     display: -webkit-box;
-    overflow: hidden;
+    padding-right: $spacer-4;
+    margin-bottom: $spacer-0;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    margin-bottom: $spacer-0;
+    overflow: hidden;
     opacity: 0.75;
-
-    p {
-      font-size: $font-size-base;
-
-      &:last-child {
-        margin-bottom: $spacer-0;
-      }
-    }
   }
 
   &__footer {
@@ -160,8 +153,7 @@
   background: transparent;
   border: 0;
   border-radius: 0;
-  box-shadow: 0 4px 6px -1px rgba($primary, 0.1),
-    0 2px 4px -1px rgba($primary, 0.06);
+  @include box-shadow(0 0 40px -9px rgba(24, 44, 120, 0.5));
 
   &::after {
     content: '';
