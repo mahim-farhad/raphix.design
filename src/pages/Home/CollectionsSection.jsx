@@ -90,7 +90,7 @@ function CollectionsSection() {
 
   return (
     <>
-      <Section
+      {/* <Section
         classes={[
           'section--collections'
         ]}
@@ -222,7 +222,7 @@ function CollectionsSection() {
         </Container>
       </Section>
 
-      <Divider />
+      <Divider /> */}
 
       <Section
         classes={[

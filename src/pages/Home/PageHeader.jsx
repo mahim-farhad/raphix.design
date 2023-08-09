@@ -1,8 +1,7 @@
 import 'swiper/css'
 
 import {
-  Heading,
-  Paragraph
+  Heading
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
 import Button from '../../components/Button'
