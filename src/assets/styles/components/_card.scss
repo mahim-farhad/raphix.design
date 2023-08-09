@@ -55,6 +55,11 @@
   }
 
   &__description {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     margin-bottom: $spacer-0;
     opacity: 0.75;
 
@@ -94,40 +99,16 @@
       margin-bottom: $spacer-3;
     }
 
-    .card__description {
-      display: -webkit-box;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-    }
-
     .card__footer {
       justify-content: space-between;
     }
   }
 
   &--reviews {
-    padding: 0rem;
-    background-color: transparent;
-    border: 0;
-    border-radius: $spacer-0;
-
-    .quote-icon {
-      max-width: 48px;
-      margin-bottom: $spacer-4;
-      opacity: 0.4;
-    }
-
-    .card__comment {
-      display: -webkit-box;
+    .card__description {
       padding-top: 2px;
-      font-size: $font-size-xl;
+      font-size: $font-size-lg;
       text-transform: capitalize;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
     }
   }
 }

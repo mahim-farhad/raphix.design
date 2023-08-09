@@ -321,9 +321,7 @@ function Top() {
         'footer__top'
       ]}
     >
-      <Container
-        fluid
-      >
+      <Container>
         <Row
           utilities={{
             'row-gap': { _: 7 },

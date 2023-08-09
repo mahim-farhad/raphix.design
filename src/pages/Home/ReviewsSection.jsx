@@ -47,7 +47,7 @@ const Info = () => {
         }}
       >
         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-        Eligendi nam consequatur reiciendis vel provident iure.
+        Eligendi nam consequatur reiciendis.
       </Paragraph>
 
       <Box
@@ -167,19 +167,20 @@ const Reviews = () => {
                 'icon--4xl'
               ]}
               utilities={{
-                mb: { _: 2 },
+                mb: { _: 6 },
                 color: { _: 'primary' }
               }}
             />
 
             <Paragraph
               classes={[
-                'card__comment'
+                'card__description'
               ]}
             >
-              I told him to get Creative and do
-              whatever He thinks is best! I really like his work
-              whatever He thinks is best! I really like his work.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Rem error ratione accusantium sint minus ad nam.
+              Harum corporis quaerat repellat quas aspernatur
+              exercitationem unde nisi, ut, error nemo odit quasi.
             </Paragraph>
 
             <Box
@@ -276,7 +277,7 @@ function ReviewsSection() {
           }}
         >
           <Column
-            col={{ _: 12, md: 5, xl: 4 }}
+            col={{ _: 12, md: 6, xl: 5 }}
             utilities={{
               mr: { md: 'auto' }
             }}
@@ -285,7 +286,7 @@ function ReviewsSection() {
           </Column>
 
           <Column
-            col={{ _: 12, md: 5, xl: 4 }}
+            col={{ _: 12, md: 6, xl: 5 }}
             utilities={{
               ml: { md: 'auto' }
             }}
