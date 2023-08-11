@@ -4,6 +4,8 @@ import Textfield from '../../components/Textfield'
 
 import Box from '../Box'
 
+import Toggler from './Toggler'
+
 function Right() {
   return (
     <Box
@@ -47,6 +49,8 @@ function Right() {
           }}
         />
       </Button>
+
+      <Toggler />
     </Box>
   )
 }

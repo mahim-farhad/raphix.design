@@ -11,8 +11,7 @@ import {
   Column
 } from '../Grid'
 
-import Toggler from './Toggler'
-import Center from './Center'
+import Left from './Left'
 import Right from './Right'
 
 function Navbar() {
@@ -49,33 +48,20 @@ function Navbar() {
     >
       <Container
         fluid
-        utilities={{
-          h: { _: 100 }
-        }}
       >
         <Row
           utilities={{
             'align-items': { _: 'center' },
-            h: { _: 100 }
           }}
         >
           <Column
-            col={{ _: 3, lg: 0 }}
-            utilities={{
-              d: { lg: 'none' }
-            }}
+            col={{ _: 6, md: 8 }}
           >
-            <Toggler />
+            <Left />
           </Column>
 
           <Column
-            col={{ _: 6, lg: 7, xl: 8 }}
-          >
-            <Center />
-          </Column>
-
-          <Column
-            col={{ _: 3, lg: 5, xl: 4 }}
+            col={{ _: 6, md: 4 }}
           >
             <Right />
           </Column>

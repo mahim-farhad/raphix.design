@@ -14,7 +14,9 @@ function Home() {
   return (
     <>
       <Helmet>
-        <title>Esports graphics designer | Raphix Design</title>
+        <title>
+          Esports graphics designer | Raphix Design
+        </title>
       </Helmet>
 
       <PageHeader />

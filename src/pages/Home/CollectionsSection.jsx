@@ -12,6 +12,7 @@ import {
 } from '../../components/Typography'
 import Icon from '../../components/Icon'
 import Divider from '../../components/Divider'
+import Image from '../../components/Image'
 import CollectionCard from '../../components/collection/CollectionCard'
 
 import Section from '../../layouts/Section'
@@ -21,7 +22,6 @@ import {
   Column
 } from '../../layouts/Grid'
 import Box from '../../layouts/Box'
-import Image from '../../components/Image'
 
 const SeactionHeading = ({
   subHeading,
@@ -90,7 +90,7 @@ function CollectionsSection() {
 
   return (
     <>
-      {/* <Section
+      <Section
         classes={[
           'section--collections'
         ]}
@@ -222,7 +222,7 @@ function CollectionsSection() {
         </Container>
       </Section>
 
-      <Divider /> */}
+      <Divider />
 
       <Section
         classes={[

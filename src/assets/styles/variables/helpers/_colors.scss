@@ -47,8 +47,8 @@ $theme-colors: (
   dark: $dark,
   ) !default;
 
-$background: #ffffff;
-$surface: #ececec;
+$background: #000000;
+$surface: #ffffff;
 $surface-variant: #202020;
 
 $layout-colors: (
@@ -57,7 +57,7 @@ $layout-colors: (
   surface-variant: $surface-variant,
   ) !default;
 
-$font-color: #2b2929;
+$font-color: #ffffff;
 
 $info: #1A73E8 !default;
 $success: #4CAF50 !default;

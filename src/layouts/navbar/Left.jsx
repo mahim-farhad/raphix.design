@@ -8,8 +8,7 @@ function Center() {
     <Box
       utilities={{
         d: { _: 'flex' },
-        'align-items': { _: 'center' },
-        'justify-content': { _: 'center', lg: 'start' }
+        'align-items': { _: 'center' }
       }}
     >
       <NavbarBrand />

@@ -6,30 +6,36 @@
   left: $spacer-0;
   width: 100%;
   height: 3.75rem;
-  padding-top: $spacer-3;
-  padding-bottom: $spacer-3;
   background-color: $background;
   transition: 0.3s all;
 
+  &>.container,
+  &>.container-fluid {
+    padding-left: $spacer-0;
+  }
+
   &__brand {
-    display: block;
-    padding-top: calc($spacer-1 + ($spacer-1 * 0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: $headings-font-family;
     font-size: $font-size-3xl;
     font-weight: $font-weight-medium;
     line-height: 1;
     text-transform: uppercase;
     white-space: nowrap;
+    background-color: $primary;
 
     &-icon {
-      width: $spacer-8;
-      height: $spacer-8;
+      width: 60px;
+      height: 60px;
+      padding: $spacer-3 $spacer-3;
     }
   }
 
   &__toggler {
     .menu-icon {
-      margin-right: auto;
+      margin-left: auto;
     }
 
     .bar-1 {
@@ -38,13 +44,13 @@
 
     .bar-2 {
       width: 75%;
+      margin-left: auto;
       animation: ease 0.33s scaled-2 forwards;
     }
 
     .bar-3 {
       animation: ease 0.33s bottom-2 forwards;
     }
-
 
     &.active {
       .bar-1 {
@@ -77,18 +83,22 @@
     box-shadow: 0 2px 4px rgba($black, 0.15);
   }
 
-  @include media-breakpoint-down(lg) {
+  @include media-breakpoint-down(md) {
     &__menu {
       display: none;
     }
   }
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(md) {
     padding-top: $spacer-0;
     padding-bottom: $spacer-0;
 
     &__brand {
       margin-right: $spacer-6;
+    }
+
+    &__toggler {
+      display: none;
     }
   }
 }

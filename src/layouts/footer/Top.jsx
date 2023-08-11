@@ -111,12 +111,12 @@ const Brand = () => {
         'align-items': { _: 'center' }
       }}
     >
-      <Icon
+      {/* <Icon
         name='brand'
         classes={[
           'icon--4xl'
         ]}
-      />
+      /> */}
 
       <Box>
         <Heading

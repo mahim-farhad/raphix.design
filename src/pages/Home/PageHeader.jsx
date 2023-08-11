@@ -18,7 +18,11 @@ import Jersey from '../../assets/images/jersey.png'
 
 function PageHeader() {
   return (
-    <Section>
+    <Section
+      utilities={{
+        mb: { _: 6 }
+      }}
+    >
       <Container>
         <Row
           utilities={{
@@ -41,7 +45,7 @@ function PageHeader() {
               Hi, I&#39;m Rafid Chowdhury
             </Heading>
 
-            <Heading
+            {/* <Heading
               as='h2'
               utilities={{
                 mb: { _: 6 }
@@ -50,7 +54,7 @@ function PageHeader() {
               I&#39;m a esports graphics designer<br />
               with award-winning branding,<br />
               digital and print experience.
-            </Heading>
+            </Heading> */}
 
             <Heading
               as='h4'
@@ -65,10 +69,6 @@ function PageHeader() {
 
             <Button>
               Let&#39;s get to work
-
-              {/* <Icon
-                name='arrow-long-right'
-              /> */}
             </Button>
           </Column>
 
@@ -78,7 +78,7 @@ function PageHeader() {
             <div
               className="position-relative"
             >
-              <div
+              {/* <div
                 className="square position-absolute"
               >
                 <Box
@@ -93,7 +93,7 @@ function PageHeader() {
                     ]}
                   />
                 </Box>
-              </div>
+              </div> */}
 
               <div
                 className="circle d-flex align-items-center justify-content-center"
@@ -102,7 +102,8 @@ function PageHeader() {
                   src={Jersey}
                   alt=''
                 />
-                <img
+
+                {/* <img
                   src="https://uploads-ssl.webflow.com/60398d2e11f53121e992ac78/6039b6bf1be19f66f17a9876_Circle.png"
                   loading="lazy"
                   alt=""
@@ -112,10 +113,10 @@ function PageHeader() {
                     width: '300px',
                     height: '300px'
                   }}
-                />
+                /> */}
               </div>
 
-              <div
+              {/* <div
                 className="triangle position-absolute bottom-0 right-0"
               >
                 <Box
@@ -130,7 +131,7 @@ function PageHeader() {
                     ]}
                   />
                 </Box>
-              </div>
+              </div> */}
             </div>
           </Column>
         </Row>
